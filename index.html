@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fusion Energy Progress Dashboard</title>
+  <meta name="description" content="Track the progress of global fusion energy development efforts, with honest assessment of milestones, uncertainties, safety, and viability signals.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Disclaimer Banner -->
+  <div class="disclaimer-banner">
+    <strong>Data Transparency Notice:</strong> This dashboard presents fusion energy progress based on publicly available information. Projected dates are aspirational targets, not predictions. All confidence assessments are subjective estimates. See sources within each section.
+  </div>
+
+  <!-- Header -->
+  <header>
+    <h1>Fusion Energy Progress Dashboard</h1>
+    <p class="subtitle">
+      Tracking global fusion energy development with honest assessment of progress, uncertainties, and viability. No hype, no cynicism &mdash; just the evidence.
+    </p>
+    <p class="last-updated">Last data update: <span id="last-updated">--</span></p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#assumptions">Assumptions</a></li>
+      <li><a href="#signals">Viability Signals</a></li>
+      <li><a href="#waste">Waste &amp; Safety</a></li>
+      <li><a href="#timeline">Timeline Scenarios</a></li>
+      <li><a href="#funding">Funding</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Overview Section -->
+    <div id="overview" class="section">
+      <div class="section-header">
+        <h2>Overview</h2>
+        <p>The current state of fusion energy &mdash; what we know, what we don't, and why honest uncertainty matters.</p>
+      </div>
+      <div id="overview-content"></div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" class="section">
+      <div class="section-header">
+        <h2>Major Fusion Projects</h2>
+        <p>Tracking 16 major public and private fusion energy efforts worldwide. Click milestones and uncertainties to expand.</p>
+      </div>
+      <div id="projects-content"></div>
+    </div>
+
+    <!-- Assumptions Section -->
+    <div id="assumptions" class="section">
+      <div class="section-header">
+        <h2>Key Assumptions &amp; Validation Status</h2>
+        <p>Fusion energy rests on several critical assumptions spanning physics, engineering, resources, policy, and economics. Here is where each stands.</p>
+      </div>
+      <div id="assumptions-content"></div>
+    </div>
+
+    <!-- Viability Signals Section -->
+    <div id="signals" class="section">
+      <div class="section-header">
+        <h2>Viability Signals</h2>
+        <p>Evidence for and against near-term fusion viability. Each signal includes a caveat to maintain intellectual honesty.</p>
+      </div>
+      <div id="signals-content"></div>
+    </div>
+
+    <!-- Waste & Safety Section -->
+    <div id="waste" class="section">
+      <div class="section-header">
+        <h2>Waste Processing &amp; Safety</h2>
+        <p>How fusion waste compares to fission, what safety characteristics fusion reactors have, and the environmental profile of fusion energy.</p>
+      </div>
+      <div id="waste-content"></div>
+    </div>
+
+    <!-- Timeline Scenarios Section -->
+    <div id="timeline" class="section">
+      <div class="section-header">
+        <h2>Timeline Scenarios</h2>
+        <p>When might fusion energy reach the grid? Four scenarios from optimistic to skeptical, with the reasoning behind each.</p>
+      </div>
+      <div id="timeline-content"></div>
+    </div>
+
+    <!-- Funding Section -->
+    <div id="funding" class="section">
+      <div class="section-header">
+        <h2>Funding Landscape</h2>
+        <p>Private investment and government funding for fusion energy development.</p>
+      </div>
+      <div id="funding-content"></div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      This dashboard is an independent educational resource. It is not affiliated with any fusion company or government program. Data is compiled from publicly available sources including company announcements, government reports, peer-reviewed publications, and industry surveys (e.g., Fusion Industry Association Global Fusion Industry reports).
+    </p>
+    <div class="sources-note">
+      <p>
+        <strong>Key Sources:</strong> ITER Organization, DOE Office of Science, UKAEA, FIA Global Fusion Industry Report, Nuclear Fusion journal, Nature/Science publications, company press releases. All projected dates and funding figures should be independently verified.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/fusion-data.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
