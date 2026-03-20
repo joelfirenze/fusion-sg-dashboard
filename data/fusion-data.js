@@ -18,6 +18,20 @@ const FUSION_DATA = {
   dataDisclaimer: "Data compiled from public sources. Projected dates are targets, not guarantees. Private company claims may not be independently verified. Last comprehensive update: May 2025.",
 
   // ============================================================
+  // PROGRESS STAGES (universal journey from concept to commercial power)
+  // ============================================================
+  progressStages: [
+    { id: 0, label: "Concept", short: "CON", description: "Theoretical design and physics basis" },
+    { id: 1, label: "Component R&D", short: "R&D", description: "Key technology demonstrations (magnets, plasma experiments)" },
+    { id: 2, label: "Prototype Build", short: "BLD", description: "Construction of demonstration device" },
+    { id: 3, label: "First Plasma", short: "FP", description: "Device achieves and sustains plasma" },
+    { id: 4, label: "Fusion Demonstrated", short: "FUS", description: "Confirmed fusion reactions in the device" },
+    { id: 5, label: "Net Energy (Q>1)", short: "Q>1", description: "More fusion energy out than heating energy in" },
+    { id: 6, label: "Net Electricity", short: "NET", description: "Device produces more electricity than it consumes" },
+    { id: 7, label: "Commercial", short: "COM", description: "Commercially viable, grid-connected power plant" }
+  ],
+
+  // ============================================================
   // SECTION 1: FUSION APPROACHES & MAJOR PROJECTS
   // ============================================================
   projects: [
@@ -32,6 +46,7 @@ const FUSION_DATA = {
       founded: 2007,
       funding: "$22B+ (estimated total cost, originally $5B)",
       status: "Under Construction (significant delays)",
+      progress: { stage: 2, pct: 60, note: "Assembly ~60% complete, but major schedule delays" },
       milestones: [
         { year: 2020, event: "Assembly phase began", achieved: true },
         { year: 2021, event: "Cryostat base installed", achieved: true },
@@ -65,6 +80,7 @@ const FUSION_DATA = {
       founded: 2018,
       funding: "$2B+ (including $1.8B Series B in 2021)",
       status: "Building SPARC device",
+      progress: { stage: 2, pct: 70, note: "SPARC construction well advanced; 20T HTS magnet demonstrated" },
       milestones: [
         { year: 2021, event: "Demonstrated 20T HTS magnet (world record for fusion-class)", achieved: true },
         { year: 2023, event: "Broke ground on SPARC facility in Devens, MA", achieved: true },
@@ -98,6 +114,7 @@ const FUSION_DATA = {
       founded: 2013,
       funding: "$2.2B+ total (including $500M Series E led by Sam Altman)",
       status: "Building Polaris prototype",
+      progress: { stage: 2, pct: 50, note: "7th gen Polaris under construction; 6th gen hit 100M\u00b0C" },
       milestones: [
         { year: 2021, event: "Trenta (6th gen) reached 100M°C plasma temperatures", achieved: true },
         { year: 2023, event: "Signed PPA with Microsoft for electricity by 2028", achieved: true },
@@ -132,6 +149,7 @@ const FUSION_DATA = {
       founded: 1998,
       funding: "$1.2B+ total raised",
       status: "Operating Copernicus (Da Vinci successor)",
+      progress: { stage: 3, pct: 40, note: "Copernicus operational; achieved 75M\u00b0C plasma but far from p-B11 temps" },
       milestones: [
         { year: 2015, event: "C-2U sustained FRC for 5+ ms", achieved: true },
         { year: 2017, event: "Norman (C-2W) achieved stable FRC plasmas at 50M+ °C", achieved: true },
@@ -165,6 +183,7 @@ const FUSION_DATA = {
       founded: 2009,
       funding: "$250M+",
       status: "Operating ST40, developing ST80-HTS",
+      progress: { stage: 3, pct: 50, note: "ST40 achieved 100M\u00b0C; HTS magnets demonstrated; next device in design" },
       milestones: [
         { year: 2022, event: "ST40 achieved 100 million °C ion temperature", achieved: true },
         { year: 2024, event: "Demonstrated HTS magnet technology", achieved: true },
@@ -195,6 +214,7 @@ const FUSION_DATA = {
       founded: 2002,
       funding: "$300M+",
       status: "Building Lawson Machine 26 (LM26) demo in Culham, UK",
+      progress: { stage: 2, pct: 40, note: "LM26 demo under construction at Culham; compression physics being validated" },
       milestones: [
         { year: 2021, event: "Announced demo plant at UKAEA Culham site", achieved: true },
         { year: 2023, event: "Construction of LM26 began", achieved: true },
@@ -226,6 +246,7 @@ const FUSION_DATA = {
       founded: 2011,
       funding: "$100M+",
       status: "Demonstrated fusion, developing power plant concept",
+      progress: { stage: 4, pct: 20, note: "Fusion confirmed by UKAEA (2022); now designing gain-capable Machine 4" },
       milestones: [
         { year: 2022, event: "Achieved fusion (confirmed by UKAEA), first private company ICF demonstration", achieved: true },
         { year: 2023, event: "Published gain-capable target design (Machine 4)", achieved: true },
@@ -255,6 +276,7 @@ const FUSION_DATA = {
       founded: 2017,
       funding: "$200M+",
       status: "Operating FuZE-Q prototype",
+      progress: { stage: 4, pct: 15, note: "FuZE-Q producing fusion neutrons; scaling to higher performance" },
       milestones: [
         { year: 2021, event: "Demonstrated sheared-flow stabilization in FuZE", achieved: true },
         { year: 2023, event: "FuZE-Q device operational, achieving fusion neutrons", achieved: true },
@@ -286,6 +308,7 @@ const FUSION_DATA = {
       founded: 2019,
       funding: "$100M+",
       status: "Design and component development",
+      progress: { stage: 1, pct: 60, note: "Stellarator design optimized; HTS magnet component R&D underway" },
       milestones: [
         { year: 2023, event: "Completed initial stellarator optimization design", achieved: true },
         { year: 2024, event: "Secured DOE milestone-based funding", achieved: true },
@@ -316,6 +339,7 @@ const FUSION_DATA = {
       founded: 1997,
       funding: "$3.5B construction + $300M+/year operations",
       status: "Operational, achieved ignition",
+      progress: { stage: 5, pct: 30, note: "Achieved target Q\u22481.9; but wall-plug Q<0.01 and not a power pathway" },
       milestones: [
         { year: 2022, event: "First scientific ignition: 3.15 MJ fusion from 2.05 MJ laser (Q=1.5 target gain)", achieved: true },
         { year: 2023, event: "Repeated ignition with 3.88 MJ yield (highest ever)", achieved: true },
@@ -349,6 +373,7 @@ const FUSION_DATA = {
       founded: 2006,
       funding: "Multi-billion USD (Chinese government)",
       status: "EAST operational, CFETR in design",
+      progress: { stage: 3, pct: 80, note: "EAST holds duration records (403s); CFETR next-step device in design" },
       milestones: [
         { year: 2021, event: "EAST sustained 120M°C plasma for 101 seconds", achieved: true },
         { year: 2023, event: "EAST sustained 70M°C plasma for 403 seconds (record)", achieved: true },
@@ -379,6 +404,7 @@ const FUSION_DATA = {
       founded: 2008,
       funding: "~$400M construction + ongoing operations",
       status: "Operational, setting records",
+      progress: { stage: 3, pct: 70, note: "High-performance plasma campaigns; 48s at 100M\u00b0C; K-DEMO in concept" },
       milestones: [
         { year: 2021, event: "Sustained 100M°C plasma for 30 seconds", achieved: true },
         { year: 2023, event: "100M°C plasma for 48 seconds (record for that temperature)", achieved: true },
@@ -407,6 +433,7 @@ const FUSION_DATA = {
       founded: 2013,
       funding: "~$1.5B (EU-Japan joint)",
       status: "First plasma achieved, commissioning",
+      progress: { stage: 3, pct: 30, note: "First plasma Oct 2023; initial research campaigns underway" },
       milestones: [
         { year: 2023, event: "First plasma achieved (October 2023)", achieved: true },
         { year: "2024-2025", event: "Initial research campaigns", achieved: true },
@@ -435,6 +462,7 @@ const FUSION_DATA = {
       founded: 2019,
       funding: "£220M+ initial, multi-billion total expected",
       status: "Conceptual design, site selected (West Burton)",
+      progress: { stage: 0, pct: 80, note: "Conceptual design phase; site selected; targeting net electricity by ~2040" },
       milestones: [
         { year: 2022, event: "West Burton, Nottinghamshire selected as site", achieved: true },
         { year: 2024, event: "Conceptual design phase ongoing", achieved: true },
@@ -465,6 +493,7 @@ const FUSION_DATA = {
       founded: 2019,
       funding: "$100M+",
       status: "Research and development phase",
+      progress: { stage: 1, pct: 30, note: "Early R&D; laser facility partnerships; target physics experiments" },
       milestones: [
         { year: 2023, event: "Partnerships with major laser facilities (e.g., LLNL, LMU Munich)", achieved: true },
         { year: 2024, event: "Secured additional funding and facility access", achieved: true },
@@ -495,6 +524,7 @@ const FUSION_DATA = {
       founded: 2015,
       funding: "~€1.1B",
       status: "Operational, world-leading stellarator results",
+      progress: { stage: 3, pct: 60, note: "Record stellarator performance; 1.3 GJ energy turnover; divertor upgrade planned" },
       milestones: [
         { year: 2018, event: "Achieved record stellarator plasma performance", achieved: true },
         { year: 2022, event: "Achieved 8 minutes plasma duration, energy confinement approaching tokamak levels", achieved: true },
@@ -991,7 +1021,57 @@ const FUSION_DATA = {
       maxScore: 10,
       label: "Strong",
       detail: "Fundamental physics is proven. D-T fusion works. Ignition achieved (NIF). Remaining question: burning plasma behavior at reactor scale.",
-      color: "#10b981"
+      color: "#10b981",
+      subParameters: [
+        {
+          name: "Plasma Confinement (Triple Product)",
+          score: 9, maxScore: 10,
+          status: "Near target",
+          detail: "The fusion triple product (temperature \u00d7 density \u00d7 confinement time) has improved ~10,000\u00d7 since 1970. JET reached ~40% of the ignition threshold. Multiple devices now operate in the reactor-relevant regime for individual parameters.",
+          evidence: "JET achieved Q=0.67 (1997). KSTAR held 100M\u00b0C for 48 seconds. EAST sustained 70M\u00b0C for 403 seconds.",
+          gap: "Achieving all three parameters simultaneously at reactor scale, in sustained steady-state, remains to be demonstrated in a single device."
+        },
+        {
+          name: "Energy Gain (Q Factor) Physics",
+          score: 8, maxScore: 10,
+          status: "Demonstrated in ICF",
+          detail: "NIF proved Q>1 is physically achievable (target gain ~1.5\u20131.9). The physics of energy gain is well understood for both magnetic and inertial confinement.",
+          evidence: "NIF ignition (Dec 2022): 3.15 MJ fusion from 2.05 MJ laser input. Repeated with 3.88 MJ yield (2023).",
+          gap: "No magnetic confinement device has achieved Q>1. ITER targets Q=10 but is years away. SPARC targets Q\u22652."
+        },
+        {
+          name: "Fuel Cycle Physics (D-T Cross Section)",
+          score: 9, maxScore: 10,
+          status: "Well established",
+          detail: "The D-T fusion cross section peaks around 64 keV (~700 million \u00b0C) and is the most favorable known fusion reaction. Nuclear data is precise and well-validated.",
+          evidence: "Measured in accelerators and confirmed in tokamak/ICF experiments for decades. No physics uncertainty here.",
+          gap: "Minimal. D-T physics is settled. Alternative fuels (D-He3, p-B11) have much lower cross sections and require far higher temperatures."
+        },
+        {
+          name: "Plasma Stability & Disruption Control",
+          score: 6, maxScore: 10,
+          status: "Active challenge",
+          detail: "Tokamak plasmas can suffer disruptions \u2014 sudden losses of confinement that dump energy into vessel walls. At ITER scale, unmitigated disruptions could cause structural damage.",
+          evidence: "Disruption prediction via ML reaches >95% accuracy on DIII-D/EAST. Shattered pellet injection is ITER\u2019s baseline mitigation. Stellarators and FRCs avoid disruptions entirely by design.",
+          gap: "ITER-scale disruption mitigation is untested. Runaway electron beam formation during disruptions is a serious open problem. Disruption-free high-performance operation has not been demonstrated at reactor-relevant parameters."
+        },
+        {
+          name: "Burning Plasma Behavior",
+          score: 5, maxScore: 10,
+          status: "Uncharted territory",
+          detail: "In a burning plasma, alpha particles from fusion reactions provide the dominant heating (self-heating). This regime has barely been accessed experimentally. New instabilities (e.g., Alfv\u00e9n eigenmodes driven by fast alpha particles) may emerge.",
+          evidence: "JET saw alpha heating contributing ~10\u201315% of plasma heating. NIF achieved a form of burning plasma in ICF. Theory and simulations exist but are not fully validated.",
+          gap: "No magnetic device has operated in the alpha-dominated heating regime. SPARC and ITER are designed to access it. Behavior could be better or worse than predicted."
+        },
+        {
+          name: "Plasma Exhaust & Divertor Physics",
+          score: 6, maxScore: 10,
+          status: "Challenging",
+          detail: "Exhaust heat from the plasma must be spread over a large enough area to avoid melting divertor components. Power densities can exceed 10 MW/m\u00b2 steady-state.",
+          evidence: "Detached divertor operation demonstrated on several tokamaks. Advanced divertor geometries (Super-X, snowflake) tested on MAST-U.",
+          gap: "Reactor-scale heat exhaust with acceptable erosion rates is unproven. The \u2018narrow scrape-off layer\u2019 problem means heat concentrates in a thin channel."
+        }
+      ]
     },
     {
       dimension: "Engineering Feasibility",
@@ -999,7 +1079,65 @@ const FUSION_DATA = {
       maxScore: 10,
       label: "Significant Gaps",
       detail: "Materials, tritium breeding, plasma-facing components, and full plant integration are undemonstrated at reactor-relevant conditions.",
-      color: "#f59e0b"
+      color: "#f59e0b",
+      subParameters: [
+        {
+          name: "Superconducting Magnets",
+          score: 7, maxScore: 10,
+          status: "Major progress",
+          detail: "HTS (REBCO) magnets are a game-changer, enabling much stronger fields in smaller, cheaper devices. CFS demonstrated a 20T large-bore HTS magnet in 2021. ITER uses conventional Nb\u2083Sn magnets, already manufactured.",
+          evidence: "CFS 20T magnet (2021). ITER toroidal field coils produced. Tokamak Energy HTS prototypes. Industrial REBCO tape production scaling.",
+          gap: "Full toroidal HTS magnet set never operated in a fusion device. Radiation effects on HTS tape in 14.1 MeV neutron environment unknown. REBCO tape cost must fall ~5\u201310\u00d7 for commercial viability. Joint design and quench protection at scale."
+        },
+        {
+          name: "Tritium Breeding Blanket",
+          score: 3, maxScore: 10,
+          status: "Critical gap",
+          detail: "D-T reactors must breed their own tritium by capturing fusion neutrons in lithium blankets. The tritium breeding ratio (TBR) must exceed 1.0 including all losses. This has never been demonstrated.",
+          evidence: "Neutronics simulations predict TBR of 1.05\u20131.15 is achievable. Small-scale lithium ceramic and liquid metal blanket tests conducted. ITER will test 6 different Test Blanket Module (TBM) concepts.",
+          gap: "No integrated tritium breeding demonstration exists. Real-world TBR is unknown (ports, penetrations, streaming paths reduce it). Tritium extraction from breeding material at scale unproven. Structural integrity of blankets under neutron irradiation untested."
+        },
+        {
+          name: "First Wall & Plasma-Facing Materials",
+          score: 3, maxScore: 10,
+          status: "Critical gap",
+          detail: "The first wall and divertor must withstand extreme neutron bombardment (14.1 MeV), intense heat flux, plasma erosion, and electromagnetic forces \u2014 simultaneously and for years.",
+          evidence: "Tungsten and beryllium used in current tokamaks. RAFM steels (EUROFER97) developed for reactor use. Extensive fission-proxy irradiation tests performed.",
+          gap: "No material has been tested under true 14.1 MeV fusion neutron conditions at reactor-relevant fluence (50\u2013150 dpa). Helium embrittlement at these energies may be qualitatively different from fission data. IFMIF-DONES facility (the dedicated test source) is years from operation."
+        },
+        {
+          name: "Tritium Fuel Cycle & Processing",
+          score: 4, maxScore: 10,
+          status: "Partially demonstrated",
+          detail: "A fusion plant must process, purify, and reinject tritium at high throughput with >99.9% recovery. Tritium permeation, accounting, and environmental release must be tightly controlled.",
+          evidence: "ITER is building the Tokamak Exhaust Processing system. Tritium handling experience from CANDU reactors and weapons complex. JET operated with tritium (D-T campaigns).",
+          gap: "Full closed-loop tritium cycle at power-plant throughput never demonstrated. Tritium inventory control at the kg-scale in a plant environment. Permeation barriers and accountancy at required precision."
+        },
+        {
+          name: "Remote Maintenance & Availability",
+          score: 3, maxScore: 10,
+          status: "Early development",
+          detail: "Activated reactor components must be maintained and replaced entirely by remote handling systems. Plant availability (uptime) determines economic viability but is completely unknown.",
+          evidence: "JET and ITER have developed remote handling systems. Robotics advancing rapidly. UKAEA has a dedicated remote maintenance R&D program.",
+          gap: "Remote replacement of large, activated in-vessel components (blankets, divertors) at commercial speed is unproven. How often components need replacement is unknown. Target availability of 70\u201380% is assumed but has no basis in data."
+        },
+        {
+          name: "Heat Exhaust & Power Conversion",
+          score: 5, maxScore: 10,
+          status: "Conventional, with caveats",
+          detail: "Fusion heat would drive a conventional steam turbine (Rankine cycle) or potentially a Brayton cycle. This part leverages existing power engineering. The challenge is the interface: extracting heat from a hostile nuclear environment.",
+          evidence: "Steam turbine technology is mature. Helium and molten salt coolant loops are under development. High-temperature blankets could improve efficiency.",
+          gap: "The thermal-hydraulic interface between the breeding blanket and the power conversion system is undesigned at scale. Pulsed operation (if any) complicates thermal management. Thermal efficiency estimates (33\u201340%) are projections."
+        },
+        {
+          name: "Plant Integration & Balance of Plant",
+          score: 2, maxScore: 10,
+          status: "Conceptual only",
+          detail: "A complete fusion power plant requires integration of plasma device, magnets, blankets, tritium systems, remote handling, cryogenics, power conversion, control systems, and shielding into a single functioning unit.",
+          evidence: "Power plant design studies exist (ARIES, EU-DEMO, ARC, STEP concepts). These are paper designs informed by physics and engineering models.",
+          gap: "No integrated fusion power plant design has been built. Parasitic power consumption (cryogenics, heating, pumping, tritium) could be 100\u2013200+ MW. The recirculating power fraction is a key unknown. First-of-a-kind integration challenges are historically severe in nuclear projects."
+        }
+      ]
     },
     {
       dimension: "Economic Feasibility",
@@ -1007,7 +1145,65 @@ const FUSION_DATA = {
       maxScore: 10,
       label: "Highly Uncertain",
       detail: "No actual cost data from any fusion power plant. Estimates range $50-200+/MWh. Must compete against rapidly cheapening renewables+storage.",
-      color: "#ef4444"
+      color: "#ef4444",
+      subParameters: [
+        {
+          name: "Capital Cost (Overnight)",
+          score: 2, maxScore: 10,
+          status: "Highly speculative",
+          detail: "Estimates for a first-of-a-kind (FOAK) fusion plant range from $5\u201320+ billion. Nth-of-a-kind projections are $3\u20138 billion for a ~1 GW plant, comparable to advanced fission. ITER's $22B+ cost is not representative of a power plant but illustrates the risk.",
+          evidence: "ARIES-AT study: ~$5/W overnight. EU-DEMO: ~$7\u201310/W projected. ARC (CFS): claims $3\u20135/W. These are models, not actuals.",
+          gap: "Zero actual construction cost data. ITER cost overruns (4\u20135\u00d7 original estimate) suggest projections should be treated with extreme caution. The gap between FOAK and NOAK costs could be enormous."
+        },
+        {
+          name: "Operating & Maintenance Costs",
+          score: 2, maxScore: 10,
+          status: "Unknown",
+          detail: "Operating costs are dominated by component replacement (blankets, divertors), tritium management, and staffing. If in-vessel components need replacement every 2\u20135 years (plausible given materials uncertainty), this drives costs significantly.",
+          evidence: "Fission plants: ~$15\u201325/MWh O&M. Fusion estimates: $10\u201340/MWh, but highly uncertain.",
+          gap: "Component lifetime under reactor conditions is unknown. Replacement cost and duration are unknown. Tritium cost and processing overhead are unknown."
+        },
+        {
+          name: "Availability Factor / Capacity Factor",
+          score: 2, maxScore: 10,
+          status: "Assumed, not demonstrated",
+          detail: "Power plant economics depend heavily on how much of the time the plant is generating power. Fusion designs assume 70\u201380% capacity factor, comparable to nuclear fission (~90%). But there is no empirical basis for this.",
+          evidence: "ITER is not designed for high availability. No fusion device has operated as a power plant. Fission took decades to reach 90% availability.",
+          gap: "Component replacement schedules, unplanned outages, and startup/shutdown cycles are all unknown. If availability is 30\u201350% (plausible for a first-of-kind), LCOE doubles or triples."
+        },
+        {
+          name: "Levelized Cost of Electricity (LCOE)",
+          score: 2, maxScore: 10,
+          status: "Speculative ranges only",
+          detail: "LCOE combines capital cost, O&M, fuel, and availability into a single $/MWh figure. Fusion estimates span a very wide range.",
+          evidence: "Optimistic: $50\u201380/MWh (comparable to new nuclear fission). Central: $80\u2013150/MWh. Pessimistic: $150\u2013300+/MWh. Current solar+storage: $30\u201360/MWh and falling.",
+          gap: "Every input to the LCOE calculation (capital, O&M, availability, lifetime) is uncertain by a factor of 2\u20135\u00d7. The resulting LCOE uncertainty is very large."
+        },
+        {
+          name: "Competitiveness vs Alternatives",
+          score: 4, maxScore: 10,
+          status: "Uncertain market position",
+          detail: "Fusion must compete with renewables+storage, advanced fission, geothermal, and potentially other technologies that will be mature by the 2040s\u20132050s when fusion arrives.",
+          evidence: "Solar LCOE has fallen ~90% in a decade. Battery storage costs falling ~15%/year. Advanced fission (SMRs) targeting $60\u201380/MWh. Grid-scale storage solutions proliferating.",
+          gap: "Fusion may find a niche in baseload, industrial process heat, hydrogen production, or locations where renewables are insufficient. But if it costs 2\u20133\u00d7 renewables+storage, market uptake will be limited to premium applications."
+        },
+        {
+          name: "Learning Rate & Cost Reduction Pathway",
+          score: 3, maxScore: 10,
+          status: "Plausible but unproven",
+          detail: "Like any energy technology, fusion costs should decrease with deployment experience. Fission saw limited learning; solar saw dramatic learning. Fusion's learning rate is unknowable at this stage.",
+          evidence: "Nuclear fission: costs actually increased over time in many countries (negative learning). Solar: ~24% cost reduction per doubling of capacity. Wind: ~15%.",
+          gap: "Fusion is a complex, nuclear-class technology. It may follow the fission pattern (limited learning due to safety requirements and bespoke engineering) rather than the solar pattern (modular, scalable manufacturing)."
+        },
+        {
+          name: "Fuel Costs",
+          score: 9, maxScore: 10,
+          status: "Negligible",
+          detail: "Deuterium is extracted from ordinary water (~$1,000/kg, essentially free per unit energy). Lithium is abundant. Fuel cost is a negligible fraction of total cost.",
+          evidence: "1 kg of D-T fuel releases ~340 GJ. Fuel cost is estimated at <$0.01/MWh. Even lithium-6 enrichment costs are small relative to plant capital.",
+          gap: "Minimal. Fuel cost is one of fusion's genuine advantages over fossil fuels and even fission."
+        }
+      ]
     },
     {
       dimension: "Timeline Confidence",
@@ -1015,7 +1211,57 @@ const FUSION_DATA = {
       maxScore: 10,
       label: "Low-Medium",
       detail: "2040s grid power is plausible but far from certain. 2030s claims from private companies are aspirational. Historical track record is poor.",
-      color: "#f59e0b"
+      color: "#f59e0b",
+      subParameters: [
+        {
+          name: "Private Sector Targets (2030s)",
+          score: 3, maxScore: 10,
+          status: "Aspirational",
+          detail: "Several private companies target net electricity or demonstration plants in the early 2030s: CFS (ARC ~2032\u201335), Helion (Microsoft PPA by 2028), Tokamak Energy (2030s). The Fusion Industry Association\u2019s survey shows median company expectation of first power by early 2030s.",
+          evidence: "CFS SPARC first plasma target: 2026\u20132027. Helion Polaris: 2025\u20132026. Both are on stated timelines per company reports. Significant capital raised to support these timelines.",
+          gap: "History of private fusion: General Fusion, TAE, and others have repeatedly pushed back timelines. The jump from \u2018first plasma in a demo\u2019 to \u2018electricity on the grid\u2019 requires solving all the engineering challenges simultaneously. No private company has yet operated a device that produces fusion neutrons at meaningful energy levels."
+        },
+        {
+          name: "Government Program Targets (2040s)",
+          score: 5, maxScore: 10,
+          status: "More conservative, still uncertain",
+          detail: "Government programs set more conservative targets: UK STEP (~2040), EU-DEMO (2050s), China CFETR (2040s), US Bold Decadal Vision (fusion pilot plant by 2035\u20132040). These timelines have better institutional backing but are also subject to political and funding risk.",
+          evidence: "UK has selected a site for STEP and allocated initial funding. US DOE has a milestone-based fusion program. China is investing aggressively.",
+          gap: "Government fusion timelines have historically slipped dramatically (ITER being the prime example). Sustained political commitment across election cycles is not guaranteed. Funding may not match ambitions."
+        },
+        {
+          name: "Historical Accuracy of Fusion Timelines",
+          score: 2, maxScore: 10,
+          status: "Very poor track record",
+          detail: "Fusion has been \u201c30 years away\u201d for 50+ years. A 1976 ERDA study projected fusion power by 2000 with adequate funding \u2014 that funding never materialized. Every major project (TFTR, JET, ITER) has taken longer and cost more than projected.",
+          evidence: "ITER: 2001 baseline had first plasma in 2016 at ~$5B. Actual: first plasma ~2035 at $22B+. JET D-T campaign: originally planned for early 1990s, achieved 1997. TFTR: 2\u00d7 over budget.",
+          gap: "The pattern is consistent: fusion projects underestimate complexity, cost, and time. There are structural reasons (novel technology, nuclear safety, international governance) that make this likely to continue."
+        },
+        {
+          name: "Regulatory & Licensing Timeline",
+          score: 5, maxScore: 10,
+          status: "Developing",
+          detail: "Regulatory frameworks are being developed in key jurisdictions. The UK has classified fusion as non-nuclear (more favorable). The US NRC is developing a fusion-specific framework. Speed of licensing will significantly affect deployment timelines.",
+          evidence: "UK: fusion regulated under existing environment/health frameworks, not nuclear. US: NRC Part 30 pathway proposed (byproduct material). Canada developing position.",
+          gap: "US NRC final rules not complete. First-of-a-kind licensing could take 3\u20135+ years even under favorable rules. Environmental impact assessments, public hearings, and construction permits add time. International harmonization is lacking."
+        },
+        {
+          name: "Supply Chain & Industrial Readiness",
+          score: 4, maxScore: 10,
+          status: "Immature",
+          detail: "A fusion industry requires specialized supply chains: REBCO superconducting tape, enriched lithium-6, tritium-compatible materials, large vacuum vessels, remote handling robotics, and specialized construction capabilities.",
+          evidence: "REBCO tape production is scaling (driven partly by fusion demand). Vacuum vessel fabrication demonstrated for ITER. Nuclear-qualified materials and welding exist from fission industry.",
+          gap: "REBCO production must scale ~10\u2013100\u00d7 for a fleet of fusion plants. Lithium-6 enrichment capacity is very limited. Tritium supply for startup is constrained (~25 kg globally). Specialized component manufacturers are few."
+        },
+        {
+          name: "Workforce & Expertise",
+          score: 5, maxScore: 10,
+          status: "Growing but thin",
+          detail: "The fusion workforce is growing rapidly (driven by private sector hiring) but remains small compared to what a commercial industry would need. Key skills: plasma physics, nuclear engineering, superconductor engineering, remote handling, tritium chemistry.",
+          evidence: "FIA reports rapid employment growth in fusion companies. University programs expanding. ITER and national labs training next generation.",
+          gap: "Scaling from ~5,000 fusion professionals globally to the tens of thousands needed for an industry. Competition with fission, defense, and other sectors for nuclear-qualified engineers. Training pipeline takes 5\u201310 years."
+        }
+      ]
     }
   ],
   criticalPath: [

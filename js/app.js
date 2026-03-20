@@ -101,16 +101,49 @@
       </div>
 
       <h3 style="margin: 24px 0 16px;">Feasibility Assessment</h3>
-      <div class="grid-4">
-        ${data.feasibilityScores.map(f => `
-          <div class="card" style="text-align: center;">
-            <div style="font-size: 2.2rem; font-weight: 800; color: ${f.color};">${f.score}<span style="font-size: 1rem; color: var(--text-muted);">/${f.maxScore}</span></div>
-            <div style="font-weight: 700; margin: 4px 0;">${f.dimension}</div>
-            <div style="font-size: 0.8rem; color: ${f.color}; font-weight: 600; text-transform: uppercase; margin-bottom: 8px;">${f.label}</div>
-            <div class="confidence-track" style="margin-bottom: 8px;">
-              <div class="confidence-fill" style="width: ${f.score * 10}%; background: ${f.color};"></div>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">Click any dimension to expand its sub-parameters and see the detailed breakdown behind each score.</p>
+      <div class="grid-2">
+        ${data.feasibilityScores.map((f, fi) => `
+          <div class="card feasibility-card" style="cursor: pointer;" onclick="toggleFeasibility(this)">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="text-align: center; min-width: 64px;">
+                <div style="font-size: 2.2rem; font-weight: 800; color: ${f.color};">${f.score}<span style="font-size: 0.9rem; color: var(--text-muted);">/${f.maxScore}</span></div>
+              </div>
+              <div style="flex: 1;">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span class="feas-chevron" style="font-size: 0.8rem; color: var(--text-muted); transition: transform 0.2s;">&#9654;</span>
+                  <span style="font-weight: 700; font-size: 1.05rem;">${f.dimension}</span>
+                  <span style="font-size: 0.75rem; color: ${f.color}; font-weight: 600; text-transform: uppercase; background: ${f.color}22; padding: 2px 10px; border-radius: 12px;">${f.label}</span>
+                </div>
+                <div class="confidence-track" style="margin-top: 8px;">
+                  <div class="confidence-fill" style="width: ${f.score * 10}%; background: ${f.color};"></div>
+                </div>
+                <div style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 6px;">${f.detail}</div>
+              </div>
             </div>
-            <div style="font-size: 0.8rem; color: var(--text-secondary);">${f.detail}</div>
+            <div class="feas-dropdown" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+              <div style="border-top: 1px solid var(--border); margin-top: 16px; padding-top: 16px;">
+                ${(f.subParameters || []).map(sp => {
+                  const spColor = sp.score >= 7 ? 'var(--accent-green)' : sp.score >= 4 ? 'var(--accent-yellow)' : 'var(--accent-red)';
+                  return `
+                  <div class="feas-sub" style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.04);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; flex-wrap: wrap; gap: 6px;">
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-weight: 700; font-size: 1.1rem; color: ${spColor}; min-width: 32px;">${sp.score}<span style="font-size: 0.7rem; color: var(--text-muted);">/${sp.maxScore}</span></span>
+                        <span style="font-weight: 600; font-size: 0.92rem;">${sp.name}</span>
+                      </div>
+                      <span style="font-size: 0.7rem; padding: 2px 10px; border-radius: 12px; background: ${spColor}22; color: ${spColor}; font-weight: 600; text-transform: uppercase;">${sp.status}</span>
+                    </div>
+                    <div class="confidence-track" style="margin-bottom: 8px; height: 5px;">
+                      <div class="confidence-fill" style="width: ${sp.score * 10}%; background: ${spColor};"></div>
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 6px;">${sp.detail}</p>
+                    <div style="font-size: 0.8rem; color: var(--accent-green); margin-bottom: 4px;"><strong>Evidence:</strong> ${sp.evidence}</div>
+                    <div style="font-size: 0.8rem; color: var(--accent-yellow);"><strong>Key gap:</strong> ${sp.gap}</div>
+                  </div>`;
+                }).join('')}
+              </div>
+            </div>
           </div>
         `).join('')}
       </div>
@@ -129,6 +162,8 @@
         `).join('')}
       </div>
 
+      ${renderOverviewComparison()}
+
       <div class="card" style="margin-top: 16px; border-left: 3px solid var(--accent-yellow);">
         <h3 style="color: var(--accent-yellow);">A Note on Uncertainty</h3>
         <p style="color: var(--text-secondary); margin-top: 8px;">
@@ -136,6 +171,90 @@
         </p>
       </div>
     `;
+  }
+
+  // ---- Progress Meter Helper ----
+  const stages = data.progressStages;
+
+  function renderProgressMeter(progress) {
+    if (!progress) return '';
+    const stagesHTML = stages.map(s => {
+      let cls = '';
+      let fillPct = 0;
+      if (s.id < progress.stage) {
+        cls = 'completed';
+        fillPct = 100;
+      } else if (s.id === progress.stage) {
+        cls = 'current';
+        fillPct = progress.pct;
+      }
+      return `
+        <div class="pm-stage ${cls}" title="${s.description}">
+          <div class="pm-stage-track">
+            <div class="pm-stage-fill pm-fill-${s.id}" style="width: ${fillPct}%;"></div>
+          </div>
+          <div class="pm-stage-name">${s.short}</div>
+        </div>`;
+    }).join('');
+
+    const currentStage = stages[progress.stage];
+    return `
+      <div class="progress-meter">
+        <div class="pm-label">
+          <span class="pm-label-text">Progress to Commercial Power</span>
+          <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600;">${currentStage.label} (${progress.pct}%)</span>
+        </div>
+        <div class="pm-stages">${stagesHTML}</div>
+        ${progress.note ? `<div class="pm-note">${progress.note}</div>` : ''}
+      </div>`;
+  }
+
+  function renderOverviewComparison() {
+    // Sort projects by overall progress (stage * 100 + pct)
+    const sorted = [...data.projects]
+      .filter(p => p.progress)
+      .sort((a, b) => (b.progress.stage * 100 + b.progress.pct) - (a.progress.stage * 100 + a.progress.pct));
+
+    const rows = sorted.map(p => {
+      const prog = p.progress;
+      const segs = stages.map(s => {
+        let fillPct = 0;
+        let fillClass = '';
+        if (s.id < prog.stage) { fillPct = 100; fillClass = `pm-fill-${s.id}`; }
+        else if (s.id === prog.stage) { fillPct = prog.pct; fillClass = `pm-fill-${s.id}`; }
+        const fillHTML = fillPct > 0
+          ? `<div class="overview-pm-seg-fill ${fillClass}" style="width:${fillPct}%;"></div>`
+          : '';
+        return `<div class="overview-pm-seg">${fillHTML}</div>`;
+      }).join('');
+
+      const currentStage = stages[prog.stage];
+      return `
+        <div class="overview-pm-row">
+          <div class="overview-pm-name">${p.name.replace(/ \(.*?\)/, '')}</div>
+          <div class="overview-pm-bar-wrap">${segs}</div>
+          <div class="overview-pm-stage-label">${currentStage.label}</div>
+        </div>`;
+    }).join('');
+
+    // Stage legend
+    const legend = stages.map(s =>
+      `<div style="text-align:center;flex:1;font-size:0.65rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.3px;">${s.short}</div>`
+    ).join('');
+
+    return `
+      <div class="card" style="margin-top: 24px;">
+        <h3 style="margin-bottom: 4px;">Progress Comparison</h3>
+        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 16px;">
+          All projects mapped onto the same 8-stage journey from concept to commercial power. Stage positions are editorial assessments, not self-reported.
+        </p>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;">
+          <div style="min-width:180px;max-width:180px;"></div>
+          <div style="flex:1;display:flex;gap:2px;">${legend}</div>
+          <div style="min-width:120px;max-width:120px;"></div>
+        </div>
+        ${rows}
+      </div>`;
   }
 
   // ---- Render Projects ----
@@ -204,6 +323,8 @@
               <strong>Status:</strong> ${p.status}
             </div>
 
+            ${renderProgressMeter(p.progress)}
+
             ${metricsHTML ? `<div class="metrics-grid">${metricsHTML}</div>` : ''}
 
             <div class="expandable-header" onclick="toggleExpand(this)">
@@ -271,43 +392,75 @@
       return 'var(--accent-red)';
     }
 
-    const cards = data.assumptions.map(a => {
-      const validatedHTML = a.validatedBy.map(v => `<li style="color: var(--accent-green);">${v}</li>`).join('');
-      const gapsHTML = a.remainingGaps.map(g => `<li>${g}</li>`).join('');
+    // Group by category
+    const categories = {};
+    data.assumptions.forEach(a => {
+      if (!categories[a.category]) categories[a.category] = [];
+      categories[a.category].push(a);
+    });
 
-      return `
-        <div class="card assumption-card">
-          <div class="category-tag">${a.category}</div>
-          <div class="card-header">
-            <h3>${a.name}</h3>
-            ${getStatusLabel(a.status)}
+    let html = '';
+    for (const [cat, items] of Object.entries(categories)) {
+      const avgConf = Math.round(items.reduce((sum, a) => sum + a.confidence, 0) / items.length);
+      const avgColor = getConfidenceColor(avgConf);
+
+      html += `
+        <div style="margin-bottom: 8px;">
+          <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+            <h3 style="margin: 0;">${cat}</h3>
+            <span style="font-size: 0.8rem; color: ${avgColor}; font-weight: 600;">Avg confidence: ${avgConf}%</span>
           </div>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 12px;">${a.description}</p>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px;">${a.detail}</p>
+        </div>`;
 
-          <div class="confidence-bar">
-            <span style="font-size: 0.85rem; color: var(--text-muted);">Confidence:</span>
-            <div class="confidence-track">
-              <div class="confidence-fill" style="width: ${a.confidence}%; background: ${getConfidenceColor(a.confidence)};"></div>
-            </div>
-            <span class="confidence-label" style="color: ${getConfidenceColor(a.confidence)};">${a.confidence}%</span>
-          </div>
+      items.forEach(a => {
+        const confColor = getConfidenceColor(a.confidence);
+        const validatedHTML = a.validatedBy.map(v =>
+          `<div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;"><span style="color:var(--accent-green);font-size:0.8rem;font-weight:700;">+</span><span style="font-size:0.85rem;color:var(--text-secondary);">${v}</span></div>`
+        ).join('');
+        const gapsHTML = a.remainingGaps.map(g =>
+          `<div style="display:flex;align-items:baseline;gap:6px;margin-bottom:4px;"><span style="color:var(--accent-red);font-size:0.8rem;font-weight:700;">?</span><span style="font-size:0.85rem;color:var(--text-secondary);">${g}</span></div>`
+        ).join('');
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;">
-            <div>
-              <strong style="font-size: 0.8rem; color: var(--accent-green);">VALIDATED BY:</strong>
-              <ul class="uncertainty-list" style="margin-top: 4px;">${validatedHTML}</ul>
+        html += `
+          <div class="card assumption-card" style="cursor: pointer;" onclick="toggleAssumption(this)">
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <div style="text-align: center; min-width: 56px;">
+                <div style="font-size: 1.6rem; font-weight: 800; color: ${confColor};">${a.confidence}%</div>
+              </div>
+              <div style="flex: 1; min-width: 0;">
+                <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+                  <span class="assumption-chevron" style="font-size: 0.75rem; color: var(--text-muted); transition: transform 0.2s;">&#9654;</span>
+                  <span style="font-weight: 700; font-size: 1rem;">${a.name}</span>
+                  ${getStatusLabel(a.status)}
+                </div>
+                <div style="display: flex; align-items: center; gap: 12px; margin-top: 8px;">
+                  <div class="confidence-track" style="flex: 1;">
+                    <div class="confidence-fill" style="width: ${a.confidence}%; background: ${confColor};"></div>
+                  </div>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 6px;">${a.description}</p>
+              </div>
             </div>
-            <div>
-              <strong style="font-size: 0.8rem; color: var(--accent-red);">REMAINING GAPS:</strong>
-              <ul class="uncertainty-list" style="margin-top: 4px;">${gapsHTML}</ul>
+            <div class="assumption-dropdown" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+              <div style="border-top: 1px solid var(--border); margin-top: 16px; padding-top: 16px;">
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 16px; line-height: 1.7;">${a.detail}</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                  <div>
+                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-green); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Validated by</div>
+                    ${validatedHTML}
+                  </div>
+                  <div>
+                    <div style="font-size: 0.75rem; font-weight: 700; color: var(--accent-red); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Remaining gaps</div>
+                    ${gapsHTML}
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      `;
-    }).join('');
+          </div>`;
+      });
+    }
 
-    container.innerHTML = cards;
+    container.innerHTML = html;
   }
 
   // ---- Render Viability Signals ----
@@ -625,6 +778,34 @@
     el.classList.toggle('open');
     const content = el.nextElementSibling;
     if (content) content.classList.toggle('open');
+  };
+
+  window.toggleFeasibility = function(card) {
+    const dropdown = card.querySelector('.feas-dropdown');
+    const chevron = card.querySelector('.feas-chevron');
+    if (!dropdown) return;
+    const isOpen = dropdown.style.maxHeight && dropdown.style.maxHeight !== '0px';
+    if (isOpen) {
+      dropdown.style.maxHeight = '0px';
+      if (chevron) chevron.style.transform = 'rotate(0deg)';
+    } else {
+      dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+      if (chevron) chevron.style.transform = 'rotate(90deg)';
+    }
+  };
+
+  window.toggleAssumption = function(card) {
+    const dropdown = card.querySelector('.assumption-dropdown');
+    const chevron = card.querySelector('.assumption-chevron');
+    if (!dropdown) return;
+    const isOpen = dropdown.style.maxHeight && dropdown.style.maxHeight !== '0px';
+    if (isOpen) {
+      dropdown.style.maxHeight = '0px';
+      if (chevron) chevron.style.transform = 'rotate(0deg)';
+    } else {
+      dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+      if (chevron) chevron.style.transform = 'rotate(90deg)';
+    }
   };
 
   // ---- Initialize ----
