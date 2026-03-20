@@ -35,3 +35,7 @@ The updater creates a timestamped backup before saving.
 ## Data Sources
 
 ITER Organization, DOE Office of Science, UKAEA, FIA Global Fusion Industry Report, Nuclear Fusion journal, Nature/Science publications, and company press releases. All projected dates are aspirational targets, not predictions. Confidence assessments are subjective estimates.
+
+## License
+
+[MIT](LICENSE) — Eddie Choo
