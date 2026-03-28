@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>References — Fusion Energy Progress Dashboard</title>
+  <meta name="description" content="Full reference list and methodology notes for the Fusion Energy Progress Dashboard.">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .ref-section { margin-bottom: 40px; }
+    .ref-section h3 {
+      color: var(--accent-cyan);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+    }
+    .ref-list { list-style: none; padding: 0; }
+    .ref-list li {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    .ref-list li:hover { background: var(--bg-card-hover); }
+    .ref-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+    .ref-tag.official { background: rgba(59,130,246,0.2); color: var(--accent-blue); }
+    .ref-tag.press { background: rgba(139,92,246,0.2); color: var(--accent-purple); }
+    .ref-tag.journal { background: rgba(16,185,129,0.2); color: var(--accent-green); }
+    .ref-tag.gov { background: rgba(245,158,11,0.2); color: var(--accent-yellow); }
+    .ref-tag.news { background: rgba(236,72,153,0.2); color: var(--accent-pink); }
+    .ref-tag.report { background: rgba(249,115,22,0.2); color: var(--accent-orange); }
+    .ref-url { color: var(--accent-cyan); text-decoration: none; word-break: break-all; }
+    .ref-url:hover { text-decoration: underline; }
+    .ref-date { color: var(--text-muted); font-size: 0.8rem; margin-left: 4px; }
+    .caveat-box {
+      background: linear-gradient(135deg, rgba(245,158,11,0.08), rgba(239,68,68,0.05));
+      border: 1px solid rgba(245,158,11,0.3);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.88rem;
+      color: var(--accent-yellow);
+    }
+    .caveat-box strong { color: var(--accent-orange); }
+    .methodology-box {
+      background: rgba(6,182,212,0.06);
+      border: 1px solid rgba(6,182,212,0.2);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 0.88rem;
+    }
+    .back-link {
+      display: inline-block;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      margin-bottom: 20px;
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .ref-content { max-width: 960px; margin: 0 auto; padding: 32px 24px; }
+    .toc { margin: 20px 0 40px; }
+    .toc a { color: var(--accent-blue); text-decoration: none; display: block; padding: 4px 0; font-size: 0.9rem; }
+    .toc a:hover { color: var(--accent-cyan); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>References &amp; Methodology</h1>
+    <p class="subtitle">Full source list for every fact, figure, and indicator in the Fusion Energy Progress Dashboard.</p>
+    <p class="last-updated">Last comprehensive fact-check: 28 March 2026</p>
+  </header>
+
+  <div class="ref-content">
+    <a href="index.html" class="back-link">&larr; Back to Dashboard</a>
+
+    <!-- Methodology & Caveats -->
+    <div class="ref-section" id="methodology">
+      <h2>Methodology &amp; General Caveats</h2>
+
+      <div class="methodology-box">
+        <strong>How this dashboard is compiled:</strong> All data is sourced from publicly available information including official project websites, peer-reviewed publications, government reports, industry surveys (primarily the Fusion Industry Association annual report), news coverage, and company press releases. Data was last comprehensively fact-checked in March 2026.
+      </div>
+
+      <div class="caveat-box">
+        <strong>General Caveats for All Data:</strong>
+        <ul style="margin: 8px 0 0 20px;">
+          <li><strong>Funding figures</strong> are company-reported and may include milestone-tied commitments, SPAC valuations, or stock deals. Actual capital deployed may differ significantly from headline numbers.</li>
+          <li><strong>Projected dates</strong> are aspirational targets set by companies or governments, not independent predictions. The historical track record of fusion timelines is very poor.</li>
+          <li><strong>Progress stages (0-7)</strong> are editorial assessments by this dashboard, not self-reported by companies. Reasonable people may disagree on stage assignments.</li>
+          <li><strong>Confidence assessments</strong> (high/medium/low) are subjective editorial judgements, not statistical probabilities.</li>
+          <li><strong>Cost estimates</strong> for fusion power plants are highly speculative — no fusion power plant has ever been built or operated.</li>
+          <li><strong>Temperature claims</strong> vary by measurement method (ion vs electron temperature) and are not always directly comparable across devices.</li>
+          <li><strong>Government spending figures</strong> are estimates from public sources. Many governments (especially China) do not publish consolidated fusion budgets.</li>
+          <li><strong>"Net energy"</strong> terminology is frequently conflated: target gain (energy into target vs out), physics Q (heating power vs fusion power), and engineering Qe (wall-plug electricity in vs out) are fundamentally different metrics.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc" id="toc">
+      <h3>Sections</h3>
+      <a href="#ref-iter">ITER</a>
+      <a href="#ref-cfs">Commonwealth Fusion Systems (CFS) / SPARC</a>
+      <a href="#ref-helion">Helion Energy</a>
+      <a href="#ref-tae">TAE Technologies</a>
+      <a href="#ref-tokamak-energy">Tokamak Energy</a>
+      <a href="#ref-general-fusion">General Fusion</a>
+      <a href="#ref-first-light">First Light Fusion</a>
+      <a href="#ref-zap">Zap Energy</a>
+      <a href="#ref-type-one">Type One Energy</a>
+      <a href="#ref-nif">NIF / LLNL</a>
+      <a href="#ref-east">EAST / CFETR (China)</a>
+      <a href="#ref-kstar">KSTAR (South Korea)</a>
+      <a href="#ref-jt60sa">JT-60SA (Japan/EU)</a>
+      <a href="#ref-step">STEP (UK)</a>
+      <a href="#ref-marvel">Marvel Fusion</a>
+      <a href="#ref-w7x">Wendelstein 7-X</a>
+      <a href="#ref-signals">Viability Signals</a>
+      <a href="#ref-assumptions">Key Assumptions</a>
+      <a href="#ref-waste">Waste &amp; Safety</a>
+      <a href="#ref-funding">Funding Landscape</a>
+      <a href="#ref-timeline">Timeline Scenarios</a>
+      <a href="#ref-feasibility">Feasibility Scores</a>
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- PROJECT REFERENCES -->
+    <!-- ================================================================ -->
+
+    <div class="ref-section" id="ref-iter">
+      <h3>ITER</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> ITER cost figures are contested. ITER's own budget accounts for ~EUR 22B. The US DOE estimates ~$65B including all in-kind contributions from member nations. The discrepancy reflects different accounting methodologies, not fraud. Both numbers are defensible depending on methodology.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> ITER Organization — Project status, assembly progress, Baseline 2024. <a class="ref-url" href="https://www.iter.org" target="_blank">iter.org</a></li>
+        <li><span class="ref-tag official">Official</span> "Project performing to schedule and cost" — ITER Council report, Nov 2025. <a class="ref-url" href="https://www.iter.org/node/20687/project-performing-schedule-and-cost" target="_blank">iter.org/node/20687</a></li>
+        <li><span class="ref-tag official">Official</span> "Third of the way there" — Vacuum vessel sector installation progress. <a class="ref-url" href="https://www.iter.org/node/20687/third-way-there" target="_blank">iter.org/node/20687</a></li>
+        <li><span class="ref-tag news">News</span> "ITER fusion reactor hit by massive decade-long delay and EUR 5bn price hike" — Physics World, Jul 2024. <a class="ref-url" href="https://physicsworld.com/a/iter-fusion-reactor-hit-by-massive-decade-long-delay-and-e5bn-price-hike/" target="_blank">physicsworld.com</a></li>
+        <li><span class="ref-tag gov">Gov</span> US Congressional Research Service Report R48362 — ITER cost analysis. <a class="ref-url" href="https://www.congress.gov/crs-product/R48362" target="_blank">congress.gov</a></li>
+        <li><span class="ref-tag news">News</span> "International collaboration completes world's largest pulsed magnet system" — Phys.org, Apr 2025. <a class="ref-url" href="https://phys.org/news/2025-04-international-collaboration-world-largest-powerful.html" target="_blank">phys.org</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-cfs">
+      <h3>Commonwealth Fusion Systems (CFS) / SPARC</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> SPARC has not yet operated. All performance claims (Q>2, 140 MW fusion power) are projections from physics models. The 20T magnet was demonstrated and DOE-validated, but a full toroidal set has not been operated in a fusion device.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> CFS corporate website — SPARC construction updates. <a class="ref-url" href="https://cfs.energy" target="_blank">cfs.energy</a></li>
+        <li><span class="ref-tag news">News</span> "CFS building first pilot with AI help from Siemens, Nvidia" — Fortune, Jan 2026. <a class="ref-url" href="https://fortune.com/2026/01/07/fusion-power-commonwealth-sparc-nuclear-fusion-pilot-ai-siemens-nvidia/" target="_blank">fortune.com</a></li>
+        <li><span class="ref-tag news">News</span> "CFS installs reactor magnet, lands deal with Nvidia" — TechCrunch, Jan 2026. <a class="ref-url" href="https://techcrunch.com/2026/01/06/commonwealth-fusion-systems-installs-reactor-magnet-lands-deal-with-nvidia/" target="_blank">techcrunch.com</a></li>
+        <li><span class="ref-tag gov">Gov</span> US DOE validates CFS magnet technology milestone. <a class="ref-url" href="https://cfs.energy/news-and-media/us-department-of-energy-validates-commonwealth-fusion-systems-completion-of-magnet-tech/" target="_blank">cfs.energy (DOE validation)</a></li>
+        <li><span class="ref-tag journal">Journal</span> "Tests show high-temperature superconducting magnets are ready for fusion" — MIT News, Mar 2024. <a class="ref-url" href="https://news.mit.edu/2024/tests-show-high-temperature-superconducting-magnets-fusion-ready-0304" target="_blank">news.mit.edu</a></li>
+        <li><span class="ref-tag press">Press</span> CFS SPARC progress and partnerships at CES 2026. <a class="ref-url" href="https://www.tipranks.com/news/private-companies/commonwealth-fusion-systems-highlights-sparc-progress-and-strategic-partnerships-at-ces-2026" target="_blank">tipranks.com</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-helion">
+      <h3>Helion Energy</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> Helion originally targeted net electricity by 2024 — this was not achieved. The 2028 Microsoft PPA target remains extremely ambitious. 150M&deg;C is ~75% of what Helion estimates is needed for their ultimate D-He3 fuel cycle. D-T fusion was demonstrated but net energy was not.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> "Helion Achieves New Fusion Energy Milestones" — 150M&deg;C and D-T fusion, Feb 2026. <a class="ref-url" href="https://www.helionenergy.com/articles/helion-achieves-new-fusion-energy-milestones/" target="_blank">helionenergy.com</a></li>
+        <li><span class="ref-tag news">News</span> "Fusion startup Helion hits blistering temps as it races toward 2028" — TechCrunch, Feb 2026. <a class="ref-url" href="https://techcrunch.com/2026/02/13/fusion-startup-helion-hits-blistering-temps-as-it-races-toward-2028-deadline/" target="_blank">techcrunch.com</a></li>
+        <li><span class="ref-tag press">Press</span> Helion milestones press release — BusinessWire, Feb 2026. <a class="ref-url" href="https://www.businesswire.com/news/home/20260213457749/en/" target="_blank">businesswire.com</a></li>
+        <li><span class="ref-tag official">Official</span> "Helion secures land for world's first fusion power plant" — Orion site near Rock Island Dam. <a class="ref-url" href="https://www.helionenergy.com/articles/helion-secures-land-and-begins-building-site-of-worlds-first-fusion-power-plant/" target="_blank">helionenergy.com</a></li>
+        <li><span class="ref-tag news">News</span> "Helion Energy breaks ground on fusion power plant" — S&P Global, Jul 2025. <a class="ref-url" href="https://www.spglobal.com/energy/en/news-research/latest-news/electric-power/073025-helion-energy-breaks-ground-on-fusion-power-plant-slated-to-be-online-in-2028" target="_blank">spglobal.com</a></li>
+        <li><span class="ref-tag official">Official</span> "$425M Series F announcement" — Jan 2025. <a class="ref-url" href="https://www.helionenergy.com/articles/helion-announces-425m-series-f-investment-to-scale-commercialized-fusion-power/" target="_blank">helionenergy.com</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-tae">
+      <h3>TAE Technologies</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> TAE's ultimate p-B11 fuel target requires plasma temperatures of ~1 billion &deg;C. Their current record is 75M&deg;C (~7.5% of target). The 2031 grid target for Da Vinci is extremely ambitious. The $6B TMTG merger is an all-stock transaction, not direct R&D funding.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> "TAE shortens device roadmap, prepares for commercial era" — Copernicus skip, Nov 2025. <a class="ref-url" href="https://tae.com/tae-shortens-device-roadmap-prepares-for-commercial-era/" target="_blank">tae.com</a></li>
+        <li><span class="ref-tag official">Official</span> "TAE Technologies raises $150M in latest funding round" — Jun 2025. <a class="ref-url" href="https://tae.com/tae-technologies-raises-150-million-in-latest-funding-round/" target="_blank">tae.com</a></li>
+        <li><span class="ref-tag official">Official</span> "Trump Media and Technology Group to merge with TAE Technologies" — Dec 2025. <a class="ref-url" href="https://tae.com/trump-media-and-technology-group-to-merge-with-tae-technologies/" target="_blank">tae.com</a></li>
+        <li><span class="ref-tag news">News</span> "Trump Media to merge with fusion startup TAE Technologies in $6B deal" — CNBC, Dec 2025. <a class="ref-url" href="https://www.cnbc.com/2025/12/18/trump-media-merger-fusion-tmtg-tae-technologies.html" target="_blank">cnbc.com</a></li>
+        <li><span class="ref-tag news">News</span> ANS Nuclear Newswire coverage of TMTG merger — Dec 2025. <a class="ref-url" href="https://www.ans.org/news/2025-12-19/article-7632/" target="_blank">ans.org</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-tokamak-energy">
+      <h3>Tokamak Energy</h3>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> "Knockout results: ST40 ends 2025 on a high" — Record plasma current, stored energy, triple product, Dec 2025. <a class="ref-url" href="https://tokamakenergy.com/2025/12/19/knockout-results-from-tokamak-energys-record-breaking-st40-ends-2025-on-a-high/" target="_blank">tokamakenergy.com</a></li>
+        <li><span class="ref-tag official">Official</span> "Fusion power plant magnet technology breakthrough" — Demo4 11.8T achievement, Nov 2025. <a class="ref-url" href="https://tokamakenergy.com/2025/11/19/tokamak-energy-announces-fusion-power-plant-magnet-technology-breakthrough/" target="_blank">tokamakenergy.com</a></li>
+        <li><span class="ref-tag press">Press</span> "Tokamak Energy announces ST80-HTS advanced prototype" — Path to grid-ready fusion. <a class="ref-url" href="https://www.prnewswire.com/news-releases/tokamak-energy-announces-st80-hts-advanced-prototype-on-path-to-demonstrate-grid-ready-fusion-power-in-the-early-2030s-301659095.html" target="_blank">prnewswire.com</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-general-fusion">
+      <h3>General Fusion</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> LM26 achieved first plasma and first compression, but has not yet reached 100M&deg;C or scientific breakeven equivalent. These are targets, not accomplished milestones.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> "Innovation in action: LM26 on track after swift launch" — First plasma and compression. <a class="ref-url" href="https://generalfusion.com/post/innovation-in-action-lm26-on-track-after-swift-launch/" target="_blank">generalfusion.com</a></li>
+        <li><span class="ref-tag press">Press</span> "General Fusion closes oversubscribed US$22 million financing" — GlobeNewsWire, Aug 2025. <a class="ref-url" href="https://www.globenewswire.com/news-release/2025/08/21/3137183/0/en/" target="_blank">globenewswire.com</a></li>
+        <li><span class="ref-tag official">Official</span> "General Fusion announces funding to build new fusion machine targeting scientific breakeven by 2026." <a class="ref-url" href="https://generalfusion.com/post/general-fusion-announces-funding-to-build-new-fusion-machine-targeting-scientific-breakeven-by-2026/" target="_blank">generalfusion.com</a></li>
+        <li><span class="ref-tag official">Official</span> Fusion Demonstration Plant overview. <a class="ref-url" href="https://generalfusion.com/fusion-demo-plant/" target="_blank">generalfusion.com/fusion-demo-plant</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-first-light">
+      <h3>First Light Fusion</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> First Light cancelled Machine 4 and pivoted to technology licensing in 2025. The FLARE concept's 1,000x gain is a model projection, not an experimental result. The company is no longer building its own power plant.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> "First Light Fusion announces strategic update" — Machine 4 cancellation, pivot to licensing, Mar 2025. <a class="ref-url" href="https://firstlightfusion.com/media/first-light-fusion-announces-strategic-update/" target="_blank">firstlightfusion.com</a></li>
+        <li><span class="ref-tag news">News</span> "First Light Fusion shifts focus from power to amplify its technology" — ANS Nuclear Newswire, Mar 2025. <a class="ref-url" href="https://www.ans.org/news/2025-03-25/article-6890/" target="_blank">ans.org</a></li>
+        <li><span class="ref-tag official">Official</span> FLARE concept announcement — Sep 2025. <a class="ref-url" href="https://firstlightfusion.com/flare/" target="_blank">firstlightfusion.com/flare</a></li>
+        <li><span class="ref-tag official">Official</span> "First plausible path to high gain" — Sep 2025. <a class="ref-url" href="https://firstlightfusion.com/media/first-light-fusion-publishes-first-plausible-path-to-high-gain-unlocking-cheap-fusion-energy/" target="_blank">firstlightfusion.com</a></li>
+        <li><span class="ref-tag news">News</span> "First Light Fusion looking for £20M" — Electronics Weekly, Jul 2025. <a class="ref-url" href="https://www.electronicsweekly.com/news/business/first-light-fusion-looking-for-20m-2025-07/" target="_blank">electronicsweekly.com</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-zap">
+      <h3>Zap Energy</h3>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> "Zap Energy exceeds gigapascal fusion plasma pressures on FuZE-3" — Nov 2025. <a class="ref-url" href="https://www.zapenergy.com/news/zap-energy-exceeds-gigapascal-fusion-plasma-pressures-on-new-fusion-device-fuze-3" target="_blank">zapenergy.com</a></li>
+        <li><span class="ref-tag news">News</span> "Zap hits new fusion milestone, squeezing plasma with pressure that's 10x Mariana Trench" — GeekWire, Nov 2025. <a class="ref-url" href="https://www.geekwire.com/2025/zap-hits-new-fusion-milestone-squeezing-plasma-with-pressure-thats-10x-mariana-trench/" target="_blank">geekwire.com</a></li>
+        <li><span class="ref-tag journal">Journal</span> Gigapascal pressures peer-reviewed publication — ScienceDaily, Nov 2025. <a class="ref-url" href="https://www.sciencedaily.com/releases/2025/11/251120002836.htm" target="_blank">sciencedaily.com</a></li>
+        <li><span class="ref-tag news">News</span> "Zap Energy secures $130M to accelerate fusion power development" — Power Electronics News (Series D). <a class="ref-url" href="https://www.powerelectronicsnews.com/zap-energy-secures-130m-to-accelerate-fusion-power-development-and-reveals-century-test-platform/" target="_blank">powerelectronicsnews.com</a></li>
+        <li><span class="ref-tag official">Official</span> First plasmas on FuZE-Q and Series C announcement. <a class="ref-url" href="https://www.zapenergy.com/news/first-plasmas-fuzeq-series-c" target="_blank">zapenergy.com</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-type-one">
+      <h3>Type One Energy</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> The TVA letter of intent is a non-binding expression of interest, not a firm contract. No stellarator has achieved reactor-relevant conditions. The $250M Series B was not yet closed as of Jan 2026.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag news">News</span> "Bill Gates-backed Type One Energy raises $87M ahead of $250M Series B" — TechCrunch, Jan 2026. <a class="ref-url" href="https://techcrunch.com/2026/01/14/bill-gates-backed-type-one-energy-raises-87m-ahead-of-250m-series-b/" target="_blank">techcrunch.com</a></li>
+        <li><span class="ref-tag official">Official</span> "$82.5M seed financing round finalized" — Jul 2024. <a class="ref-url" href="https://typeoneenergy.com/type-one-energy-group-finalizes-82-5m-seed-financing-round/" target="_blank">typeoneenergy.com</a></li>
+        <li><span class="ref-tag official">Official</span> "Type One Energy completes formal design review" — Infinity Two, May 2025. <a class="ref-url" href="https://typeoneenergy.com/type-one-energy-completes-formal-design-review/" target="_blank">typeoneenergy.com</a></li>
+        <li><span class="ref-tag news">News</span> "TVA and Type One Energy to build 350 MW fusion plant" — Neutron Bytes, Sep 2025. <a class="ref-url" href="https://neutronbytes.com/2025/09/20/tva-and-type-one-energy-to-build-350-mw-fusion-plant/" target="_blank">neutronbytes.com</a></li>
+        <li><span class="ref-tag journal">Journal</span> Infinity Two design basis — Journal of Plasma Physics, 2025. <a class="ref-url" href="https://fusionenergyinsights.com/blog/post/type-one-energy-publishes-design-basis-for-stellarator-fusion-pilot-plant" target="_blank">fusionenergyinsights.com</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-nif">
+      <h3>NIF / LLNL (National Ignition Facility)</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> "Ignition" and "target gain" refer to energy delivered to the target capsule vs fusion energy out. NIF's laser is ~1% efficient, so the wall-plug energy input is ~200 MJ, making wall-plug Q &lt; 0.05 even at 8.6 MJ yield. NIF is a weapons physics facility, not designed for power generation. It fires ~1 shot/day vs the ~10 Hz needed for a power plant.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> "Achieving Fusion Ignition" — Full ignition timeline and shot data. <a class="ref-url" href="https://lasers.llnl.gov/science/achieving-fusion-ignition" target="_blank">lasers.llnl.gov</a></li>
+        <li><span class="ref-tag official">Official</span> "NIF Sets Power and Energy Records" — 8.6 MJ yield, Apr 2025. <a class="ref-url" href="https://lasers.llnl.gov/about/keys-to-success/nif-sets-power-energy-records" target="_blank">lasers.llnl.gov</a></li>
+        <li><span class="ref-tag official">Official</span> "The Future of Ignition" — LLNL Science & Technology Review, Jul-Aug 2025. <a class="ref-url" href="https://str.llnl.gov/str-julyaugust-2025/future-ignition" target="_blank">str.llnl.gov</a></li>
+        <li><span class="ref-tag official">Official</span> "LANL/LLNL achieve fusion ignition with groundbreaking approach" — Jun 2025. <a class="ref-url" href="https://lasers.llnl.gov/news/lanl-llnl-achieve-fusion-ignition-groundbreaking-approach" target="_blank">lasers.llnl.gov</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-east">
+      <h3>EAST / CFETR (China)</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> Temperature reports for EAST vary by source. Some report "over 100 million &deg;C" and others "nearly 70 million &deg;C" for the same shot — likely reflecting ion vs electron temperature measurements. Chinese fusion spending estimates are approximate as no consolidated public budget exists.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> Chinese Academy of Sciences — EAST 1,066-second record announcement, Jan 2025. <a class="ref-url" href="https://english.cas.cn/head/202501/t20250121_899060.shtml" target="_blank">english.cas.cn</a></li>
+        <li><span class="ref-tag news">News</span> "China's EAST smashes fusion confinement record" — Physics World, Jan 2025. <a class="ref-url" href="https://physicsworld.com/a/chinas-experimental-advanced-superconducting-tokamak-smashes-fusion-confinement-record/" target="_blank">physicsworld.com</a></li>
+        <li><span class="ref-tag news">News</span> "China's artificial sun sets new world record: 100M&deg;C for 1,066 sec" — CGTN, Jan 2025. <a class="ref-url" href="https://news.cgtn.com/news/2025-01-21/China-s-artificial-sun-sets-new-world-record-100m-C-for-1-066-sec-1Al4KMYGWli/p.html" target="_blank">news.cgtn.com</a></li>
+        <li><span class="ref-tag official">Official</span> "Achievements EAST and West" — ITER.org coverage. <a class="ref-url" href="https://www.iter.org/node/20687/achievements-east-and-west" target="_blank">iter.org</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-kstar">
+      <h3>KSTAR (South Korea)</h3>
+      <ul class="ref-list">
+        <li><span class="ref-tag news">News</span> "Nuclear fusion record: Korea's 'artificial sun' runs at 100M&deg;C for 48 seconds" — CNN, Apr 2024. <a class="ref-url" href="https://www.cnn.com/2024/04/01/climate/nuclear-fusion-record-korea-climate-intl" target="_blank">cnn.com</a></li>
+        <li><span class="ref-tag journal">Journal</span> Tungsten divertor results — 25% surface temperature reduction. <a class="ref-url" href="https://www.eurekalert.org/news-releases/1029937" target="_blank">eurekalert.org</a></li>
+        <li><span class="ref-tag journal">Journal</span> KSTAR continuous operations and 300-second target. <a class="ref-url" href="https://www.eurekalert.org/news-releases/1039244" target="_blank">eurekalert.org</a></li>
+        <li><span class="ref-tag official">Official</span> Korea Fusion Energy Institute. <a class="ref-url" href="https://www.kfe.re.kr" target="_blank">kfe.re.kr</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-jt60sa">
+      <h3>JT-60SA (Japan/EU)</h3>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> "Europe-Japan JT-60SA tokamak upgrade" — Fusion for Energy. <a class="ref-url" href="https://fusionforenergy.europa.eu/news/europe-japan-jt60sa-tokamak-upgrade/" target="_blank">fusionforenergy.europa.eu</a></li>
+        <li><span class="ref-tag official">Official</span> "Europe and Japan restart JT-60SA" — Fusion for Energy. <a class="ref-url" href="https://fusionforenergy.europa.eu/news/europe-and-japan-restart-jt-60sa/" target="_blank">fusionforenergy.europa.eu</a></li>
+        <li><span class="ref-tag official">Official</span> "Upgrading JT-60SA to prepare 2026 experiments" — ITER.org. <a class="ref-url" href="https://www.iter.org/node/20687/upgrading-jt-60sa-prepare-2026-experiments" target="_blank">iter.org</a></li>
+        <li><span class="ref-tag official">Official</span> "World's largest superconducting fusion system will use American technology" — PPPL collaboration. <a class="ref-url" href="https://www.pppl.gov/news/2025/" target="_blank">pppl.gov</a></li>
+        <li><span class="ref-tag official">Official</span> QST Japan — Guinness World Record certification. <a class="ref-url" href="https://www.qst.go.jp/site/news/20241004.html" target="_blank">qst.go.jp</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-step">
+      <h3>STEP (UK)</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> STEP targets net electricity by ~2040, but design approval is not expected until ~2032 with construction through the 2030s. No spherical tokamak power plant has ever been built. Funding beyond initial commitment may depend on future government decisions.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag gov">Gov</span> "Britain on course to lead global race for fusion energy — STEP moves from research to delivery" — West Lindsey Council, Mar 2026. <a class="ref-url" href="https://www.west-lindsey.gov.uk/council-news/2026/03/" target="_blank">west-lindsey.gov.uk</a></li>
+        <li><span class="ref-tag gov">Gov</span> "From fossil fuels to fusion: West Burton STEP receives multi-billion pound investment" — East Midlands CCA. <a class="ref-url" href="https://www.eastmidlands-cca.gov.uk/news/from-fossil-fuels-to-fusion-west-burton-step-fusion-plant-receives-multi-billion-pound-investment/" target="_blank">eastmidlands-cca.gov.uk</a></li>
+        <li><span class="ref-tag gov">Gov</span> "ILIOS appointment speeds delivery of STEP fusion at West Burton" — GOV.UK. <a class="ref-url" href="https://www.gov.uk/government/news/ilios-appointment-speeds-delivery-of-step-fusion-at-west-burton" target="_blank">gov.uk</a></li>
+        <li><span class="ref-tag news">News</span> "New company takes over UK's fusion programme" — World Nuclear News (UKIFS). <a class="ref-url" href="https://www.world-nuclear-news.org/articles/new-company-takes-over-uks-fusion-programme" target="_blank">world-nuclear-news.org</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-marvel">
+      <h3>Marvel Fusion</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> Nonthermal laser fusion is less validated than thermal ICF (NIF approach). The laser facility is under construction, not yet operational. EUR 215M of the total is public project funding which may carry milestone conditions. Experiments are not expected to begin until early 2027.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> Marvel Fusion Series B page — EUR 113M round. <a class="ref-url" href="https://marvelfusion.com/series-b/" target="_blank">marvelfusion.com</a></li>
+        <li><span class="ref-tag news">News</span> "Marvel Fusion raises more than EUR 60M Series B" — b2venture. <a class="ref-url" href="https://www.b2venture.vc/stories/marvel-fusion-raises-more-than-eu60-million-seriess-b" target="_blank">b2venture.vc</a></li>
+        <li><span class="ref-tag news">News</span> "Marvel Fusion EUR 63M round" — Optics.org, Oct 2024. <a class="ref-url" href="https://optics.org/news/15/10/4" target="_blank">optics.org</a></li>
+        <li><span class="ref-tag news">News</span> "YPOG advises EIC Fund on Series B financing" — EIC Fund's first fusion investment. <a class="ref-url" href="https://www.ypog.law/en/press/ypog-advises-eic-fund-on-series-b-financing-round-of-marvel-fusion-gmbh" target="_blank">ypog.law</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-w7x">
+      <h3>Wendelstein 7-X</h3>
+      <ul class="ref-list">
+        <li><span class="ref-tag official">Official</span> IPP Greifswald — W7-X project page with latest results. <a class="ref-url" href="https://www.ipp.mpg.de/5532945/w7x" target="_blank">ipp.mpg.de/w7x</a></li>
+        <li><span class="ref-tag news">News</span> "Wendelstein 7-X sets new fusion performance records" — World Nuclear News. <a class="ref-url" href="https://www.world-nuclear-news.org/articles/wendelstein-7-x-sets-new-fusion-performance-records" target="_blank">world-nuclear-news.org</a></li>
+        <li><span class="ref-tag official">Official</span> "Wendelstein 7-X reaches gigajoule milestone" (1.8 GJ) — EUROfusion. <a class="ref-url" href="https://euro-fusion.org/member-news/wendelstein-7-x-reaches-milestone/" target="_blank">euro-fusion.org</a></li>
+        <li><span class="ref-tag official">Official</span> IPP — New experimental campaign schedule. <a class="ref-url" href="https://www.ipp.mpg.de/5440378/W7X_startet_OP_09_2024" target="_blank">ipp.mpg.de</a></li>
+      </ul>
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- CROSS-CUTTING REFERENCES -->
+    <!-- ================================================================ -->
+
+    <div class="ref-section" id="ref-signals">
+      <h3>Viability Signals</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> Viability signal assessments (high/medium/low significance) are editorial judgements. Positive and negative signals are presented together to maintain balance, but readers should weight them based on their own assessment of the evidence.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag report">Report</span> Fusion Industry Association — Annual Global Fusion Industry Report (2023, 2024, 2025 editions). Covers private investment totals, company count, workforce data, timelines. <a class="ref-url" href="https://www.fusionindustryassociation.org/annual-survey" target="_blank">fusionindustryassociation.org</a></li>
+        <li><span class="ref-tag report">Report</span> IAEA — Fusion Energy Conference proceedings. <a class="ref-url" href="https://www.iaea.org/events/fec2025" target="_blank">iaea.org</a></li>
+        <li><span class="ref-tag gov">Gov</span> US DOE Bold Decadal Vision for Commercial Fusion Energy (2022). <a class="ref-url" href="https://science.osti.gov/fes" target="_blank">science.osti.gov/fes</a></li>
+        <li><span class="ref-tag gov">Gov</span> UK Government Fusion Strategy — Regulatory framework and STEP program. <a class="ref-url" href="https://www.gov.uk/government/publications/towards-fusion-energy-the-uk-fusion-strategy" target="_blank">gov.uk</a></li>
+        <li><span class="ref-tag journal">Journal</span> DeepMind tokamak plasma shaping control — Nature, 2022. <a class="ref-url" href="https://www.nature.com/articles/s41586-021-04301-9" target="_blank">nature.com</a></li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-assumptions">
+      <h3>Key Assumptions &amp; Validation Status</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> Confidence percentages on assumptions are subjective editorial estimates, not statistical probabilities. "Partially validated" means key aspects are demonstrated but critical gaps remain. The assumptions section reflects the state of knowledge as of March 2026 and will need periodic updates.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag journal">Journal</span> JET D-T campaign results (Q=0.67) — Nuclear Fusion journal, 1997-1999 and 2023 publications.</li>
+        <li><span class="ref-tag journal">Journal</span> NIF ignition results — Physical Review Letters, 2023-2025 publications. <a class="ref-url" href="https://journals.aps.org/prl/" target="_blank">journals.aps.org</a></li>
+        <li><span class="ref-tag journal">Journal</span> CFS 20T HTS magnet — MIT peer-reviewed results, Mar 2024. <a class="ref-url" href="https://news.mit.edu/2024/tests-show-high-temperature-superconducting-magnets-fusion-ready-0304" target="_blank">news.mit.edu</a></li>
+        <li><span class="ref-tag report">Report</span> ITER Test Blanket Module (TBM) program — Tritium breeding blanket designs. <a class="ref-url" href="https://www.iter.org/mach/TritiumBreeding" target="_blank">iter.org</a></li>
+        <li><span class="ref-tag report">Report</span> IFMIF-DONES — Fusion materials testing facility, Granada, Spain. Construction underway, target operations ~2030-2032. <a class="ref-url" href="https://ifmifdones.org" target="_blank">ifmifdones.org</a></li>
+        <li><span class="ref-tag gov">Gov</span> US NRC Fusion Rulemaking — Developing fusion-specific regulatory framework. <a class="ref-url" href="https://www.nrc.gov" target="_blank">nrc.gov</a></li>
+        <li><span class="ref-tag gov">Gov</span> UK Fusion Regulation — Classified separately from fission (2021 decision). <a class="ref-url" href="https://www.gov.uk" target="_blank">gov.uk</a></li>
+        <li><span class="ref-tag report">Report</span> Tritium supply estimates — Global supply ~20-25 kg, declining at 5.5%/year due to 12.3-year half-life. Primary source: CANDU reactors (Ontario Power Generation). Multiple fusion policy papers cite this constraint.</li>
+        <li><span class="ref-tag report">Report</span> ARIES, EU-DEMO, ARC power plant design studies — Basis for economic feasibility estimates.</li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-waste">
+      <h3>Waste &amp; Safety</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> Waste and safety comparisons between fusion and fission are based on physics and engineering analysis, not operational experience (since no fusion power plant exists). Actual waste volumes, activation levels, and decay times will depend on specific materials choices, neutron fluences, and plant designs that are not yet finalized. The "~100 years to clearance" estimate assumes use of low-activation materials (RAFM steels, SiC) which are still under development.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag journal">Journal</span> "Safety and environmental assessment of fusion power" — Nuclear Fusion journal, multiple publications.</li>
+        <li><span class="ref-tag report">Report</span> IAEA — Fusion safety guidance documents. <a class="ref-url" href="https://www.iaea.org" target="_blank">iaea.org</a></li>
+        <li><span class="ref-tag report">Report</span> EUROfusion safety and environment studies for EU-DEMO.</li>
+        <li><span class="ref-tag journal">Journal</span> EUROFER97 and low-activation materials — Materials science publications in Journal of Nuclear Materials.</li>
+        <li><span class="ref-tag report">Report</span> Tritium safety — Based on decades of experience from CANDU reactors and weapons complex tritium handling.</li>
+        <li><span class="ref-tag journal">Journal</span> Carbon footprint lifecycle estimates (2-10 gCO2/kWh) — Based on power plant design studies; comparable estimates in IPCC reports for nuclear energy.</li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-funding">
+      <h3>Funding Landscape</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> Private funding figures are self-reported by companies. They may include milestone-tied commitments that have not been disbursed, SPAC valuations, or stock transactions (e.g., TAE's $6B TMTG merger). Government funding figures use different accounting methods across countries and are not directly comparable. China's fusion spending is particularly opaque.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag report">Report</span> FIA Global Fusion Industry Report — Primary source for private investment totals. <a class="ref-url" href="https://www.fusionindustryassociation.org" target="_blank">fusionindustryassociation.org</a></li>
+        <li><span class="ref-tag report">Report</span> Lazard Levelized Cost of Energy Analysis (v17, 2024) — Renewable energy cost benchmarks. <a class="ref-url" href="https://www.lazard.com/research-insights/levelized-cost-of-energy-plus/" target="_blank">lazard.com</a></li>
+        <li>Individual company funding sources: see project-specific references above.</li>
+        <li>Government program funding: see project-specific references above (ITER, STEP, DOE, etc.).</li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-timeline">
+      <h3>Timeline Scenarios</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> All timeline scenarios are editorial assessments, not forecasts. Probability ranges are subjective. The historical track record of fusion timelines is very poor — ITER alone has slipped ~18 years from its original first plasma target. Private company timelines have also historically slipped (e.g., Helion targeted net electricity by 2024). Readers should calibrate expectations accordingly.
+      </div>
+      <ul class="ref-list">
+        <li><span class="ref-tag report">Report</span> FIA surveys — Median company expectations for first fusion power.</li>
+        <li><span class="ref-tag report">Report</span> Historical fusion timeline analysis — 1976 ERDA study projected fusion by 2000; subsequent government and industry projections have consistently been too optimistic.</li>
+        <li><span class="ref-tag gov">Gov</span> UK STEP target (~2040), US Bold Decadal Vision (pilot plant 2035-2040), China (~2035), EU-DEMO (2050s).</li>
+        <li><span class="ref-tag report">Report</span> Energy system modeling — Various academic papers on fusion's role in future energy systems.</li>
+      </ul>
+    </div>
+
+    <div class="ref-section" id="ref-feasibility">
+      <h3>Feasibility Scores &amp; Critical Path</h3>
+      <div class="caveat-box">
+        <strong>Caveat:</strong> All feasibility scores (0-10) are editorial assessments by the dashboard authors, not standardized metrics. Sub-parameter scores are subjective. Reasonable experts disagree significantly on engineering and economic feasibility assessments. The scores reflect a "honest middle ground" — neither promotional nor dismissive — but should not be treated as authoritative.
+      </div>
+      <ul class="ref-list">
+        <li>Physics feasibility scores draw on: JET results (Nuclear Fusion journal), NIF ignition (Physical Review Letters), EAST/KSTAR long-pulse data (ASIPP, KFE publications), W7-X stellarator results (IPP publications).</li>
+        <li>Engineering feasibility scores draw on: CFS HTS magnet validation (MIT/DOE), ITER TBM program, EUROFER97 materials data, IFMIF-DONES status, JET and ITER remote handling R&D (UKAEA).</li>
+        <li>Economic feasibility ranges draw on: ARIES power plant studies, EU-DEMO cost projections, Lazard LCOE analysis for alternatives, academic literature on fusion economics.</li>
+        <li>Critical path items and timeline confidence draw on: ITER Baseline 2024, CFS/Helion company statements, DOE milestone program updates, FIA industry surveys, historical analysis of fusion project timelines.</li>
+      </ul>
+    </div>
+
+    <!-- ================================================================ -->
+    <!-- ADDITIONAL GENERAL SOURCES -->
+    <!-- ================================================================ -->
+
+    <div class="ref-section" id="ref-general">
+      <h3>General / Cross-Cutting Sources</h3>
+      <ul class="ref-list">
+        <li><span class="ref-tag report">Report</span> Fusion Industry Association — Annual Global Fusion Industry Report. <a class="ref-url" href="https://www.fusionindustryassociation.org" target="_blank">fusionindustryassociation.org</a></li>
+        <li><span class="ref-tag journal">Journal</span> Nuclear Fusion (IAEA journal) — Primary peer-reviewed fusion journal. <a class="ref-url" href="https://iopscience.iop.org/journal/0029-5515" target="_blank">iopscience.iop.org</a></li>
+        <li><span class="ref-tag journal">Journal</span> Nature / Nature Physics / Nature Energy — High-impact fusion publications. <a class="ref-url" href="https://www.nature.com" target="_blank">nature.com</a></li>
+        <li><span class="ref-tag journal">Journal</span> Physical Review Letters — NIF and plasma physics results. <a class="ref-url" href="https://journals.aps.org/prl/" target="_blank">journals.aps.org</a></li>
+        <li><span class="ref-tag gov">Gov</span> US DOE Office of Fusion Energy Sciences. <a class="ref-url" href="https://science.osti.gov/fes" target="_blank">science.osti.gov/fes</a></li>
+        <li><span class="ref-tag gov">Gov</span> ITER Organization. <a class="ref-url" href="https://www.iter.org" target="_blank">iter.org</a></li>
+        <li><span class="ref-tag gov">Gov</span> UKAEA / STEP / UKIFS. <a class="ref-url" href="https://www.gov.uk/government/organisations/uk-atomic-energy-authority" target="_blank">gov.uk (UKAEA)</a></li>
+        <li><span class="ref-tag gov">Gov</span> EUROfusion. <a class="ref-url" href="https://euro-fusion.org" target="_blank">euro-fusion.org</a></li>
+        <li><span class="ref-tag report">Report</span> IAEA Fusion Energy Conference proceedings. <a class="ref-url" href="https://www.iaea.org" target="_blank">iaea.org</a></li>
+        <li><span class="ref-tag report">Report</span> Lazard Levelized Cost of Energy Analysis. <a class="ref-url" href="https://www.lazard.com/research-insights/levelized-cost-of-energy-plus/" target="_blank">lazard.com</a></li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 40px; padding: 20px; text-align: center; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border);">
+      <p>This references page was compiled as part of a comprehensive fact-check conducted on 28 March 2026.</p>
+      <p>Data and sources should be independently verified. Fusion energy is a rapidly evolving field — information may become outdated quickly.</p>
+      <p style="margin-top: 12px;"><a href="index.html" class="back-link">&larr; Back to Dashboard</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
