@@ -36,6 +36,12 @@ The updater creates a timestamped backup before saving.
 
 ITER Organization, DOE Office of Science, UKAEA, FIA Global Fusion Industry Report, Nuclear Fusion journal, Nature/Science publications, and company press releases. All projected dates are aspirational targets, not predictions. Confidence assessments are subjective estimates.
 
+## Support
+
+If you find this dashboard useful, consider supporting it:
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/joelfirenze)
+
 ## License
 
 [MIT](LICENSE) — Eddie Choo
