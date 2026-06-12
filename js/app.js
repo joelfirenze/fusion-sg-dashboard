@@ -46,7 +46,21 @@
     const partialAssumptions = data.assumptions.filter(a => a.status === 'partially_validated').length;
     const unvalidated = data.assumptions.filter(a => a.status === 'not_validated').length;
 
+    const latest = (data.changelog && data.changelog[0]) || null;
+    const whatsNew = latest ? `
+      <div class="card whats-new">
+        <div class="whats-new-head">
+          <h3>What's New <span class="whats-new-date">${latest.date}</span></h3>
+          <span class="whats-new-badge">Refreshed</span>
+        </div>
+        <p class="whats-new-summary">${latest.summary}</p>
+        <ul class="uncertainty-list">
+          ${latest.highlights.map(h => `<li>${h}</li>`).join('')}
+        </ul>
+      </div>` : '';
+
     container.innerHTML = `
+      ${whatsNew}
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-value">${totalProjects}</div>
@@ -61,8 +75,8 @@
           <div class="stat-label">Government Programs</div>
         </div>
         <div class="stat-card">
-          <div class="stat-value">$7B+</div>
-          <div class="stat-label">Private Investment (cumulative)</div>
+          <div class="stat-value">$9.8B+</div>
+          <div class="stat-label">Private Investment (cumulative, FIA)</div>
         </div>
         <div class="stat-card">
           <div class="stat-value">${partialAssumptions}/${data.assumptions.length}</div>
