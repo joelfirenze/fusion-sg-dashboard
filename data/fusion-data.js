@@ -681,12 +681,13 @@ const FUSION_DATA = {
       founded: 2023,
       funding: "$900M Series A (Oct 2024, milestone-released); investors incl. General Catalyst (Hemant Taneja), Breakthrough Energy Ventures, Eric Schmidt, John Doerr, Ken Griffin, Mustafa Suleyman, Patrick Collison, Reid Hoffman, Andrew Forrest, Lightspeed, Lowercarbon",
       status: "Transitioning from foundational R&D to production for a demonstration-system build",
-      progress: { stage: 1, pct: 30, note: "Pulser-module R&D; 2026 focus is proving a full module to spec, then replicating it ~155x for the demonstration system; planning a ~$1B research/manufacturing campus in Albuquerque, NM" },
+      progress: { stage: 1, pct: 30, note: "Pulser-module R&D; 2026 focus is proving a full module to spec, then replicating it ~155x for the demonstration system; $1B research/manufacturing campus selected at Albuquerque, NM (Sept 2025), net facility gain targeted 2030" },
       milestones: [
         { year: 2023, event: "Founded to pursue high-gain pulsed magnetic fusion", achieved: true },
         { year: 2024, event: "Emerged from stealth with a $900M milestone-structured Series A (Oct)", achieved: true },
-        { year: 2026, event: "Transition from R&D to production; demonstration-system build; ~$1B Albuquerque campus ('billion-dollar fusion machine') announced", achieved: true },
-        { year: "Late 2020s", event: "Demonstration of net facility gain (target)", achieved: false, confidence: "low" },
+        { year: 2025, event: "General Atomics partnership to test a production-scale pulser module (impedance-matched Marx generator) (Apr); $1B Research & Manufacturing Campus selected at Mesa del Sol, Albuquerque NM (Sept)", achieved: true },
+        { year: 2026, event: "Transition from R&D to production; demonstration-system build begins", achieved: true },
+        { year: 2030, event: "Demonstration system attempts net facility gain (target)", achieved: false, confidence: "low" },
         { year: "2030s", event: "Commercial pulsed magnetic fusion plant", achieved: false, confidence: "very low" }
       ],
       keyMetrics: {
@@ -711,13 +712,14 @@ const FUSION_DATA = {
       type: "Inertial Confinement (Laser)",
       sector: "private",
       approach: "Repetition-rated, laser-driven inertial confinement fusion (ICF), building directly on NIF ignition physics",
-      description: "Launched Feb 2026 by Twilio co-founder Jeff Lawson (CEO) with two of the field's most prominent ICF scientists — Annie Kritcher (Chief Scientist, who led the design of NIF's first net-gain ignition shot) and Mike Dunne (CTO, former LLNL inertial-fusion-energy lead and ex-head of SLAC's LCLS). Raised $450M to build a high-repetition-rate laser and an ICF pilot plant.",
-      founded: 2026,
-      funding: "$450M (Feb 2026) led by Bessemer Venture Partners and Alphabet's GV; also Threshold Ventures, Modern Capital",
-      status: "Newly launched (Feb 2026); building toward a high-rep-rate laser facility and pilot plant",
-      progress: { stage: 1, pct: 15, note: "Founded Feb 2026 on NIF ignition heritage; aims to build 'the world's most powerful clean-energy laser' and a rep-rated ICF pilot plant — no Inertia hardware yet operating" },
+      description: "Founded 2024 (unveiled Aug 2025), then raised $450M in Feb 2026. Led by Twilio co-founder Jeff Lawson (CEO) with two of the field's most prominent ICF scientists — Annie Kritcher (Chief Scientist, who led the design of NIF's first net-gain ignition shot) and Mike Dunne (CTO, former LLNL inertial-fusion-energy program director, now a Stanford professor). Building a high-repetition-rate laser line ('Thunderwall') and an ICF pilot plant.",
+      founded: 2024,
+      funding: "$450M (Feb 11, 2026) led by Bessemer Venture Partners and Alphabet's GV; also Threshold Ventures, Modern Capital",
+      status: "Unveiled Aug 2025; $450M raised Feb 2026; building toward a high-rep-rate laser facility and pilot plant",
+      progress: { stage: 1, pct: 15, note: "Founded 2024 on NIF ignition heritage; building the 'Thunderwall' rep-rated laser line and target factory for an ICF pilot plant — no Inertia hardware yet operating" },
       milestones: [
-        { year: 2026, event: "Launched with $450M; founding team Jeff Lawson (CEO), Annie Kritcher (Chief Scientist), Mike Dunne (CTO) (Feb)", achieved: true, note: "Kritcher led NIF's record-gain target design; Dunne is ex-LLNL IFE / ex-LCLS" },
+        { year: 2025, event: "Company unveiled (Aug); founding team Jeff Lawson (CEO), Annie Kritcher (Chief Scientist), Mike Dunne (CTO)", achieved: true, note: "Kritcher led NIF's record-gain target design; Dunne is former LLNL IFE program director" },
+        { year: 2026, event: "Raised $450M led by Bessemer and Alphabet's GV (Feb 11)", achieved: true },
         { year: "Late 2020s", event: "Build high-rep-rate laser and demonstrate rep-rated ICF (target)", achieved: false, confidence: "low" },
         { year: "2030s", event: "ICF pilot plant (target)", achieved: false, confidence: "very low" }
       ],
