@@ -14,13 +14,23 @@
  */
 
 const FUSION_DATA = {
-  lastUpdated: "2026-06-12",
+  lastUpdated: "2026-06-14",
   dataDisclaimer: "Data compiled from public sources. Projected dates are targets, not guarantees. Private company claims may not be independently verified. Funding figures are best-available estimates and may not reflect latest rounds. Last comprehensive fact-check: June 2026.",
 
   // ============================================================
   // CHANGELOG — recent refreshes (most recent first; rendered as "What's New")
   // ============================================================
   changelog: [
+    {
+      date: "2026-06-14",
+      title: "CFS ARC physics papers",
+      summary: "Captured CFS's five peer-reviewed ARC papers (published Jun 10, 2026) making the physics-and-engineering case for its commercial pilot plant.",
+      highlights: [
+        "ARC quantified: ~1.13 GW fusion power (range 0.9–1.3 GW), 400 MW net to grid, via a fully-immersed FLiBe liquid blanket",
+        "Tritium breeding now has a published, peer-reviewed design — a modeled tritium breeding ratio (TBR) of 1.08 (with a 1cm beryllium neutron multiplier)",
+        "Caveats added: TBR 1.08 is a thin ~8% margin and modeled, not measured; SPARC itself does not breed; no device has closed the tritium loop; ARC magnet lifetime vs neutron damage flagged in CFS's own papers"
+      ]
+    },
     {
       date: "2026-06-12",
       title: "June 2026 comprehensive refresh",
@@ -118,6 +128,7 @@ const FUSION_DATA = {
         { year: 2024, event: "20T magnet independently validated by DOE; peer-reviewed results published (MIT, Mar 2024)", achieved: true },
         { year: 2025, event: "Vacuum vessel delivered (Oct); $863M Series B2 raised (Aug); digital twin unveiled at CES 2026 with Siemens/Nvidia", achieved: true },
         { year: 2026, event: "Second vacuum vessel half arrived (May), completing tokamak structure; ENI signed ~$1B early-power offtake agreement (May)", achieved: true, note: "First of 18 TF magnets installed Jan 2026" },
+        { year: 2026, event: "Published 5 peer-reviewed papers establishing the ARC physics basis (Jun): ~1.13 GW fusion power (range 0.9-1.3 GW), 400 MW net to grid, fully-immersed FLiBe liquid blanket with a modeled tritium breeding ratio (TBR) of 1.08", achieved: true, note: "TBR is from neutronics modeling, not measured; ~8% margin above self-sufficiency. Sorbom: ARC designed to work even 'on the wrong side of all the uncertainties'" },
         { year: 2026, event: "All 18 TF magnets expected installed by end of summer 2026", achieved: false, confidence: "high" },
         { year: "2026-2027", event: "SPARC first plasma (target)", achieved: false, confidence: "medium" },
         { year: "2027-2028", event: "SPARC D-T operations, target Q>2", achieved: false, confidence: "medium" },
@@ -126,16 +137,19 @@ const FUSION_DATA = {
       keyMetrics: {
         magneticField: "12.2 T (toroidal, HTS)",
         targetQ: ">2 (SPARC), >10 (ARC)",
-        targetFusionPower: "140 MW (SPARC), 500 MW (ARC)",
-        plasmaVolume: "~26 m³ (SPARC)"
+        targetFusionPower: "140 MW (SPARC), ~1.13 GW fusion / 400 MW net to grid (ARC)",
+        plasmaVolume: "~26 m³ (SPARC)",
+        arcTritiumBreedingRatio: "1.08 (modeled, FLiBe blanket + 1cm Be neutron multiplier)"
       },
       uncertainties: [
         "SPARC has not yet operated - performance claims are projections",
         "HTS magnet manufacturing at scale is unproven beyond single-coil demo",
         "Jump from SPARC to commercial ARC requires major engineering",
+        "Tritium self-sufficiency rests on a modeled ARC TBR of 1.08 - a thin ~8% margin; SPARC itself does not breed, and no device has yet bred and recovered tritium in a closed loop or demonstrated online extraction from flowing FLiBe",
+        "ARC magnet lifetime depends on neutron damage from the salt blanket - an unresolved durability question per CFS's own papers",
         "Net electricity generation has not been demonstrated by any fusion device"
       ],
-      sources: ["cfs.energy", "Fortune (Jan 2026)", "TechCrunch (Jan 2026)", "CPG/Click Oil & Gas (May 2026, vessel + ENI deal)", "MIT News (Mar 2024)", "DOE milestone validation", "Nature papers on HTS magnets"]
+      sources: ["cfs.energy", "CFS ARC physics papers (5, peer-reviewed, Jun 2026)", "IEEE Spectrum (Jun 2026, ARC)", "Fortune (Jan 2026)", "TechCrunch (Jan 2026)", "CPG/Click Oil & Gas (May 2026, vessel + ENI deal)", "MIT News (Mar 2024)", "DOE milestone validation", "Nature papers on HTS magnets"]
     },
     {
       id: "helion",
