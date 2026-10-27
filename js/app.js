@@ -75,7 +75,7 @@
           <div class="stat-label">Government Programs</div>
         </div>
         <div class="stat-card">
-          <div class="stat-value">$9.8B+</div>
+          <div class="stat-value">${(data.funding && data.funding.privateSector && data.funding.privateSector.headline) || '$9.8B+'}</div>
           <div class="stat-label">Private Investment (cumulative, FIA)</div>
         </div>
         <div class="stat-card">
@@ -763,12 +763,12 @@
     container.innerHTML = `
       <div class="stats-grid" style="margin-bottom: 32px;">
         <div class="stat-card">
-          <div class="stat-value">${f.privateSector.total}</div>
-          <div class="stat-label">Total Private Investment</div>
+          <div class="stat-value">${f.privateSector.headline || f.privateSector.total}</div>
+          <div class="stat-label">Total Private Investment (FIA)</div>
         </div>
         <div class="stat-card">
-          <div class="stat-value">40+</div>
-          <div class="stat-label">Fusion Companies Worldwide</div>
+          <div class="stat-value">${f.privateSector.companyCount || '40+'}</div>
+          <div class="stat-label">Fusion Companies Worldwide (FIA)</div>
         </div>
         <div class="stat-card">
           <div class="stat-value">$22B+</div>

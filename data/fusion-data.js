@@ -14,13 +14,25 @@
  */
 
 const FUSION_DATA = {
-  lastUpdated: "2026-06-14",
-  dataDisclaimer: "Data compiled from public sources. Projected dates are targets, not guarantees. Private company claims may not be independently verified. Funding figures are best-available estimates and may not reflect latest rounds. Last comprehensive fact-check: June 2026.",
+  lastUpdated: "2026-10-27",
+  dataDisclaimer: "Data compiled from public sources. Projected dates are targets, not guarantees. Private company claims may not be independently verified. Funding figures are best-available estimates and may not reflect latest rounds. Last comprehensive fact-check: October 2026.",
 
   // ============================================================
   // CHANGELOG — recent refreshes (most recent first; rendered as "What's New")
   // ============================================================
   changelog: [
+    {
+      date: "2026-10-27",
+      title: "October 2026 refresh: record money, softer timelines",
+      summary: "Full refresh covering mid-June to late October 2026. The period's defining pattern: record private and public funding commitments alongside quiet slippage of the flagship private milestones.",
+      highlights: [
+        "Funding: FIA 2026 report puts total fusion funding at $14.24B (56 companies; record $4.48B in 12 months). CFS raised another ~$1B (total ~$4B); Proxima €411M at a €2.4B valuation; Helion's Series G topped up to $500M; Type One $200M; General Fusion listed on Nasdaq (GFUZ)",
+        "Timelines softened: Helion dropped 'net electricity' as Polaris's goal and reframed Orion's 2028 target as 'initial operations' (full power 2029–30); CFS missed 'all 18 TF magnets by end of summer' (8/18 at end-Sep) and SPARC first plasma is now 2027; Type One's groundbreaking slipped to H1 2027; TAE's TMTG merger is still unclosed with a Dec 18 deadline and no Da Vinci site",
+        "Governments funded programmes rather than strategies: Japan's ¥3.1T public-private roadmap and ¥60B METI demonstration selections; Germany's €500M SPRIND milestone programme; a $10B US fusion bill introduced (not enacted — FY2027 is on a continuing resolution); US Commerce CHIPS equity-for-grant LOIs to Helion ($175M) and CFS ($85M). The EU Fusion Strategy and the US NRC final rule are both overdue",
+        "Hardware progress: ITER placed its sixth of nine vacuum-vessel sector modules ~6 months ahead of Baseline 2024; BEST's campus delivered with >50% of main-machine assembly done (though '2027' is now worded as 'construction complete', not first plasma); Tokamak Energy's Demo4 reached 13.7 T; General Fusion claims ~1 keV in LM26 (pending peer review); Pacific Fusion broke ground in Albuquerque",
+        "Added a Singapore row to the government funding table (A*STAR–CFS research agreement, FusionX:APAC 2026, new Ministry of Energy, Trade and Industry) and two new viability signals: supply-chain industrialisation (positive) and softening private timelines (negative)"
+      ]
+    },
     {
       date: "2026-06-14",
       title: "CFS ARC physics papers",
@@ -83,12 +95,13 @@ const FUSION_DATA = {
       founded: 2007,
       funding: "$22B+ ITER budget (EUR 5B overrun announced Jul 2024; US DOE estimates ~$65B total including in-kind, disputed by ITER)",
       status: "Under Construction (Baseline 2024 revision)",
-      progress: { stage: 2, pct: 46, note: "3 of 9 vacuum vessel sectors installed (200° of chamber); central solenoid being stacked in the pit — sixth and final module added mid-2026; all magnets manufactured" },
+      progress: { stage: 2, pct: 50, note: "6 of 9 vacuum vessel sector modules placed in the pit (Jul 2026, ~6 months ahead of Baseline 2024 schedule); 3 sectors lowered onto final gravity supports, enough to begin vessel welding preparations; final module now targeted mid-2027 (was Dec 2027); all magnets manufactured, US central-solenoid scope complete (Apr 2026)" },
       milestones: [
         { year: 2020, event: "Assembly phase began", achieved: true },
         { year: 2021, event: "Cryostat base installed", achieved: true },
         { year: 2025, event: "All superconducting magnets completed (world's largest pulsed magnet system)", achieved: true },
-        { year: 2026, event: "Sixth and final central solenoid module stacked in the tokamak pit (mid-2026); Disruption Mitigation System (shattered pellet injection, 27 injectors/6 ports) maturing toward manufacturing; ITER magnet test facility began operation", achieved: true },
+        { year: 2026, event: "US delivery of the central solenoid completed (Apr); Magnet Cold Test Facility began operation; 38th ITER Council (Jun) noted progress against Baseline 2024 with no new cost or schedule figures; French regulator agreed to exclude the vacuum vessel from Pressure Equipment Directive rules, expected to help schedule and cost", achieved: true, note: "Stacking of the sixth CS module in the pit was 'tentatively March 2026' per ITER (Nov 2025) but no dated confirmation has been published — treat as unconfirmed" },
+        { year: 2026, event: "Sixth of nine vacuum vessel sector modules installed in the pit (Jul 29) — two-thirds of the tokamak core in place, ~6 months ahead of schedule; sectors 6 and 5 lowered onto final gravity supports (May, Aug)", achieved: true, note: "Sector module 9 sub-assembly due end-Nov with pit transfer early Dec 2026 — on the critical path. Final-module target advanced from Dec 2027 to mid-2027" },
         { year: 2025, event: "First plasma (original target)", achieved: false, note: "Delayed by ~9 years" },
         { year: 2034, event: "First plasma - deuterium only (Baseline 2024 target)", achieved: false, confidence: "low", note: "Revised Jul 2024; on track vs new baseline per Nov 2025 ITER Council" },
         { year: 2036, event: "Full plasma current operation (Baseline 2024)", achieved: false, confidence: "low" },
@@ -104,11 +117,13 @@ const FUSION_DATA = {
       uncertainties: [
         "Cost has escalated from original ~$5B to $22B+ (ITER budget) or ~$65B (DOE total estimate)",
         "Baseline 2024 represents a ~9-year delay from original first plasma target",
-        "Only 3 of 9 vacuum vessel sectors installed as of early 2026",
+        "6 of 9 sector modules are in the pit but only 3 sit on final supports; vacuum vessel welding and the full in-pit magnet integration are still ahead",
+        "Being 'ahead of schedule' is measured against the already-delayed Baseline 2024, not the original plan",
+        "US FY2027 funding for ITER remains unresolved; a $10B 'American Leadership in Fusion Act' (Sep 2026) is proposed but not enacted and does not mention ITER",
         "Management and governance complexity across 35 nations",
         "Whether design will achieve Q=10 as planned"
       ],
-      sources: ["iter.org", "ITER Baseline 2024 announcement (Jul 2024)", "Physics World (Jul 2024)", "US CRS Report R48362", "ITER Council Nov 2025 report"]
+      sources: ["iter.org (Jul 29 2026, sixth sector module; Jul 6 2026, 38th Council)", "ANS Nuclear Newswire (Sep 9 2026, assembly progress)", "World Nuclear News (Aug 2026, core assembly)", "US ITER / ORNL (central solenoid completion)", "ITER Baseline 2024 announcement (Jul 2024)", "US CRS Report R48362", "ITER Council Nov 2025 report"]
     },
     {
       id: "cfs",
@@ -119,9 +134,9 @@ const FUSION_DATA = {
       approach: "High-temperature superconducting (HTS) compact tokamak using REBCO magnets",
       description: "MIT spinoff building SPARC (demonstration) and ARC (commercial power plant). Uses HTS magnets to achieve stronger fields in a smaller device.",
       founded: 2018,
-      funding: "~$3B total (including $1.8B Series B + $863M Series B2 in Aug 2025; investors include Nvidia, Google, Temasek, Equinor)",
-      status: "SPARC construction nearing completion",
-      progress: { stage: 2, pct: 88, note: "TF magnet installation underway (first installed Jan 2026, all 18 targeted by end of summer 2026); second vacuum vessel half arrived May 2026, completing the tokamak structure; first plasma targeted 2026-2027" },
+      funding: "~$4B total (incl. $1.8B Series B, $863M Series B2 Aug 2025, and a ~$1B round Jul 2026 from pension/sovereign/infrastructure investors incl. Hyundai Motor Group; valuation undisclosed; earlier investors include Nvidia, Google, Temasek, Equinor)",
+      status: "SPARC ~80% assembled; TF magnet installation behind schedule; first plasma targeted 2027",
+      progress: { stage: 2, pct: 90, note: "SPARC ~80% assembled (CFS, Jul 2026); 8 of 18 TF magnets installed as of late Sep 2026 — the 'all 18 by end of summer' target was missed; first plasma and Q>1 now both targeted for 2027; ~$1B raised Jul 2026 (total ~$4B)" },
       milestones: [
         { year: 2021, event: "Demonstrated 20T HTS magnet (world record for fusion-class)", achieved: true },
         { year: 2023, event: "Broke ground on SPARC facility in Devens, MA", achieved: true },
@@ -129,10 +144,12 @@ const FUSION_DATA = {
         { year: 2025, event: "Vacuum vessel delivered (Oct); $863M Series B2 raised (Aug); digital twin unveiled at CES 2026 with Siemens/Nvidia", achieved: true },
         { year: 2026, event: "Second vacuum vessel half arrived (May), completing tokamak structure; ENI signed ~$1B early-power offtake agreement (May)", achieved: true, note: "First of 18 TF magnets installed Jan 2026" },
         { year: 2026, event: "Published 5 peer-reviewed papers establishing the ARC physics basis (Jun): ~1.13 GW fusion power (range 0.9-1.3 GW), 400 MW net to grid, fully-immersed FLiBe liquid blanket with a modeled tritium breeding ratio (TBR) of 1.08", achieved: true, note: "TBR is from neutronics modeling, not measured; ~8% margin above self-sufficiency. Sorbom: ARC designed to work even 'on the wrong side of all the uncertainties'" },
-        { year: 2026, event: "All 18 TF magnets expected installed by end of summer 2026", achieved: false, confidence: "high" },
-        { year: "2026-2027", event: "SPARC first plasma (target)", achieved: false, confidence: "medium" },
-        { year: "2027-2028", event: "SPARC D-T operations, target Q>2", achieved: false, confidence: "medium" },
-        { year: "Early 2030s", event: "ARC commercial pilot plant", achieved: false, confidence: "low" }
+        { year: 2026, event: "~$1B equity round (Jul) from pension, sovereign and infrastructure investors — total raised ~$4B; Hyundai Motor Group joined (Sep); named first international partner in UKAEA's £220M LIBRTI tritium-breeding programme (Jul); record ~10,000 km REBCO tape order with Fujikura for ARC magnets (Sep)", achieved: true, note: "Jul 2026 funds cover ARC site preparation but not full construction; no Chesterfield site plan or building permit filed as of Jul 2026 per county records" },
+        { year: 2026, event: "All 18 TF magnets installed by end of summer 2026 (target) — MISSED: CFS reported 8 of 18 installed as of late Sep 2026", achieved: false, confidence: "high", note: "Installation continuing; no revised completion date published" },
+        { year: 2026, event: "Selected to lead a 10-organisation DOE Genesis Mission Phase II team building an AI digital twin / operations co-pilot for SPARC (Oct); $85M Letter of Intent with US Dept of Commerce CHIPS R&D Office for fusion-ready semiconductors, with Commerce taking a minority non-voting equity stake (Oct)", achieved: true, note: "LOI, not a final award; equity stake size undisclosed" },
+        { year: 2027, event: "SPARC first plasma (target) — slipped from '2026-2027' to 2027", achieved: false, confidence: "medium" },
+        { year: "2027-2028", event: "SPARC D-T operations, target Q>1 then Q>2", achieved: false, confidence: "medium", note: "CFS now states Q>1 targeted in 2027" },
+        { year: "Early 2030s", event: "ARC commercial pilot plant (Chesterfield County, VA; PJM interconnection application pending since Apr 2026)", achieved: false, confidence: "low" }
       ],
       keyMetrics: {
         magneticField: "12.2 T (toroidal, HTS)",
@@ -147,9 +164,11 @@ const FUSION_DATA = {
         "Jump from SPARC to commercial ARC requires major engineering",
         "Tritium self-sufficiency rests on a modeled ARC TBR of 1.08 - a thin ~8% margin; SPARC itself does not breed, and no device has yet bred and recovered tritium in a closed loop or demonstrated online extraction from flowing FLiBe",
         "ARC magnet lifetime depends on neutron damage from the salt blanket - an unresolved durability question per CFS's own papers",
+        "TF magnet installation is running behind CFS's own schedule (8 of 18 at end-Sep 2026 vs 'all 18 by end of summer'); first plasma has already slipped from 2025 → 2026 → 2027",
+        "~$4B raised is still short of a full ARC build; Jul 2026 round covers site prep only",
         "Net electricity generation has not been demonstrated by any fusion device"
       ],
-      sources: ["cfs.energy", "CFS ARC physics papers (5, peer-reviewed, Jun 2026)", "IEEE Spectrum (Jun 2026, ARC)", "Fortune (Jan 2026)", "TechCrunch (Jan 2026)", "CPG/Click Oil & Gas (May 2026, vessel + ENI deal)", "MIT News (Mar 2024)", "DOE milestone validation", "Nature papers on HTS magnets"]
+      sources: ["cfs.energy (Jul–Oct 2026 releases: LIBRTI, Hyundai, Genesis Mission)", "TechCrunch (Oct 23 2026, $85M CHIPS LOI)", "Richmond BizSense (Jul 30 2026, $1B raise + Chesterfield permits)", "Khaleej Times (Sep 30 2026, Fujikura tape order)", "CFS on X (Sep 2026, 8/18 TF magnets)", "CFS ARC physics papers (5, peer-reviewed, Jun 2026)", "IEEE Spectrum (Jun 2026, ARC)", "Fortune (Jan 2026)", "CPG/Click Oil & Gas (May 2026, vessel + ENI deal)", "MIT News (Mar 2024)", "DOE milestone validation"]
     },
     {
       id: "helion",
@@ -158,17 +177,20 @@ const FUSION_DATA = {
       type: "Field-Reversed Configuration (FRC)",
       sector: "private",
       approach: "Pulsed, magnetically-confined FRC with direct energy capture. Targets D-He3 fuel (aneutronic).",
-      description: "Operating Polaris (7th gen), which achieved 150M°C and demonstrated D-T fusion (first private company). Building Orion commercial plant for Microsoft PPA.",
+      description: "Operating Polaris (7th gen), which achieved 150M°C and demonstrated D-T fusion (first private company). Building Orion commercial plant for Microsoft PPA. In Sep 2026 Helion quietly dropped 'net electricity' as Polaris's stated goal and reframed Orion's 2028 milestone from 'produce electricity' to 'initial operations', with full 50 MW power now 2029–2030.",
       founded: 2013,
-      funding: "~$1.5B raised to date (incl. $425M Series F Jan 2025 + $465M Series G Jun 2026 at $15.5B post-money valuation, ~3x prior); up to $1.7B in earlier milestone-tied commitments",
-      status: "Operating Polaris; Orion commercial plant under construction (Malaga, WA)",
-      progress: { stage: 4, pct: 30, note: "Polaris reached 150M°C and demonstrated D-T fusion (Feb 2026); $465M Series G raised Jun 2026 ($15.5B valuation); Orion plant under construction" },
+      funding: "~$1.55B raised to date (incl. $425M Series F Jan 2025 + Series G at $15.5B post-money valuation — $465M Jun 2026, topped up to $500M Sep 2026); ~$3.2B total committed capital incl. milestone-tied commitments (TechCrunch, Oct 2026); plus LOI for up to $175M US CHIPS R&D award (Oct 2026) with Commerce taking non-voting equity (~1%)",
+      status: "Operating Polaris (still in testing); Orion under construction (Malaga, WA) and licensed by Washington State; 'net electricity' goal quietly dropped from Polaris",
+      progress: { stage: 4, pct: 30, note: "Polaris reached 150M°C and demonstrated D-T fusion (Feb 2026) but no net-electricity result has been reported and the goal was removed from Helion's site (Sep 2026); Orion licensed by WA DOH (Jun 2026), generator building steel up; 2028 now 'initial operations', full power 2029–30" },
       milestones: [
         { year: 2021, event: "Trenta (6th gen) reached 100M°C plasma temperatures", achieved: true },
         { year: 2023, event: "Signed PPA with Microsoft for electricity by 2028", achieved: true },
         { year: 2025, event: "$425M Series F raised (Jan); Orion commercial plant groundbreaking near Rock Island Dam, WA (Jul)", achieved: true },
         { year: 2026, event: "Polaris achieved 150M°C and first private D-T fusion demonstration (Feb); $465M Series G raised at $15.5B valuation (Jun)", achieved: true, note: "Industry first for a private company; total raised to date ~$1.5B" },
-        { year: "2028-2029", event: "Deliver electricity to Microsoft via Orion (PPA target)", achieved: false, confidence: "low", note: "Extremely ambitious; Helion now references Orion startup ~2029" },
+        { year: 2026, event: "Washington State DOH issued Radioactive Materials and Radioactive Air Emissions licences for Orion (Jun) — Helion claims first fusion company licensed to build and operate a power plant; Orion assembly/office buildings complete, generator building steel up (Sep); headcount ~800", achieved: true, note: "State licences, not a federal NRC licence; Chelan PUD interconnection agreement still in progress" },
+        { year: 2026, event: "Helion removed 'net electricity' as Polaris's goal and 'produce electricity by 2028' from the Orion page (reported by Axios, Sep); LOI for up to $175M CHIPS R&D award for high-voltage semiconductors, Commerce to take ~1% non-voting equity (Oct)", achieved: true, note: "Two 2026 academic papers questioned Helion's energy-recovery assumptions; Helion disputes them. CHIPS award is an LOI, not finalised" },
+        { year: 2028, event: "Orion 'initial operations' (revised target) — Microsoft contract requires grid connection and start of operations by end-2028", achieved: false, confidence: "low", note: "Slipped in substance: was 'electricity by 2028'; full 50 MW operation now stated as 2029–2030 (Helion public affairs, FusionX 2026)" },
+        { year: "2029-2030", event: "Orion full 50 MW power to Microsoft (revised target)", achieved: false, confidence: "low", note: "Extremely ambitious; no fusion device has produced net electricity" },
         { year: "2030s", event: "Commercial fusion power plants", achieved: false, confidence: "low" }
       ],
       keyMetrics: {
@@ -181,11 +203,12 @@ const FUSION_DATA = {
         "D-He3 fuel cycle requires much higher temperatures than D-T; 150M°C is ~75% of estimated requirement",
         "No fusion device has demonstrated net electricity generation",
         "He-3 availability is extremely limited unless bred from D-D reactions",
-        "2028 Microsoft PPA remains extremely ambitious despite Orion groundbreaking",
-        "Direct energy conversion at scale is unproven",
-        "Net electricity was originally targeted for 2024 but not achieved"
+        "2028 Microsoft target has been softened to 'initial operations'; full power now 2029–30, and whether the PPA requires actual electricity delivery by end-2028 is unclear (Microsoft declined comment)",
+        "Direct energy conversion at scale is unproven; two 2026 academic papers questioned Helion's energy-recovery assumptions (Helion disputes)",
+        "Net electricity was originally targeted for 2024, then for Polaris; the Polaris net-electricity goal was quietly removed in 2026 with no result published",
+        "Polaris results remain company-reported, not peer-reviewed"
       ],
-      sources: ["helionenergy.com (Feb 2026 milestone announcement)", "GeekWire (Jun 2026, Series G)", "TechCrunch (Feb 2026)", "S&P Global (Jul 2025)", "Microsoft PPA announcement (May 2023)"]
+      sources: ["Axios Pro (Sep 8 2026, net-electricity goal dropped)", "Axios Seattle (Sep 28 2026)", "GeekWire (Sep 8 2026, headcount/Orion; Oct 22 2026, CHIPS LOI)", "TechCrunch (Oct 26 2026, equity-for-awards)", "helionenergy.com (Jun 2026 Orion licences; Feb 2026 milestone)", "GeekWire (Jun 2026, Series G)", "Microsoft PPA announcement (May 2023)"]
     },
     {
       id: "tae",
@@ -196,17 +219,18 @@ const FUSION_DATA = {
       approach: "Beam-driven FRC targeting p-B11 (proton-boron) aneutronic fusion",
       description: "One of the oldest private fusion companies. Skipped Copernicus (Nov 2025), leapfrogging from Norman directly to Da Vinci, a 50 MWe prototype power plant. Announced $6B merger with Trump Media & Technology Group (Dec 2025).",
       founded: 1998,
-      funding: "$1.3B+ private capital raised (incl. $150M Jun 2025 from Chevron, Google, NEA); TMTG merger valued at $6B+ (Dec 2025, providing up to $300M at signing)",
-      status: "Norman operational; Da Vinci 50 MWe plant in planning",
-      progress: { stage: 3, pct: 50, note: "Norman exceeded expectations; Copernicus skipped; Da Vinci site selection and construction targeting 2026" },
+      funding: "$1.3B+ private capital raised (incl. $150M Jun 2025 from Chevron, Google, NEA); TMTG merger valued at $6B+ (Dec 2025); TMTG has advanced $200M under a convertible note, with a further $100M available on S-4 filing (Sep 2026)",
+      status: "Norman operational; Da Vinci key designs complete, site not yet selected; TMTG merger pending (S-4 filed Sep 30 2026, must close by Dec 18 2026)",
+      progress: { stage: 3, pct: 50, note: "Norman exceeded expectations; Copernicus skipped; Da Vinci 'key designs complete' (Aug 2026) but no site announced as of late Oct 2026 and 'construction later in 2026' is at risk; TMTG merger not yet closed" },
       milestones: [
         { year: 2015, event: "C-2U sustained FRC for 5+ ms", achieved: true },
         { year: 2017, event: "Norman (C-2W) achieved stable FRC plasmas at 50M+ °C", achieved: true },
         { year: 2022, event: "Norman achieved 75 million °C", achieved: true },
         { year: 2025, event: "Copernicus cancelled — Norman performance exceeded expectations, leapfrogging to Da Vinci (Nov)", achieved: true, note: "Roadmap shortened by one generation" },
         { year: 2025, event: "$150M funding round (Jun); TMTG merger announced at $6B+ (Dec)", achieved: true },
-        { year: "2026", event: "TMTG merger close now targeted Q4 2026 or sooner (slipped from mid-2026, per Jun 10 2026 joint statement)", achieved: false, confidence: "medium" },
-        { year: "2026", event: "Da Vinci site selection and construction commencement after merger close (target)", achieved: false, confidence: "low" },
+        { year: 2026, event: "Helium-3 supply and commercialisation option agreement with Black Moon Energy, a lunar He-3 startup (Aug); Form S-4 for the TMTG all-stock merger filed with the SEC (Sep 30) — not yet effective", achieved: true, note: "He-3 deal has no quantities or pricing; Black Moon targets a first robotic lunar mission 'within five years'. TAE's own p-B11 roadmap does not need He-3" },
+        { year: "2026", event: "TMTG merger close targeted 'late 2026' (slipped from mid-2026 → Q4 2026); either party may terminate if not closed by Dec 18 2026", achieved: false, confidence: "medium", note: "Remaining conditions: S-4 effectiveness, shareholder consents, exchange listing. TMTG (NASDAQ: DJT) hit a record intraday low of $6.29 on Oct 20 2026, ~$1.8B market cap — well below the $6B headline merger value" },
+        { year: "2026", event: "Da Vinci site selection and construction commencement (target) — site still unannounced as of late Oct 2026 (AL, OH, TX under study)", achieved: false, confidence: "low", note: "At risk of slipping into 2027" },
         { year: 2031, event: "Da Vinci first power to grid (target, 50 MWe)", achieved: false, confidence: "low" },
         { year: "2030s", event: "Commercial p-B11 fusion power", achieved: false, confidence: "very low" }
       ],
@@ -221,10 +245,11 @@ const FUSION_DATA = {
         "Cross-section for p-B11 is much lower than D-T",
         "No FRC device has achieved net energy gain",
         "Bremsstrahlung radiation losses are severe at required temperatures",
-        "TMTG merger introduces unusual corporate structure; close now targeted Q4 2026 or sooner (slipped from mid-2026)",
-        "Da Vinci 2031 grid target is highly ambitious given current plasma temperatures are ~7.5% of p-B11 requirement"
+        "TMTG merger introduces unusual corporate structure; close has slipped twice and faces a Dec 18 2026 termination deadline; the acquirer's market cap (~$1.8B, Oct 2026) is far below the $6B headline value, so the stock consideration is worth much less than announced",
+        "Da Vinci 2031 grid target is highly ambitious given current plasma temperatures are ~7.5% of p-B11 requirement; site selection has not happened despite a 2026 construction-start target",
+        "No new Norman physics results published in 2026"
       ],
-      sources: ["tae.com (Nov 2025 roadmap update)", "TMTG/TAE joint statement (Jun 10 2026, SEC Form 425)", "CNBC (Dec 2025 TMTG merger)", "Nature Physics publications"]
+      sources: ["SEC Form S-4 (TMTG/TAE, Sep 30 2026)", "tae.com (Aug 2026 Da Vinci and Black Moon releases)", "Forbes (Oct 20 2026, DJT record low)", "StreetInsider (S-4 filing)", "tae.com (Nov 2025 roadmap update)", "TMTG/TAE joint statement (Jun 10 2026, SEC Form 425)", "CNBC (Dec 2025 TMTG merger)", "Nature Physics publications"]
     },
     {
       id: "tokamak_energy",
@@ -236,30 +261,32 @@ const FUSION_DATA = {
       description: "UK-based company building compact spherical tokamaks. Demo4 HTS magnet achieved 11.8T in fusion config (Nov 2025). ST40 set records in 2025; ST80-HTS build completion targeting 2026.",
       founded: 2009,
       funding: "$336M+ total (incl. $125M Series C Nov 2024; selected for US DOE FIRE Collaboratives); plus £70M STEP magnet-systems contract from UK Fusion Energy Ltd (Mar 2026–Mar 2029)",
-      status: "ST40 operational (record-breaking 2025); ST80-HTS build targeting 2026; Demo4 HTS magnet breakthrough",
-      progress: { stage: 3, pct: 60, note: "ST40 set plasma current/stored energy/triple product records (2025); Demo4 achieved 11.8T; ST80-HTS targeting 2026" },
+      status: "ST40 operational; Demo4 HTS campaign completed at 13.7 T peak (Sep 2026); ST80-HTS 2026 target unaddressed in any 2026 release",
+      progress: { stage: 3, pct: 60, note: "ST40 set plasma current/stored energy/triple product records (2025); Demo4 14-month campaign finished with 13.7 T peak field (Sep 2026); no ST80-HTS build-status update published in 2026 — the 2026 completion target appears to have lapsed without an official re-dating" },
       milestones: [
         { year: 2022, event: "ST40 achieved 100 million °C ion temperature", achieved: true },
         { year: 2025, event: "Demo4 HTS magnet system achieved 11.8T at -243°C, 7M ampere-turns — first fusion power plant field strength in full HTS config (Nov)", achieved: true },
         { year: 2025, event: "ST40 record-breaking results: highest plasma current, stored energy, and fusion triple product (Dec)", achieved: true },
         { year: 2025, event: "ST40 receives $52M upgrade (US DOE + UK DESNZ partnership)", achieved: true },
         { year: 2026, event: "Appointed magnet-systems partner for the UK's STEP programme — £70M contract (Mar 2026–Mar 2029)", achieved: true, note: "Validates HTS magnet commercialization beyond own devices" },
-        { year: 2026, event: "ST80-HTS build completion at UKAEA Culham (target)", achieved: false, confidence: "medium", note: "World's first high-field spherical tokamak with HTS magnets at scale" },
+        { year: 2026, event: "Demo4 HTS magnet campaign completed (Sep): peak 13.7 T (up from 11.8 T), ~10,000 hours energised, forced discharges to 12.5 T, >90 HTS joints tested; results feed STEP model-coil work. Agreement with Furukawa Electric to explore UK HTS tape manufacturing capability (Jun)", achieved: true, note: "Furukawa deal is a feasibility study — no facility, investment figure or dates" },
+        { year: 2026, event: "ST80-HTS build completion at UKAEA Culham (target)", achieved: false, confidence: "low", note: "No build-status update in any 2026 company release; target effectively lapsed, no revised date published" },
         { year: "Early 2030s", event: "ST-E1 fusion pilot plant, up to 200 MWe to grid", achieved: false, confidence: "low" }
       ],
       keyMetrics: {
         plasmaTemp: "100 million °C (achieved in ST40)",
-        magnetField: "11.8 T (achieved in Demo4 HTS system, Nov 2025)",
+        magnetField: "13.7 T peak (Demo4 HTS system, campaign completed Sep 2026)",
         magnetType: "HTS (REBCO); supply agreement with Furukawa/SuperPower",
         configuration: "Spherical tokamak (tight aspect ratio)"
       },
       uncertainties: [
         "Spherical tokamaks have center-column engineering challenges",
         "Scaling from ST40/ST80 to commercial ST-E1 is a major step",
-        "Long-pulse (15 min) plasma control in ST80-HTS is unproven",
+        "Long-pulse (15 min) plasma control in ST80-HTS is unproven; ST80-HTS has gone silent in company communications through 2026",
+        "No new equity round since the $125M Series C (Nov 2024); revenue increasingly from magnet contracts (STEP) rather than own-device progress",
         "Competition from larger conventional tokamak designs"
       ],
-      sources: ["tokamakenergy.com (Dec 2025 results, Nov 2025 magnet breakthrough)", "UK government fusion reports", "US DOE FIRE Collaboratives"]
+      sources: ["tokamakenergy.com (Sep 2026 Demo4 campaign results; Jun 2026 Furukawa agreement)", "World Nuclear News (Jun 2026)", "tokamakenergy.com (Dec 2025 results, Nov 2025 magnet breakthrough)", "UK government fusion reports", "US DOE FIRE Collaboratives"]
     },
     {
       id: "general_fusion",
@@ -268,35 +295,36 @@ const FUSION_DATA = {
       type: "Magnetized Target Fusion",
       sector: "private",
       approach: "Magnetized target fusion using liquid metal compression",
-      description: "Uses pneumatic pistons to compress a liquid metal liner around magnetized plasma. LM26 achieved first plasma (Feb 2025) and first compression (Apr 2025). Fusion Demonstration Plant (FDP) at Culham targeting 2026-2027.",
+      description: "Uses pneumatic pistons to compress a liquid metal liner around magnetized plasma. LM26 achieved first plasma (Feb 2025), first compression (Apr 2025), and a claimed ~1 keV electron temperature under compression (Oct 2026, submitted for peer review). Listed on Nasdaq (GFUZ) in Jul 2026 via SVAC reverse merger. Lawson-equivalent milestones targeted 2028; first-of-a-kind plant 'around 2035'.",
       founded: 2002,
-      funding: "$300M+ (incl. $22M financing Aug 2025); going public via ~$1B reverse merger with Spring Valley Acquisition Corp III (SVAC), Nasdaq ticker GFUZ, close targeted mid-2026",
-      status: "LM26 operational (first plasma Feb 2025, first compression Apr 2025); breakeven target slipped to 2028; Nasdaq listing pending",
-      progress: { stage: 3, pct: 40, note: "LM26 achieved first plasma and first compression; scientific breakeven target now 2028 (slipped from 2026); pursuing Nasdaq listing via SVAC reverse merger" },
+      funding: "$300M+ private capital; SVAC reverse merger closed Jul 10 2026 (Nasdaq: GFUZ) with ~US$150M cash at listing; company notes LM26 programme funded only to end-2028 and may cost more than expected",
+      status: "Public company (Nasdaq: GFUZ since Jul 2026); LM26 operational, 1 keV milestone claimed Oct 2026 (not yet peer-reviewed); Lawson-equivalent targets 2028",
+      progress: { stage: 3, pct: 42, note: "LM26 achieved first plasma, first compression, and a claimed ~1.1–1.2 keV electron temperature under compression (Oct 2026, submitted for peer review; ion temperature inferred ~0.46 keV); next step is 10 keV (no date), then Lawson-equivalent by 2028" },
       milestones: [
         { year: 2021, event: "Announced demo plant at UKAEA Culham site", achieved: true },
         { year: 2024, event: "LM26 assembled (Dec 2024)", achieved: true },
         { year: 2025, event: "LM26 first plasma (Feb); first plasma compression (Apr)", achieved: true },
-        { year: 2026, event: "Definitive business combination with Spring Valley Acquisition Corp III (SVAC) announced (Jan); Nasdaq listing as GFUZ, ~$1B, close targeted mid-2026", achieved: true, note: "TechCrunch characterized the company as financially struggling" },
-        { year: 2026, event: "Targeting 10 keV (100M°C) plasma temperatures in LM26", achieved: false, confidence: "low", note: "Milestone progression: 1 keV → 10 keV → breakeven equivalent" },
-        { year: 2028, event: "Scientific breakeven equivalent (100% Lawson) target — slipped from 2026", achieved: false, confidence: "low" },
-        { year: "2030s", event: "Commercial pilot plant", achieved: false, confidence: "low" }
+        { year: 2026, event: "Definitive business combination with Spring Valley Acquisition Corp III (SVAC) announced (Jan); merger closed Jul 10, GFUZ/GFUZW trading on Nasdaq from Jul 13 with ~US$150M cash", achieved: true, note: "TechCrunch characterized the company as financially struggling ahead of the deal; >100M shares subsequently registered for resale (F-1/424B3)" },
+        { year: 2026, event: "LM26 compressional heating: Te ≈ 0.72 keV (Jun), then ~1.1 keV (Thomson scattering, with UKAEA) / ~1.2 keV (AXUV) claimed at peak compression (Oct 8); non-binding framework agreement with Renexia for deployment in Italy (Jun)", achieved: true, note: "Company-reported, papers 'submitted for peer review'; ion temperature inferred only ~0.46 keV; independent commentary notes temperature still collapses at compression ratio ~2.7" },
+        { year: "TBD", event: "10 keV (100M°C) plasma temperatures in LM26 (target) — originally 2026, no new date given", achieved: false, confidence: "low", note: "Milestone progression: 1 keV → 10 keV → Lawson equivalent" },
+        { year: 2028, event: "Scientific breakeven equivalent (100% Lawson) target — slipped from 2026", achieved: false, confidence: "low", note: "LM26 funding runs to end-2028 and the company warns it may cost more than expected" },
+        { year: "~2035", event: "First-of-a-kind commercial plant (target, stated Oct 2026)", achieved: false, confidence: "very low" }
       ],
       keyMetrics: {
         approach: "Pneumatic piston compression of liquid metal",
         liquidMetal: "Molten lead-lithium",
         cycleRate: "~1 Hz pulsed operation",
-        lm26Status: "First plasma and first compression achieved (2025)"
+        lm26Status: "First plasma and first compression (2025); ~1 keV electron temperature claimed under compression (Oct 2026, pending peer review)"
       },
       uncertainties: [
         "Magnetized target fusion has not achieved net energy",
         "Plasma-liquid metal interface physics is complex",
         "Repetition rate and energy balance are unproven",
         "Symmetry of compression is challenging",
-        "100M°C and breakeven targets have not yet been reached in LM26",
-        "Breakeven target slipped from 2026 to 2028; company described as financially struggling ahead of SVAC reverse merger"
+        "1 keV electron-temperature claim is company-reported and not yet peer-reviewed; ion temperature is much lower (~0.46 keV) and 10 keV has no date",
+        "Breakeven target slipped from 2026 to 2028; listed with only ~$150M cash and LM26 funded to end-2028 — further dilution likely (large resale registration already filed)"
       ],
-      sources: ["generalfusion.com (LM26 updates 2025)", "TechCrunch (Jan 2026, SVAC reverse merger)", "Nuclear Engineering International (General Fusion goes public)", "GlobeNewsWire ($22M financing Aug 2025)"]
+      sources: ["GlobeNewswire (Oct 8 2026, 1 keV milestone)", "BNN Bloomberg (Jun 2026, 0.72 keV result; Renexia agreement)", "Canadian Mining Journal (Jul 2026, Nasdaq listing)", "Fusion Fortnightly (Oct 14 2026, sceptical analysis)", "TechCrunch (Jan 2026, SVAC reverse merger)", "generalfusion.com (LM26 updates 2025)"]
     },
     {
       id: "first_light",
@@ -316,7 +344,8 @@ const FUSION_DATA = {
         { year: 2025, event: "Amplifier tech helped Z Machine (Sandia) reach 3.67 TPa pressure record (Feb)", achieved: true },
         { year: 2025, event: "FLARE concept published (Sep) — models 1,000x gain, 1/10th cost of fast ignition (Sep)", achieved: true },
         { year: 2026, event: "£25M funding first close (Apr) led by East X Ventures/Starmaker One with UKAEA and IP Group to commercialize FLARE; pursuing partnerships in fusion, space, and defense", achieved: true },
-        { year: "2028+", event: "License amplifier technology to inertial fusion developers", achieved: false, confidence: "medium" }
+        { year: 2026, event: "FLARE compression stage 'validated' on in-house M3 pulsed-power facility (Sep); selected by UK Dstl for a hypervelocity impact research programme (Oct); orbital-impact-velocity tests with Texas A&M (Jun)", achieved: true, note: "Compression-only test — no ignition or gain demonstrated; cost-advantage claims are company estimates; Dstl contract value undisclosed. Non-fusion (space/defence) revenue lines now visible" },
+        { year: "2028+", event: "License amplifier technology to inertial fusion developers", achieved: false, confidence: "medium", note: "No FLARE licensing deal announced as of Oct 2026" }
       ],
       keyMetrics: {
         projectileSpeed: ">6.5 km/s hypervelocity impact",
@@ -329,9 +358,9 @@ const FUSION_DATA = {
         "FLARE 1,000x gain is a model projection, not experimental result",
         "Licensing model depends on other companies building inertial fusion plants",
         "Fusion neutron yield from original demonstration was very small",
-        "Business viability as a technology licensor is unproven"
+        "Business viability as a technology licensor is unproven; 2026 wins are defence/space contracts rather than fusion licences"
       ],
-      sources: ["firstlightfusion.com (Mar 2025 strategic update, Sep 2025 FLARE)", "ANS Nuclear Newswire (Mar 2025)", "Electronics Weekly (Jul 2025)"]
+      sources: ["Nuclear Engineering International (Sep 2026, FLARE compression validation)", "firstlightfusion.com (2026 releases: Dstl, Texas A&M)", "firstlightfusion.com (Mar 2025 strategic update, Sep 2025 FLARE)", "ANS Nuclear Newswire (Mar 2025)"]
     },
     {
       id: "zap_energy",
@@ -351,6 +380,7 @@ const FUSION_DATA = {
         { year: 2025, event: "FuZE-3 achieved gigapascal fusion plasma pressures (~10,000x atmospheric, peer-reviewed, Nov)", achieved: true },
         { year: 2025, event: "$130M Series D raised; Century high-rep-rate platform launched", achieved: true },
         { year: 2026, event: "FuZE-A (5th device) brought online; new CEO Zabrina Johal named, cofounder Benj Conway becomes President; partial pivot adding small-scale fission announced (Apr)", achieved: true },
+        { year: 2026, event: "Gen-3 liquid bismuth loop passed 1,000 hours of flowing operation at 400°C (~3,000 plasma shots; Aug); DOE Milestone Program approved detailed design and first prototype of a plant-grade 35 kV / 50 kA / 10 Hz pulsed-power capacitor (Oct); VP Fission Technology and VP Fuel Programs hired (Sep)", achieved: true, note: "Capacitor prototype tested only to 8 kV / 7 kA over hundreds of cycles vs a 6-billion-pulse design life; DOE payment amount not disclosed. Liquid-metal loops are explicitly dual-use for the fission track" },
         { year: "Late 2020s", event: "Demonstration of net energy", achieved: false, confidence: "low" },
         { year: "2030s", event: "Commercial Z-pinch fusion systems", achieved: false, confidence: "low" }
       ],
@@ -365,9 +395,10 @@ const FUSION_DATA = {
         "Scaling from gigapascal pressures to energy-producing conditions remains a major physics question",
         "Electrode erosion and lifetime in reactor scenario",
         "Energy balance has not been demonstrated",
-        "Apr 2026 partial pivot to fission may signal that fusion revenue timelines are too distant for near-term commercial viability"
+        "Apr 2026 partial pivot to fission may signal that fusion revenue timelines are too distant for near-term commercial viability; senior fission hires in H2 2026 suggest the fission track is absorbing real resources",
+        "No new plasma-physics results or funding published since the Nov 2025 gigapascal paper; 2026 milestones are component-level (liquid-metal loop, capacitor)"
       ],
-      sources: ["zapenergy.com (Nov 2025 gigapascal announcement)", "TechCrunch (Apr 2026, fission pivot)", "Neutron Bytes (Apr 2026)", "GeekWire (Nov 2025)"]
+      sources: ["zapenergy.com (Aug 2026 bismuth loop; Oct 2026 DOE capacitor milestone)", "zapenergy.com (Nov 2025 gigapascal announcement)", "TechCrunch (Apr 2026, fission pivot)", "Neutron Bytes (Apr 2026)", "GeekWire (Nov 2025)"]
     },
     {
       id: "type_one",
@@ -376,33 +407,36 @@ const FUSION_DATA = {
       type: "Stellarator (HTS)",
       sector: "private",
       approach: "Optimized stellarator with HTS magnets, building on Wendelstein 7-X physics",
-      description: "Developing Infinity Two (350 MW stellarator pilot plant) with TVA letter of intent for deployment at retired Bull Run coal plant. Bill Gates among backers. Completed first formal design review (May 2025).",
+      description: "Developing Infinity Two (stellarator pilot plant, now described as 400 MWe; was 350 MW) with TVA letter of intent for deployment at retired Bull Run coal plant. Bill Gates among backers. Completed first formal design review (May 2025). Closed a $200M Series B (Oct 2026); Infinity One groundbreaking now H1 2027.",
       founded: 2019,
-      funding: "$160M+ total (incl. $82.4M seed Jul 2024 + $87M Jan 2026 convertible note ahead of a $250M Series B at ~$900M pre-money valuation; backed by Bill Gates)",
-      status: "Infinity Two design review complete; Infinity One prototype construction targeting 2026",
-      progress: { stage: 1, pct: 80, note: "Infinity Two design basis peer-reviewed; formal design review passed (May 2025); TVA partnership" },
+      funding: "~$370M total (incl. $82.4M seed Jul 2024, $87M Jan 2026 convertible note, and $200M Series B closed Oct 2026 — co-led by Breakthrough Energy Ventures and Clutterbuck Capital, with Lowercarbon, Siemens Energy Ventures, SiteGround; valuation undisclosed). Series B closed below the $250M earlier reported as targeted",
+      status: "Series B closed ($200M, Oct 2026); Tennessee fusion-specific licence issued; Infinity One groundbreaking slipped to H1 2027",
+      progress: { stage: 1, pct: 82, note: "Infinity Two design basis peer-reviewed; formal design review passed (May 2025); first US state fusion-specific byproduct-material licence (Tennessee, 2026); $200M Series B closed Oct 2026; Infinity One prototype groundbreaking now H1 2027 (was late 2026), plasma startup target 2029" },
       milestones: [
         { year: 2023, event: "Completed initial stellarator optimization design", achieved: true },
         { year: 2024, event: "Secured DOE milestone-based funding; $82.4M seed round finalized", achieved: true },
         { year: 2025, event: "Infinity Two design basis published in Journal of Plasma Physics (Mar); first formal design review completed (May)", achieved: true },
         { year: 2025, event: "TVA letter of intent for 350 MW Infinity Two at retired Bull Run coal plant, Oak Ridge, TN", achieved: true },
-        { year: 2026, event: "$87M raised (Jan) ahead of $250M Series B; Infinity One prototype construction (target)", achieved: false, confidence: "medium" },
-        { year: "Mid 2030s", event: "Infinity Two 350 MW pilot plant at TVA Bull Run site", achieved: false, confidence: "low" }
+        { year: 2026, event: "$87M convertible note (Jan); Tennessee TDEC issued the first US state fusion-specific byproduct-material licence for Project Infinity at Bull Run (effective Jun, reported Sep); $200M Series B closed (Oct 6), co-led by Breakthrough Energy Ventures and Clutterbuck Capital", achieved: true, note: "Series B landed at $200M vs the $250M previously reported as targeted; valuation not disclosed" },
+        { year: "H1 2027", event: "Infinity One prototype groundbreaking (target) — slipped from 'late 2026'", achieved: false, confidence: "medium", note: "NEI (Sep 2026) still said 'later in 2026'; ENR (Oct 2026) reports H1 2027. Commissioning/plasma target 2029 unchanged" },
+        { year: 2029, event: "Infinity One plasma startup (target)", achieved: false, confidence: "low" },
+        { year: "Mid 2030s", event: "Infinity Two ~400 MWe pilot plant at TVA Bull Run site (conventional island 2028 / fusion island 2030 targets)", achieved: false, confidence: "low" }
       ],
       keyMetrics: {
         advantage: "Stellarators are inherently steady-state (no disruptions)",
         magnetType: "HTS (REBCO)",
         basis: "Builds on W7-X optimized stellarator physics",
-        infinityTwoPower: "350 MW target (Infinity Two pilot plant)"
+        infinityTwoPower: "~400 MWe (Infinity Two pilot plant, per Oct 2026 Series B release; earlier materials said 350 MW — change unexplained)"
       },
       uncertainties: [
         "Stellarator construction is extremely complex (3D magnet geometry)",
         "No stellarator has achieved reactor-relevant conditions",
         "Manufacturing of complex 3D HTS coils at scale is unproven",
-        "Earlier stage than competing tokamak approaches",
-        "TVA partnership is a letter of intent, not a firm commitment"
+        "Earlier stage than competing tokamak approaches; Infinity One groundbreaking has already slipped once (late 2026 → H1 2027)",
+        "TVA partnership is a letter of intent, not a firm commitment",
+        "Series B closed below the reported $250M target"
       ],
-      sources: ["typeoneenergy.com (design review May 2025)", "TechCrunch (Jan 2026)", "Neutron Bytes (TVA partnership Sep 2025)", "Journal of Plasma Physics (2025)"]
+      sources: ["Business Wire via FinancialContent (Oct 6 2026, $200M Series B)", "ENR (Oct 7 2026, H1 2027 groundbreaking)", "Nuclear Engineering International (Sep 4 2026, Tennessee licence)", "typeoneenergy.com (design review May 2025)", "TechCrunch (Jan 2026)", "Journal of Plasma Physics (2025)"]
     },
     {
       id: "nif",
@@ -423,13 +457,14 @@ const FUSION_DATA = {
         { year: 2025, event: "8.6 MJ yield, target gain 4.13x — new record using novel fuel-capsule design (Apr 2025)", achieved: true },
         { year: 2025, event: "LANL-led team achieved ignition via 'groundbreaking approach' with 2.4 MJ yield (Jun 2025)", achieved: true },
         { year: 2026, event: "LLNL leads DOE IFE-STAR ecosystem and STARFIRE Hub (~$16M, 4-yr) — one of three DOE inertial-fusion-energy science/technology hubs translating ignition toward power applications", achieved: true, note: "IFE-STAR Conference convened 2026; five thrusts incl. high-gain targets, lasers, target manufacturing" },
+        { year: 2026, event: "Enhanced Yield Capability (EYC) upgrade passed its second critical-decision gate (Apr; $26M appropriated) to raise laser energy from 2.2 to ~2.6 MJ, which LLNL says 'could quadruple yields'; Annie Kritcher received the E.O. Lawrence Award (Oct)", achieved: true, note: "No new yield record above 8.6 MJ and no updated ignition-shot count published Jun–Oct 2026; EYC has no further approval or baseline announced since Apr" },
         { year: "2026+", event: "Continued ignition experiments, exploring higher yields and new approaches", achieved: false, confidence: "high" }
       ],
       keyMetrics: {
         laserEnergy: "2.05-2.2 MJ (192 beams)",
         peakFusionYield: "8.6 MJ (April 2025)",
         peakTargetGain: "4.13x (April 2025)",
-        totalIgnitionShots: "10+ (as of Oct 2025)",
+        totalIgnitionShots: "10+ (as of Oct 2025; no updated count published through Oct 2026)",
         wallPlugEfficiency: "~0.5% (laser is ~1% efficient)",
         repetitionRate: "~1 shot per day (not suitable for power)"
       },
@@ -440,7 +475,7 @@ const FUSION_DATA = {
         "Target fabrication cost ($50K+ each) must drop by >1000x for energy",
         "Primarily a weapons physics facility, not energy program"
       ],
-      sources: ["lasers.llnl.gov (ignition timeline, Apr 2025 record)", "LLNL S&T Review (Jul-Aug 2025)", "Stansberry Research (Apr 2025 record analysis)", "DOE/NNSA reports"]
+      sources: ["lasers.llnl.gov (ignition timeline, Apr 2025 record)", "The Independent / Livermore (Apr 2026, EYC approval)", "lmf.llnl.gov news (Jun–Oct 2026)", "LLNL S&T Review (Jul-Aug 2025)", "DOE/NNSA reports"]
     },
     {
       id: "east",
@@ -452,8 +487,8 @@ const FUSION_DATA = {
       description: "China's national program. EAST sustained 1,066s of steady-state H-mode plasma (Jan 2025). Its successor BEST (Burning Plasma Experimental Superconducting Tokamak) is under construction in Hefei, targeting first plasma and ~5x energy gain (Q~5) by end of 2027. CFETR is the planned >1 GW demonstration reactor. In Jul 2025 China created a CNNC-led state fusion company (CFEC, ~$2.1B registered capital); private players are also emerging (Energy Singularity's HTS HH70 reportedly sustained 1,337s).",
       founded: 2006,
       funding: "Estimated $1.5-2B/year government across programs; CNNC-led China Fusion Energy Co. (CFEC) created Jul 2025 with ~15B yuan (~$2.1B) registered capital (~$1.6B first round); analysts cite a ~$6.5B national fusion buildout",
-      status: "EAST operational; BEST under construction (first plasma target end-2027); CFETR in design; state company CFEC established",
-      progress: { stage: 3, pct: 85, note: "EAST sustained 1,066s (Jan 2025); BEST main-machine assembly underway (400-ton Dewar base installed Oct 2025), first plasma targeted end-2027 at Q~5; CFETR in design" },
+      status: "EAST operational; BEST campus delivered Oct 2026 with main-machine nested assembly >50% complete ('construction complete' end-2027); CFETR in design; state company CFEC established",
+      progress: { stage: 3, pct: 86, note: "EAST sustained 1,066s (Jan 2025); BEST campus formally put into use (Oct 1 2026), four-layer nested assembly of the main machine underway with >50% of planned tasks complete per state media; 2027 milestone now phrased as 'construction complete' rather than 'first plasma'; D-T electricity demonstration 'around 2030' (target); CFETR in design" },
       milestones: [
         { year: 2021, event: "EAST sustained 120M°C plasma for 101 seconds", achieved: true },
         { year: 2023, event: "EAST sustained 70M°C plasma for 403 seconds", achieved: true },
@@ -461,7 +496,9 @@ const FUSION_DATA = {
         { year: 2025, event: "BEST 400-ton Dewar base installed (Oct) — largest vacuum component ever produced in China's fusion program; CNNC-led state fusion company CFEC established in Shanghai (Jul, ~$2.1B registered capital)", achieved: true },
         { year: 2026, event: "Private firm Energy Singularity's HH70 (world's first fully-HTS tokamak) sustained a 1,337s (~22 min) steady-state long-pulse plasma current, via AI-based control (campaign ran Nov 2025: 120s → 335s → 1,337s)", achieved: true, note: "Longest by a commercially built device; surpasses EAST's 1,066s under different conditions/parameters" },
         { year: 2026, event: "EAST raised line-averaged electron density to ~1.3–1.65 (×10^19 m^-3 range), up from prior 0.8–1.0 (Jan 2026)", achieved: true },
-        { year: 2027, event: "BEST first plasma target, aiming for ~5x energy gain (Q~5)", achieved: false, confidence: "medium", note: "Construction began 2023; aggressive 'China speed' schedule" },
+        { year: 2026, event: "ASIPP completed full-parameter tests of a 582-tonne toroidal-field coil (21 m × 12 m, 100 kA, 6.5 T) and an HTS central solenoid (rated 46.5 kA, tested to 60 kA) (Jun); state media claim 100% domestic magnet supply and superconductor cost down from 400 to 100 yuan/m", achieved: true, note: "Xinhua labels these 'EAST magnets' but NEI/CGTN describe them as CRAFT prototype magnets for BEST/CFETR — the coil is far larger than any EAST component. State-reported" },
+        { year: 2026, event: "BEST project campus formally delivered and put into use (Oct 1); core components arriving since Jul; main machine in four-layer nested assembly (vacuum vessel → thermal shield → TF magnets → in-vessel components), '>50% of planned tasks complete'; CFEC signed a memorandum of cooperation with the ITER Organization and CNNC opened HL-3 joint experiments to foreign partners (Sep, IAEA General Conference)", achieved: true, note: "All state/company-reported; ITER MoC not corroborated on ITER's own site" },
+        { year: 2027, event: "BEST construction complete (target); first plasma and Q~5 burning plasma to follow", achieved: false, confidence: "medium", note: "Construction began 2023. Nov 2025 BEST research plan said 'first plasma 2027'; Oct 2026 state messaging says 'construction complete end-2027' — a softening, though no slip has been announced. D-T electricity demonstration targeted 'around 2030'" },
         { year: "Early 2030s", event: "CFETR completion target — >1 GW fusion power, Q~30 design goal", achieved: false, confidence: "low" },
         { year: "~2050", event: "China targets commercial fusion (CNNC stated goal)", achieved: false, confidence: "low" }
       ],
@@ -475,10 +512,11 @@ const FUSION_DATA = {
         "CFETR timeline depends on Chinese government priorities and funding",
         "Long-pulse operations at moderate parameters don't directly translate to net energy at reactor-relevant conditions",
         "Publication transparency varies; some results (e.g., Energy Singularity's 1,337s) are company/state-announced and corroborated mainly via Chinese media rather than peer review",
-        "BEST's end-2027 first-plasma and Q~5 goals are aggressive; burning-plasma operation has never been achieved in a magnetic device",
+        "BEST's 2027 milestone has quietly shifted in state messaging from 'first plasma' to 'construction complete'; Q~5 burning-plasma operation has never been achieved in a magnetic device",
+        "No new EAST plasma records in 2026; the Jun 2026 magnet tests were mislabelled 'EAST' in some state media and are better read as BEST/CFETR prototype hardware",
         "Temperature reports vary by source (ion vs electron temperature measurements)"
       ],
-      sources: ["Chinese Academy of Sciences (Oct 2025, BEST Dewar)", "Xinhua (Jul 2025, CFEC state company)", "Interesting Engineering (BEST Q~5 by 2027)", "Physics World (Jan 2025, EAST 1,066s)", "ASIPP publications"]
+      sources: ["CGTN / Global Times (Oct 1 2026, BEST campus delivery)", "Nuclear Engineering International (Oct 6 2026, BEST; Jul 2 2026, CRAFT magnet tests)", "Xinhua (Jun 28 2026, magnet tests)", "Global Times via GlobeNewswire (Sep 17 2026, CFEC–ITER MoC)", "EUROfusion (BEST research plan, Nov 2025)", "Chinese Academy of Sciences (Oct 2025, BEST Dewar)", "Physics World (Jan 2025, EAST 1,066s)", "ASIPP publications"]
     },
     {
       id: "kstar",
@@ -490,26 +528,28 @@ const FUSION_DATA = {
       description: "Korea Superconducting Tokamak Advanced Research device. Tungsten divertor successfully installed (Dec 2023), showing 25% surface temp reduction. Targeting 300 seconds at 100M°C by end of 2026.",
       founded: 2008,
       funding: "~$400M construction + ongoing operations",
-      status: "Operational with tungsten divertor; targeting 300s at 100M°C",
-      progress: { stage: 3, pct: 75, note: "48s at 100M°C record (2023); tungsten divertor operational; 102s continuous H-mode; targeting 300s by 2026" },
+      status: "Operational with full-tungsten wall; 300s-at-100M°C target for 2026 not yet reported; Korea reorganising toward a 'Korean Innovative Fusion Reactor' / K-Moonshot programme",
+      progress: { stage: 3, pct: 75, note: "48s at 100M°C record (2023); ≥102s H-mode after full-tungsten conversion (Jun 2026 — whether 100M°C was held for 48s or 102s is disputed between sources); 300s target for 2026 unmet as of Oct 2026" },
       milestones: [
         { year: 2021, event: "Sustained 100M°C plasma for 30 seconds", achieved: true },
         { year: 2023, event: "100M°C ion temperature for 48 seconds (record); 102 seconds continuous H-mode operation", achieved: true },
         { year: 2024, event: "Tungsten divertor installed and operational (Dec 2023); 25% reduction in surface temperature under similar heat loads", achieved: true },
-        { year: 2026, event: "Target: 300 seconds at 100M°C with tungsten divertor and AI-assisted control", achieved: false, confidence: "medium" },
-        { year: "2030s", event: "K-DEMO design (Korean DEMO reactor)", achieved: false, confidence: "low" }
+        { year: 2026, event: "KFE reported a 102-second plasma after full-tungsten wall conversion (Jun); KFE reorganised (Aug) with a new Innovative Fusion Reactor Design Group and a 'K-Moonshot Fusion Project' director (Sep)", achieved: true, note: "Secondary sources disagree on whether the 102s was at 100M°C ion temperature or H-mode duration with 48s at 100M°C; KFE primary release not reachable. Korean Innovative Fusion Reactor conceptual design starts 2026 (KRW 2.1B); Naju facility KRW 1.2T planned 2027–36" },
+        { year: 2026, event: "Target: 300 seconds at 100M°C with tungsten divertor and AI-assisted control", achieved: false, confidence: "low", note: "No result reported as of Oct 2026; ~2 months remain in the target year" },
+        { year: "2030s", event: "Korean Innovative Fusion Reactor / K-Moonshot (supersedes K-DEMO naming); 5th Basic Plan 2027–31 in preparation", achieved: false, confidence: "low" }
       ],
       keyMetrics: {
-        record: "48 seconds at 100 million °C ion temperature (2023); 102 seconds continuous H-mode",
+        record: "48 seconds at 100 million °C ion temperature (2023); ≥102 seconds H-mode (2023, repeated with full-tungsten wall Jun 2026)",
         magnetType: "Nb3Sn superconducting",
-        divertor: "Tungsten divertor operational (Dec 2023)"
+        divertor: "Full tungsten plasma-facing wall (divertor Dec 2023; full conversion by 2026)"
       },
       uncertainties: [
-        "300-second target at 100M°C is ambitious with new divertor",
-        "K-DEMO plans are early stage",
+        "300-second target at 100M°C is ambitious with new divertor and has not been reported with two months left in 2026",
+        "Jun 2026 102s result is reported inconsistently across secondary sources",
+        "K-DEMO plans are early stage and the national vehicle is being renamed/reorganised (K-Moonshot), which can mask schedule resets",
         "Transition from research tokamak to power plant design"
       ],
-      sources: ["kfe.re.kr", "CNN (Apr 2024)", "EurekAlert (tungsten divertor results)", "Nuclear Fusion journal"]
+      sources: ["Fusion Energy News (Jun 15 2026, 102s result)", "Financial News Korea (Sep 22 2026, KFE reorganisation)", "EnergyKor (May 2026, 5th Basic Plan)", "kfe.re.kr", "CNN (Apr 2024)", "Nuclear Fusion journal"]
     },
     {
       id: "jt60sa",
@@ -527,7 +567,8 @@ const FUSION_DATA = {
         { year: 2023, event: "First plasma achieved (October 2023)", achieved: true },
         { year: 2024, event: "Certified by Guinness as world's largest tokamak (160 m³ plasma volume)", achieved: true },
         { year: "2024-2026", event: "Major upgrades incl. two 8m-diameter in-vessel coils wound inside the machine, new diagnostics and heating; integrated commissioning restarted (May 2026)", achieved: true, note: "Followed ~2-year shutdown; EU-Japan restart announced May 2026" },
-        { year: "Late 2026", event: "New round of experiments begins (~6 months); 150+ proposals submitted by EU, Japan, and ITER scientists", achieved: false, confidence: "high" },
+        { year: "Late 2026", event: "New round of experiments begins (~6 months); 150+ proposals submitted by EU, Japan, and ITER scientists", achieved: false, confidence: "high", note: "No plasma reported as of Oct 2026; trackers still say 'from end-2026' — target unchanged, not slipped" },
+        { year: 2026, event: "Japan adopted a national 'Public-Private Investment Roadmap for Fusion Energy' (Jul 21): ~¥3.1 trillion public+private investment through FY2040, 2030s demonstration plant, staged safety regulation; METI conditionally selected four operators (EX-Fusion, Helical Fusion, LINEA Innovation, Starlight Engine) for a ~¥60B power-demonstration subsidy programme (Sep)", achieved: true, note: "Policy context for Japan's programme, of which JT-60SA is the flagship device; formal METI grant decisions were due 'as early as Oct 2026' and are not yet confirmed. QST's accelerated JA DEMO prototype targets 2038" },
         { year: "2027-2030", event: "Advanced tokamak scenario development; PPPL and GA collaborations", achieved: false, confidence: "high" },
         { year: "2030s", event: "Support ITER operations with scenario optimization", achieved: false, confidence: "medium" }
       ],
@@ -541,7 +582,7 @@ const FUSION_DATA = {
         "Value depends partly on ITER timeline",
         "Upgrade phase delays could push experiment start"
       ],
-      sources: ["Fusion for Energy (upgrade & restart announcements)", "ITER.org (2026 experiments preview)", "QST Japan (Guinness record)", "PPPL collaboration announcement"]
+      sources: ["Cabinet Office Japan (Jul 21 2026, fusion investment roadmap)", "FIA / World Nuclear News (Sep 2026, METI demonstration selections)", "Nuclear Engineering International (Mar 2026, QST JA DEMO acceleration)", "Fusion for Energy (upgrade & restart announcements)", "ITER.org (2026 experiments preview)", "QST Japan (Guinness record)"]
     },
     {
       id: "step",
@@ -560,6 +601,8 @@ const FUSION_DATA = {
         { year: 2024, event: "UKIFS (UK Industrial Fusion Solutions) established as UKAEA subsidiary to manage STEP", achieved: true },
         { year: 2025, event: "ILIOS consortium (Kier, Nuvia, AL_A, Aecom, Turner & Townsend) appointed for site redevelopment", achieved: true },
         { year: 2026, event: "Move 'from research to delivery' at West Burton (Mar); first public consultation (Jan 14–Mar 11); West Burton site ownership transferred to UKAEA; Construction, Magnets and Information Systems partners in place; new UK Fusion Energy Strategy published (Apr 2026)", achieved: true },
+        { year: 2026, event: "Concept-design update published in J. Fusion Energy: major radius grown 3.6 → 4.275 m, centre-column life 0.22 → 0.6 full-power-years, blanket switched from liquid lithium to solid Li2O; senior hires incl. Head of DCO (Oct); draft National Policy Statement EN-8 for fusion under Parliamentary scrutiny (oral evidence Sep 9), designation deadline Nov 30 2026; Dennis Whyte appointed UKAEA CEO (Aug)", achieved: true, note: "Design growth signals earlier compactness assumptions were optimistic; EN-8 not yet designated" },
+        { year: "~2030", event: "Construction start (per UKIFS, Dec 2025); Development Consent Order process began Jan 2026", achieved: false, confidence: "low" },
         { year: "~2032", event: "Fully evolved design and approval to build", achieved: false, confidence: "medium" },
         { year: "2032-2035", event: "Construction", achieved: false, confidence: "low" },
         { year: "~2040", event: "Net electricity to grid (target)", achieved: false, confidence: "low" }
@@ -573,9 +616,10 @@ const FUSION_DATA = {
         "Very ambitious timeline for a first-of-kind power plant",
         "Spherical tokamak power plant has never been built",
         "Design approval ~2032 means construction timeline is tight for ~2040 operations",
-        "UK fusion regulatory framework still developing for power plant licensing"
+        "UK fusion regulatory framework still developing for power plant licensing; fusion NPS (EN-8) not yet designated",
+        "2026 design update enlarged the machine and changed the blanket concept — a sign the design is still moving materially; UK officials declined to endorse industry cost claims at the Sep 2026 EN-8 hearing"
       ],
-      sources: ["West Lindsey Council (Mar 2026)", "GOV.UK New UK Fusion Energy Strategy (Apr 2026)", "Insider Media (£200m West Burton construction partner)", "East Midlands CCA", "World Nuclear News (UKIFS establishment)"]
+      sources: ["stepfusion.com (Oct 2026 appointments)", "Journal of Fusion Energy (2026 STEP concept design overview)", "UK Parliament ESNZ Committee (EN-8 scrutiny, Sep 2026)", "West Lindsey Council (Mar 2026)", "GOV.UK New UK Fusion Energy Strategy (Apr 2026)", "World Nuclear News (UKIFS establishment)"]
     },
     {
       id: "marvel",
@@ -587,30 +631,31 @@ const FUSION_DATA = {
       description: "Best-funded fusion company in Europe (~EUR 385M). Building $150M laser facility with Colorado State University. Siemens Energy partnership for integrated power plant design.",
       founded: 2019,
       funding: "~EUR 385M total (EUR 170M private + EUR 215M public projects; Series B EUR 113M incl. EQT Ventures, Siemens Energy Ventures, EIC Fund)",
-      status: "Building laser facility; Siemens Energy power plant design partnership",
-      progress: { stage: 1, pct: 50, note: "Best-funded European fusion company; $150M laser facility under construction with Colorado State; experiments early 2027" },
+      status: "ATLAS laser facility under construction (substantial completion Dec 2026, opening 2027); Siemens Energy partnership; launched 'Caelora' laser-systems venture (Sep 2026)",
+      progress: { stage: 1, pct: 50, note: "No longer Europe's best-funded fusion company (overtaken by Proxima's €411M round, Jul 2026); ~$160M ATLAS laser facility at Colorado State due for substantial completion Dec 2026 with opening in 2027 (slipped from 2026); experiments to follow" },
       milestones: [
         { year: 2023, event: "Partnerships with major laser facilities", achieved: true },
         { year: 2024, event: "Series B initial close EUR 63M (Sep 2024)", achieved: true },
         { year: 2025, event: "Series B extended to EUR 113M (Mar 2025); EIC Fund's first fusion equity investment", achieved: true },
         { year: 2025, event: "Siemens Energy partnership for integrated fusion power plant conceptual design", achieved: true },
-        { year: "Early 2027", event: "Laser facility operational at Colorado State; proof-of-concept experiments begin", achieved: false, confidence: "medium" },
+        { year: 2026, event: "Letter of intent with the State of Colorado and Siemens Energy on R&D, supply chain and talent (signed Jun, announced Aug); launched 'Caelora', a venture to commercialise high-energy laser systems (Sep); Jan Heye Buss named CTO (Sep)", achieved: true, note: "LOI carries no funding or plant commitment; Caelora is a revenue diversification away from fusion-only" },
+        { year: 2027, event: "ATLAS laser facility opens at Colorado State (substantial completion Dec 2026); proof-of-concept experiments begin — slipped from a 2026 completion target", achieved: false, confidence: "medium" },
         { year: "2030s", event: "Prototype fusion device", achieved: false, confidence: "very low" }
       ],
       keyMetrics: {
         approach: "Nonthermal, ultra-short pulse laser",
         targetType: "Nanostructured solid-state targets",
         laserType: "Petawatt-class, femtosecond pulses",
-        laserFacility: "$150M 'ATLAS' facility at Colorado State University: three ultra-high-intensity lasers delivering ~7 petawatts at a hair-width target; ground broken Oct 2025, targeted completion 2026"
+        laserFacility: "~$160M 'ATLAS' facility at Colorado State University: three ultra-high-intensity lasers delivering ~7 petawatts at a hair-width target; ground broken Oct 2025, substantial completion Dec 2026, opening 2027"
       },
       uncertainties: [
         "Nonthermal laser fusion is less validated than thermal ICF",
-        "Still early stage — laser facility not yet operational",
+        "Still early stage — laser facility not yet operational and its opening has slipped to 2027",
         "Target physics at these conditions is not well understood",
         "Significant gap between laser experiments and power plant",
-        "Large public funding component (EUR 215M) may carry milestone conditions"
+        "Large public funding component (EUR 215M) may carry milestone conditions; no new equity round since Mar 2025 while peers raised heavily in 2026"
       ],
-      sources: ["marvelfusion.com (Series B)", "b2venture (Series B announcement)", "Optics.org (Sep 2024)", "YPOG (EIC Fund investment)"]
+      sources: ["marvelfusion.com (Aug–Sep 2026 newsroom: Colorado/Siemens LOI, Caelora, CTO)", "Tradeline (Jun 2026, ATLAS construction status)", "marvelfusion.com (Series B)", "b2venture (Series B announcement)", "YPOG (EIC Fund investment)"]
     },
     {
       id: "w7x",
@@ -631,7 +676,7 @@ const FUSION_DATA = {
         { year: 2025, event: "Water-cooled divertor completed and operational (enables up to 30-min pulses at full heating power)", achieved: true },
         { year: 2025, event: "New energy turnover record: 1.8 GJ over 6-minute run (90 hydrogen pellets injected)", achieved: true },
         { year: 2025, event: "World-best fusion triple product sustained for 43 seconds on the final day of the OP2.3 campaign (May 22), exceeding JET/JT-60U at comparable durations; peak ion temp ~40M°C, fueled by an ORNL pellet injector", achieved: true },
-        { year: "2026", event: "OP2.4 experimental campaign (Aug-Dec 2026) after maintenance", achieved: false, confidence: "high" },
+        { year: "2026", event: "OP2.4 experimental campaign (Sep–Dec 2026 per IPP; EUROfusion lists Aug–Dec) after maintenance", achieved: false, confidence: "high", note: "No results or campaign-start release found as of late Oct 2026. IPP and Columbia University established a $13.3M/5-yr 'Max Planck Columbia Center' using W7-X from 2027 (Oct 2026), with Proxima Fusion participating" },
         { year: "2028-2035", event: "30-minute plasma operations at full performance", achieved: false, confidence: "medium" }
       ],
       keyMetrics: {
@@ -646,7 +691,7 @@ const FUSION_DATA = {
         "Research device, not on path to direct power production",
         "Long-duration results at moderate temperatures, not reactor-relevant conditions"
       ],
-      sources: ["IPP Greifswald (ipp.mpg.de/w7x)", "World Nuclear News (performance records)", "EUROfusion (gigajoule milestone)", "Nature Physics publications"]
+      sources: ["IPP Greifswald (ipp.mpg.de/w7x; OP2.4 proposals page)", "ANS Nuclear Newswire (Oct 21 2026, IPP–Columbia center)", "World Nuclear News (performance records)", "EUROfusion (gigajoule milestone)", "Nature Physics publications"]
     },
     {
       id: "proxima",
@@ -655,16 +700,17 @@ const FUSION_DATA = {
       type: "Stellarator (HTS)",
       sector: "private",
       approach: "Quasi-isodynamic optimized stellarator with HTS magnets; spun out of Max Planck IPP, building on Wendelstein 7-X physics",
-      description: "Munich-based Max Planck IPP spinout, now one of Europe's best-funded fusion startups (~€200M Series A). Published the 'Stellaris' integrated power plant concept and is driving the 'Alpha Alliance' to build a net-energy stellarator demonstrator in Garching by the early 2030s.",
+      description: "Munich-based Max Planck IPP spinout, now Europe's best-funded fusion startup after a €411M round at a €2.4B valuation (Jul 2026). Published the 'Stellaris' integrated power plant concept and is driving the 'Alpha Alliance' to build a net-energy stellarator demonstrator near Garching by ~2031. Germany's new €500M federal milestone programme (Oct 2026) is a key expected funding source.",
       founded: 2023,
-      funding: "~€200M (Series A extended to €200M in 2026 from €130M in 2025); backers incl. Cherry Ventures, Balderton, Plural, UVC Partners",
-      status: "Stellaris concept published; Alpha demonstrator site/design; Stellarator Model Coil targeted 2027",
-      progress: { stage: 1, pct: 35, note: "Stellaris power plant concept published; Alpha Alliance (30+ companies) launched Feb 2026; MOU with Bavaria/RWE/Max Planck IPP (Mar 2026); SMC magnet demo due 2027" },
+      funding: ">€650M total incl. ~€95M grants: €130M Series A (2025) → €200M (early 2026) → €411M round Jul 2026 at €2.4B valuation (led by XTX Ventures and East X Ventures; RWE €25M, Google, KfW Capital, SPRIND, EIC Fund). Alpha (~€2B) is ~€800M funded; Proxima seeks a ~€1.2B German federal grant",
+      status: "€411M raised (Jul 2026); Stellarator Model Coil due 2027; €140M HTS tape factory MOU in Lower Saxony (Sep 2026); Alpha operational testing targeted 2031",
+      progress: { stage: 1, pct: 38, note: "Stellaris power plant concept published; Alpha Alliance (30+ companies) launched Feb 2026; MOU with Bavaria/RWE/Max Planck IPP (Mar 2026); €411M round (Jul 2026); SMC magnet demo due 2027 — no Proxima hardware has yet produced plasma" },
       milestones: [
         { year: 2023, event: "Founded as a Max Planck IPP spinout to commercialize optimized stellarators", achieved: true },
         { year: 2025, event: "€130M Series A; Stellaris fusion power plant concept published with partners", achieved: true },
         { year: 2026, event: "Alpha Alliance launched (30+ companies, Feb) to build the 'Alpha' net-energy stellarator demonstrator in Garching; MOU with Free State of Bavaria, RWE and Max Planck IPP (Mar)", achieved: true },
         { year: 2026, event: "Series A extended to €200M", achieved: true },
+        { year: 2026, event: "€411M round at €2.4B valuation (Jul 7) led by XTX Ventures and East X Ventures with RWE, Google, KfW Capital, SPRIND, EIC Fund — Europe's largest fusion raise; MOU for a €140M HTS tape factory in Lower Saxony (state contributing €21M, Sep); Germany launched a €500M SPRIND milestone-based fusion programme to 2029, up to €2.5B long-term (Oct 8)", achieved: true, note: "Federal/EU funds for Alpha are expected, not committed; the SPRIND programme's first milestone is only a demo-plant blueprint. Alpha needs ~20,000 km of HTS tape, a market dominated by Asian suppliers" },
         { year: 2027, event: "Stellarator Model Coil (SMC) completion — HTS magnet de-risking demonstrator (target)", achieved: false, confidence: "medium" },
         { year: 2031, event: "Alpha demonstrator operational targeting net energy gain (Q>1), ~€2B (target)", achieved: false, confidence: "low" },
         { year: "2030s", event: "Stellaris commercial stellarator power plant", achieved: false, confidence: "very low" }
@@ -678,11 +724,12 @@ const FUSION_DATA = {
       uncertainties: [
         "Very early stage — no Proxima hardware has yet produced plasma",
         "SMC and Alpha demonstrator are unbuilt; complex 3D HTS coil manufacturing at scale is unproven",
-        "€2B Alpha demonstrator requires far more capital than raised to date",
-        "Alpha Alliance MOUs and partnerships are non-binding intentions, not firm commitments",
+        "€2B Alpha demonstrator is only ~40% funded; the ~€1.2B federal grant it is counting on has not been committed",
+        "Alpha Alliance MOUs, the Lower Saxony tape-factory MOU and partnerships are non-binding intentions, not firm commitments",
+        "€2.4B valuation is priced on a 2031 net-energy target with no hardware yet built",
         "No stellarator has achieved reactor-relevant net-energy conditions"
       ],
-      sources: ["proximafusion.com (Stellaris concept)", "ANS Nuclear Newswire (Mar 2026, Bavaria/RWE/Max Planck MOU)", "TechFundingNews (Series A €200M)", "Nuclear Engineering International (stellarator roadmap)"]
+      sources: ["proximafusion.com (Jul 7 2026, €411M round)", "Neutron Bytes (Jul 2026, funding analysis)", "TechCrunch (Sep 10 2026, HTS tape factory)", "deutschland.de / FIA (Oct 2026, German €500M programme)", "proximafusion.com (Stellaris concept)", "ANS Nuclear Newswire (Mar 2026, Bavaria/RWE/Max Planck MOU)"]
     },
     {
       id: "pacific_fusion",
@@ -694,14 +741,15 @@ const FUSION_DATA = {
       description: "Emerged from stealth in Oct 2024 with a $900M Series A — one of the largest in fusion history — structured to release capital as milestones are met. Pursues 'net facility gain' via a pulser-driven approach, partnering with General Atomics, and is scaling toward a demonstration system.",
       founded: 2023,
       funding: "$900M Series A (Oct 2024, milestone-released); investors incl. General Catalyst (Hemant Taneja), Breakthrough Energy Ventures, Eric Schmidt, John Doerr, Ken Griffin, Mustafa Suleyman, Patrick Collison, Reid Hoffman, Andrew Forrest, Lightspeed, Lowercarbon",
-      status: "Transitioning from foundational R&D to production for a demonstration-system build",
-      progress: { stage: 1, pct: 30, note: "Pulser-module R&D; 2026 focus is proving a full module to spec, then replicating it ~155x for the demonstration system; $1B research/manufacturing campus selected at Albuquerque, NM (Sept 2025), net facility gain targeted 2030" },
+      status: "Broke ground on ~$1B Albuquerque campus (Aug 2026); SIRIUS 4-stage prototype past 3,000 full-power shots; full-scale pulser module demonstration still pending",
+      progress: { stage: 1, pct: 35, note: "SIRIUS 4-stage pulser prototype at LLNL passed 3,000 full-power shots (60 GW / 100 ns, ~95% efficiency) by Jul 2026; full-scale module (~40× SIRIUS) 'completion projected in the coming months' — not yet demonstrated; groundbreaking at Mesa del Sol, Albuquerque (Aug 2026); net facility gain targeted 2030" },
       milestones: [
         { year: 2023, event: "Founded to pursue high-gain pulsed magnetic fusion", achieved: true },
         { year: 2024, event: "Emerged from stealth with a $900M milestone-structured Series A (Oct)", achieved: true },
         { year: 2025, event: "General Atomics partnership to test a production-scale pulser module (impedance-matched Marx generator) (Apr); $1B Research & Manufacturing Campus selected at Mesa del Sol, Albuquerque NM (Sept)", achieved: true },
-        { year: 2026, event: "Transition from R&D to production; demonstration-system build begins", achieved: true },
-        { year: 2030, event: "Demonstration system attempts net facility gain (target)", achieved: false, confidence: "low" },
+        { year: 2026, event: "SIRIUS 4-stage impedance-matched Marx generator prototype at LLNL (under CRADA) passed 3,000 full-power shots (Jul); groundbreaking on the ~$1B Research & Manufacturing Campus / Demonstration System at Mesa del Sol, Albuquerque, with an NNSA MOU on high-yield fusion and pulsed power (Aug 25); modular pulser components to be built in Los Lunas, NM", achieved: true, note: "Company-reported; the full-scale production pulser module — the stated 'next major technical milestone' — had not been demonstrated as of Aug 2026. No milestone-tranche release of the $900M has been reported" },
+        { year: "Late 2026", event: "Full-scale pulser module demonstration (target, 'coming months' per Jul 2026 CTO blog)", achieved: false, confidence: "medium" },
+        { year: 2030, event: "Demonstration system (>100 MJ yield) attempts net facility gain (target)", achieved: false, confidence: "low" },
         { year: "2030s", event: "Commercial pulsed magnetic fusion plant", achieved: false, confidence: "very low" }
       ],
       keyMetrics: {
@@ -717,7 +765,7 @@ const FUSION_DATA = {
         "Net facility gain ≠ net electricity; balance-of-plant and rep-rate remain far off",
         "Very early stage despite the large raise"
       ],
-      sources: ["ANS Nuclear Newswire (pulsed magnetic concept; General Atomics)", "Power Engineering (Series A)", "Fusion Energy Insights (stealth exit)", "PitchBook"]
+      sources: ["World Nuclear News (Aug 2026, Albuquerque groundbreaking)", "TechCrunch (Aug 25 2026)", "pacificfusion.com (Jul 2026 CTO blog, SIRIUS 3,000 shots)", "ANS Nuclear Newswire (pulsed magnetic concept; General Atomics)", "Power Engineering (Series A)", "PitchBook"]
     },
     {
       id: "inertia",
@@ -729,11 +777,12 @@ const FUSION_DATA = {
       description: "Founded 2024 (unveiled Aug 2025), then raised $450M in Feb 2026. Led by Twilio co-founder Jeff Lawson (CEO) with two of the field's most prominent ICF scientists — Annie Kritcher (Chief Scientist, who led the design of NIF's first net-gain ignition shot) and Mike Dunne (CTO, former LLNL inertial-fusion-energy program director, now a Stanford professor). Building a high-repetition-rate laser line ('Thunderwall') and an ICF pilot plant.",
       founded: 2024,
       funding: "$450M (Feb 11, 2026) led by Bessemer Venture Partners and Alphabet's GV; also Threshold Ventures, Modern Capital",
-      status: "Unveiled Aug 2025; $450M raised Feb 2026; building toward a high-rep-rate laser facility and pilot plant",
-      progress: { stage: 1, pct: 15, note: "Founded 2024 on NIF ignition heritage; building the 'Thunderwall' rep-rated laser line and target factory for an ICF pilot plant — no Inertia hardware yet operating" },
+      status: "Livermore HQ and target-fabrication lab opened (Jul 2026); Thunderwall 'unit cell' laser prototype planned on site; no Inertia laser has yet fired",
+      progress: { stage: 1, pct: 18, note: "Founded 2024 on NIF ignition heritage; 50,000 sq ft Livermore HQ with fuel-target manufacturing lab opened Jul 2026; with LLNL cut D-T ice-layer fabrication from up to a week to 2–3 hours (Aug 2026); the 'Thunderwall' rep-rated laser line remains unbuilt — no Inertia hardware has fired at a target" },
       milestones: [
         { year: 2025, event: "Company unveiled (Aug); founding team Jeff Lawson (CEO), Annie Kritcher (Chief Scientist), Mike Dunne (CTO)", achieved: true, note: "Kritcher led NIF's record-gain target design; Dunne is former LLNL IFE program director" },
         { year: 2026, event: "Raised $450M led by Bessemer and Alphabet's GV (Feb 11)", achieved: true },
+        { year: 2026, event: "Opened 50,000 sq ft Livermore HQ with fuel-target manufacturing and metrology lab (Jul 10); with LLNL (Inertia funds ~50 LLNL staff) cut D-T ice-layer fabrication time from up to a week to 2–3 hours (Aug)", achieved: true, note: "Remaining target-factory gaps per Inertia: carbon-shell industrialisation, thin films, automated batch assembly. Pilot-plant groundbreaking ~2030, power mid-2030s (targets)" },
         { year: "Late 2020s", event: "Build high-rep-rate laser and demonstrate rep-rated ICF (target)", achieved: false, confidence: "low" },
         { year: "2030s", event: "ICF pilot plant (target)", achieved: false, confidence: "very low" }
       ],
@@ -750,7 +799,7 @@ const FUSION_DATA = {
         "Net facility/target gain ≠ net electricity; driver efficiency is the central problem",
         "Rep-rated, high-energy lasers at the required efficiency and durability are unproven"
       ],
-      sources: ["TechCrunch (Feb 2026)", "SiliconANGLE (Feb 2026)", "Bloomberg (Feb 2026)", "optics.org (pilot plant)"]
+      sources: ["ANS Nuclear Newswire (Aug 25 2026, fuel fabrication with LLNL)", "TechCrunch (Aug 20 2026)", "Livermore Vine (Jul 14 2026, HQ opening)", "TechCrunch (Feb 2026)", "Bloomberg (Feb 2026)", "optics.org (pilot plant)"]
     }
   ],
 
@@ -786,10 +835,10 @@ const FUSION_DATA = {
       name: "High-Temperature Superconducting Magnets",
       description: "HTS magnets (REBCO) can produce much stronger fields, enabling smaller, cheaper fusion devices.",
       status: "partially_validated",
-      detail: "CFS demonstrated a 20T large-bore HTS magnet in 2021 - a landmark achievement. Multiple companies now developing HTS magnets. Manufacturing scale-up and cost reduction are the remaining challenges.",
-      confidence: 75,
-      validatedBy: ["CFS 20T magnet demo (2021)", "Tokamak Energy HTS magnet tests", "Various industrial HTS demonstrations"],
-      remainingGaps: ["Full toroidal magnet set not yet operated in a fusion device", "Radiation effects on HTS in fusion neutron environment", "Cost of REBCO tape at volume production", "Joint and quench management in full-scale systems"]
+      detail: "CFS demonstrated a 20T large-bore HTS magnet in 2021 - a landmark achievement. Tokamak Energy's Demo4 full-HTS system completed a 14-month campaign at 13.7 T peak (Sep 2026). SPARC's 18 TF coils are being installed (8 of 18 by Sep 2026). Manufacturing scale-up and cost reduction are the remaining challenges; the first industrial-scale tape orders and factories were announced in 2026.",
+      confidence: 76,
+      validatedBy: ["CFS 20T magnet demo (2021)", "Tokamak Energy Demo4: 13.7 T peak, ~10,000 h energised, >90 joints (2026)", "China ASIPP HTS central solenoid tested to 60 kA (Jun 2026)", "Various industrial HTS demonstrations"],
+      remainingGaps: ["Full toroidal magnet set not yet operated in a fusion device (SPARC installation running behind schedule)", "Radiation effects on HTS in fusion neutron environment", "Cost of REBCO tape at volume production — supply concentrated in a few Asian producers; CFS's 10,000 km Fujikura order and Proxima's planned €140M plant are the first scale-up moves", "Joint and quench management in full-scale systems"]
     },
     {
       id: "tritium_breeding",
@@ -797,9 +846,9 @@ const FUSION_DATA = {
       name: "Tritium Self-Sufficiency (Breeding Blanket)",
       description: "D-T fusion reactors must breed their own tritium from lithium blankets, achieving a tritium breeding ratio >1.",
       status: "not_validated",
-      detail: "No fusion device has demonstrated tritium breeding. ITER will test breeding blanket modules but full self-sufficiency is untested. This is one of the most critical unresolved challenges.",
+      detail: "No fusion device has demonstrated tritium breeding. ITER will test breeding blanket modules but full self-sufficiency is untested. CFS published a peer-reviewed ARC blanket design with a modeled TBR of 1.08 (Jun 2026) and joined UKAEA's £220M LIBRTI breeding test programme (Jul 2026); Kyoto Fusioneering's UNITY-2 tritium loop tests at Chalk River are due within 2026. This remains one of the most critical unresolved challenges.",
       confidence: 40,
-      validatedBy: ["Neutronics simulations", "Small-scale lithium blanket material tests", "ITER TBM module designs"],
+      validatedBy: ["Neutronics simulations (incl. CFS ARC TBR 1.08, peer-reviewed 2026)", "Small-scale lithium blanket material tests", "ITER TBM module designs", "UKAEA LIBRTI programme (test articles under construction)"],
       remainingGaps: ["No integrated tritium breeding demonstration", "TBR >1 not experimentally confirmed", "Tritium extraction from breeding blankets at scale", "Lithium-6 enrichment at industrial scale", "Structural materials performance under neutron irradiation"]
     },
     {
@@ -841,10 +890,10 @@ const FUSION_DATA = {
       name: "Regulatory Framework",
       description: "Fusion needs a clear, proportionate regulatory framework distinct from fission.",
       status: "partially_validated",
-      detail: "UK pioneered fusion-specific regulation (not classified as nuclear fission). US NRC developing fusion regulatory framework. EU and other jurisdictions following. Key question: will fusion be regulated like fission (costly, slow) or receive proportionate risk-based regulation?",
-      confidence: 55,
-      validatedBy: ["UK fusion regulatory framework (2021)", "US NRC fusion rulemaking (ongoing)", "IAEA fusion safety guidance"],
-      remainingGaps: ["US NRC final fusion rules not complete", "International harmonization", "Waste classification for activated materials", "Tritium handling regulations at commercial scale", "Public acceptance and licensing timeline"]
+      detail: "UK pioneered fusion-specific regulation (not classified as nuclear fission) and is now adding a planning National Policy Statement (EN-8). US NRC proposed a byproduct-material (Part 30) fusion rule in Feb 2026; the final rule has not issued, but Agreement States are already licensing: Tennessee issued the first fusion-specific licence (Type One, Aug 2026) and Washington licensed Helion's Orion (Jun 2026). Japan's Jul 2026 roadmap adopts staged safety regulation; Italy's 2026 nuclear law names fusion. Key question: will fusion be regulated like fission (costly, slow) or receive proportionate risk-based regulation?",
+      confidence: 58,
+      validatedBy: ["UK fusion regulatory framework (2021)", "US NRC proposed fusion rule (Feb 2026)", "First US state fusion licences: Tennessee (Type One), Washington (Helion) — 2026", "IAEA fusion safety guidance"],
+      remainingGaps: ["US NRC final fusion rule not complete (target 'Fall 2026' missed so far; statutory deadline end-2027)", "EU Fusion Strategy unpublished; UK EN-8 not yet designated", "International harmonization", "Waste classification for activated materials", "Tritium handling regulations at commercial scale", "Public acceptance and licensing timeline"]
     },
     {
       id: "economics",
@@ -879,11 +928,11 @@ const FUSION_DATA = {
         caveat: "Single magnet demonstration. Full toroidal set in a fusion device not yet tested."
       },
       {
-        signal: "Cumulative fusion industry funding reaches $9.77B (FIA)",
+        signal: "Record $4.48B raised in a year; cumulative fusion funding reaches $14.24B (FIA 2026)",
         date: "2021-2026",
         significance: "medium",
-        detail: "FIA's Global Fusion Industry Report (Jul 2025) put cumulative funding at $9.77B across 53 companies, with $2.64B raised in the prior 12 months. 2026 momentum continued: Helion $465M Series G ($15.5B valuation, Jun), Inertia Enterprises $450M for laser ICF, Pacific Fusion $900M Series A. Investors include Nvidia, Google, Temasek, Soros Fund, Bill Gates.",
-        caveat: "Private investment does not guarantee technical success. VC timelines may not align with fusion development timescales. Some headline figures are stock deals or milestone commitments, not deployed R&D capital (e.g., TAE's $6B TMTG merger). Several firms are pivoting or restructuring (General Fusion SVAC reverse merger; Zap adding fission)."
+        detail: "FIA's Global Fusion Industry Report (Jul 13 2026) put total funding at $14.24B ($13.26B private + $0.98B public) across 56 companies, with a record $4.48B raised in the prior 12 months (+69% on 2025's $2.64B). Largest rounds: CFS $863M (Aug 2025) and a further ~$1B (Jul 2026, total ~$4B); Proxima €411M at €2.4B valuation (Jul 2026); Helion $500M Series G ($15.5B valuation); Inertia $450M; Type One $200M (Oct 2026). Five companies have now raised >$1B, all US-based. First Nasdaq-listed pure play (General Fusion, GFUZ, Jul 2026).",
+        caveat: "Private investment does not guarantee technical success. The same FIA survey shows expectations for first commercial electricity shifting later (fewer respondents say 2031–35, more say 2041–45 than in 2025). Headline figures include stock deals and milestone commitments, not deployed R&D capital (TAE's $6B TMTG merger is now worth far less on the acquirer's market cap). Several firms are pivoting, listing, or softening targets (General Fusion SPAC; Zap adding fission; Helion dropping 'net electricity')."
       },
       {
         signal: "Helion signs Microsoft PPA",
@@ -893,11 +942,11 @@ const FUSION_DATA = {
         caveat: "The 2028 target is widely considered extremely ambitious. PPA likely includes penalty/exit clauses."
       },
       {
-        signal: "Government commitments accelerate",
-        date: "2022-2025",
+        signal: "Governments move from strategies to funded programmes",
+        date: "2022-2026",
         significance: "medium",
-        detail: "US Bold Decadal Vision, UK STEP program, China CFETR, Japan fusion strategy, Korea K-DEMO. Multiple governments targeting fusion power by 2040.",
-        caveat: "Government targets often slip. Funding commitments may not be sustained across political cycles."
+        detail: "H2 2026 brought a cluster of concrete national commitments: Japan adopted a ~¥3.1 trillion public-private fusion investment roadmap through FY2040 and METI conditionally selected four operators for a ~¥60B demonstration subsidy (Jul–Sep); Germany launched a €500M milestone-based programme via SPRIND (up to €2.5B long-term, Oct); the UK committed £2.5B over five years and put a fusion National Policy Statement (EN-8) before Parliament; Italy's nuclear law names fusion; the US saw a bipartisan $10B 'American Leadership in Fusion Act' introduced and the Commerce Department offer up to $389M in CHIPS R&D funds to fusion-linked firms for equity. Earlier: US Bold Decadal Vision, UK STEP, China's CFEC state company, Korea's K-Moonshot reorganisation.",
+        caveat: "Most of these are authorisations, roadmaps or conditional selections rather than appropriated money — the US bill is not enacted and FY2027 appropriations are running on a continuing resolution; the EU Fusion Strategy promised for Q1 2026 remains unpublished; Germany's first SPRIND milestone is only a blueprint. Government targets often slip and commitments may not survive political cycles."
       },
       {
         signal: "EAST shatters duration record: 1,066 seconds",
@@ -910,8 +959,8 @@ const FUSION_DATA = {
         signal: "China mounts a state-backed fusion scale-up",
         date: "2025-2026",
         significance: "high",
-        detail: "Beyond EAST, China is building BEST (burning-plasma tokamak, first plasma targeted end-2027 at Q~5; 400-ton Dewar installed Oct 2025), created a CNNC-led state fusion company (CFEC, ~$2.1B registered capital, Jul 2025), and is seeding private players (Energy Singularity's HTS HH70 reportedly sustained 1,337s; Star Fusion, Nova Fusion funded). Analysts cite a ~$6.5B national buildout, reportedly ~3x US public spend.",
-        caveat: "Several results are state/company-reported and hard to verify independently. Aggressive schedules (BEST by 2027) may slip. Spending scale doesn't guarantee net energy or commercialization, and CNNC's own commercial target is ~2050."
+        detail: "Beyond EAST, China is building BEST (burning-plasma tokamak; campus delivered Oct 2026 with main-machine nested assembly >50% complete; construction-complete target end-2027, D-T electricity demo 'around 2030'), tested CRAFT-class prototype magnets incl. a 582-tonne TF coil (Jun 2026), created a CNNC-led state fusion company (CFEC, ~$2.1B registered capital, Jul 2025) which signed an MoC with ITER (Sep 2026), and is seeding private players: Startorus Fusion raised RMB 880M (Aug 2026), NovaFusionX ~$100–180M (2026) targeting first plasma end-2026, Energy Singularity's HTS HH70 reportedly sustained 1,337s. Analysts cite a ~$6.5B national buildout, reportedly ~3x US public spend.",
+        caveat: "Nearly all results are state/company-reported. BEST's 2027 milestone has quietly been reworded from 'first plasma' to 'construction complete'. Private-round sizes are reported inconsistently (NovaFusionX). Spending scale doesn't guarantee net energy or commercialization, and CNNC's own commercial target is ~2050."
       },
       {
         signal: "JT-60SA first plasma",
@@ -931,15 +980,22 @@ const FUSION_DATA = {
         signal: "Stellarators gain industrial momentum",
         date: "2025-2026",
         significance: "medium",
-        detail: "W7-X set a world-best triple product sustained for 43s (OP2.3, May 2025). On the commercial side, Type One Energy (TVA Bull Run site) and Proxima Fusion (Stellaris concept; Alpha Alliance of 30+ companies, MOU with Bavaria/RWE/Max Planck IPP, Mar 2026) are industrializing the optimized-stellarator approach, which is steady-state and disruption-free by design.",
-        caveat: "No stellarator has reached reactor-relevant net-energy conditions. Complex 3D HTS coil manufacturing at scale is unproven, and commercial demonstrators (Infinity Two, Alpha) are unbuilt and need far more capital than raised to date."
+        detail: "W7-X set a world-best triple product sustained for 43s (OP2.3, May 2025). On the commercial side, Proxima Fusion raised €411M at a €2.4B valuation (Jul 2026) and plans a €140M HTS tape plant; Type One Energy closed a $200M Series B (Oct 2026) and holds the first US state fusion-specific licence (Tennessee); Helical Fusion (Japan) was selected for METI's demonstration programme; Thea Energy extended its Series B. The optimized-stellarator approach is steady-state and disruption-free by design.",
+        caveat: "No stellarator has reached reactor-relevant net-energy conditions. Complex 3D HTS coil manufacturing at scale is unproven; Proxima's SMC (2027) and Type One's Infinity One (groundbreaking slipped to H1 2027) are the first hardware tests. Commercial demonstrators (Infinity Two, Alpha) are unbuilt and still need far more capital than raised."
       },
       {
         signal: "AI/ML accelerating plasma research",
-        date: "2023-2025",
+        date: "2023-2026",
         significance: "medium",
-        detail: "Machine learning being used for plasma control, disruption prediction, materials discovery, and experiment optimization. DeepMind demonstrated tokamak plasma shaping control.",
-        caveat: "AI assists but doesn't solve fundamental physics or engineering challenges."
+        detail: "Machine learning being used for plasma control, disruption prediction, materials discovery, and experiment optimization. DeepMind demonstrated tokamak plasma shaping control; Energy Singularity credits AI control for its 1,337s pulse; DOE's Genesis Mission Phase II (Oct 2026) funds a CFS-led team (Google DeepMind, NVIDIA, national labs) to build an AI digital twin and operations co-pilot for SPARC.",
+        caveat: "AI assists but doesn't solve fundamental physics or engineering challenges. SPARC's digital twin cannot be validated until SPARC runs."
+      },
+      {
+        signal: "Fusion supply chain starts to industrialise (HTS tape, lithium-6)",
+        date: "2026",
+        significance: "medium",
+        detail: "CFS placed the largest-ever HTS tape order (~10,000 km) with Fujikura for ARC (Sep 2026); Proxima signed an MOU for a €140M REBCO tape factory in Lower Saxony and Tokamak Energy/Furukawa are studying UK tape capability; FIA's supply-chain report shows supplier spending up 24% in 2025. Lithium-6 enrichment startups emerged (Molten Salt Solutions $7M seed with Type One/Gauss frameworks; Marathon Fusion plasma-centrifuge demo; Licube in Japan). CFS joined UKAEA's £220M LIBRTI tritium-breeding programme as first international partner.",
+        caveat: "HTS tape supply remains dominated by a handful of Asian producers; Alpha alone needs ~20,000 km. Li-6 ventures are seed-stage with no industrial output. LIBRTI is a test programme — no device has yet bred and recovered tritium in a closed loop."
       }
     ],
     negative: [
@@ -975,8 +1031,15 @@ const FUSION_DATA = {
         signal: "Some fusion firms restructure or hedge as revenue slips",
         date: "2025-2026",
         significance: "medium",
-        detail: "Several companies are adjusting business models as fusion revenue stays distant: General Fusion pushed breakeven from 2026 to 2028 and is going public via a ~$1B SVAC reverse merger amid financial strain; Zap Energy announced a partial pivot to also develop small-scale fission (Apr 2026); First Light Fusion abandoned its own power plant to license amplifier tech (now also targeting space/defense); TAE's path runs through a $6B TMTG stock merger now slipped to Q4 2026.",
-        caveat: "Pragmatic pivots and public listings can extend runway and de-risk. Licensing and dual fission/fusion strategies may still advance the underlying technology even if the original plan changes."
+        detail: "Several companies are adjusting business models as fusion revenue stays distant: General Fusion pushed breakeven from 2026 to 2028 and listed via SPAC with only ~$150M cash (Jul 2026), then registered >100M shares for resale; Zap Energy announced a partial pivot to also develop small-scale fission (Apr 2026) and has since hired fission leadership; First Light Fusion abandoned its own power plant to license amplifier tech and its 2026 wins are defence/space contracts; Marvel Fusion spun up a laser-systems venture (Caelora); TAE's path runs through a TMTG stock merger that has slipped twice, faces a Dec 18 2026 termination date, and whose acquirer now trades at ~$1.8B market cap vs the $6B headline. Helion and CFS accepted US Commerce equity-for-grant LOIs.",
+        caveat: "Pragmatic pivots and public listings can extend runway and de-risk. Licensing and dual fission/fusion strategies may still advance the underlying technology even if the original plan changes. Government equity stakes are small (~1%) and non-voting."
+      },
+      {
+        signal: "Flagship private timelines quietly soften",
+        date: "H2 2026",
+        significance: "high",
+        detail: "The three most-cited private milestones all moved in H2 2026 without formal announcements: Helion removed 'net electricity' as Polaris's goal and reworded Orion's 2028 promise from 'produce electricity' to 'initial operations', with full 50 MW power now 2029–30 (Axios, Sep); CFS missed its 'all 18 TF magnets by end of summer' target (8 of 18 at end-Sep) and now gives 2027 — not 2026 — for SPARC first plasma; Type One's Infinity One groundbreaking slipped from late 2026 to H1 2027; Marvel's ATLAS laser opening slipped 2026 → 2027; Tokamak Energy's ST80-HTS 2026 target went unmentioned all year; TAE's Da Vinci still has no site. FIA's own 2026 survey shows fewer companies expecting first commercial electricity in 2031–35 and more in 2041–45 than a year earlier.",
+        caveat: "Slips of months to a year on first-of-a-kind hardware are normal and none of these firms has abandoned its programme; several raised large rounds in the same period. But the pattern — softened wording rather than announced re-baselines — is the one the dashboard's historical-accuracy score warns about."
       },
       {
         signal: "Renewables + storage costs falling rapidly",
@@ -996,8 +1059,8 @@ const FUSION_DATA = {
         signal: "Regulatory uncertainty",
         date: "Ongoing",
         significance: "medium",
-        detail: "If fusion is regulated like fission, it could add billions in cost and decades in licensing. Regulatory frameworks are still being developed in most countries.",
-        caveat: "UK has created a fusion-favorable framework. US NRC rulemaking is progressing."
+        detail: "If fusion is regulated like fission, it could add billions in cost and decades in licensing. Regulatory frameworks are still being developed in most countries. The US NRC's fusion rule (10 CFR Part 30 byproduct-material framework) was proposed Feb 2026 but no final rule had issued by Oct 2026 (target was 'Fall 2026'; statutory deadline end-2027); the EU Fusion Strategy due Q1 2026 is still unpublished; the UK's fusion National Policy Statement EN-8 is not yet designated.",
+        caveat: "The UK framework remains fusion-favourable. US Agreement States are moving ahead of the NRC — Tennessee issued the first fusion-specific licence (Type One, Aug 2026) and Washington State licensed Helion's Orion (Jun 2026). Japan adopted staged safety regulation in its Jul 2026 roadmap; Italy's new nuclear law names fusion."
       }
     ]
   },
@@ -1143,9 +1206,9 @@ const FUSION_DATA = {
       firstNetElectricity: "2030-2035",
       firstCommercialPlant: "2035-2040",
       gridScale: "2040-2050",
-      assumptions: "HTS magnets work at scale, no showstopper engineering issues, adequate funding, favorable regulation",
+      assumptions: "HTS magnets work at scale, no showstopper engineering issues, adequate funding, favorable regulation. Note: FIA's 2026 survey shows the industry's own median expectation drifting later (fewer firms say 2031–35, more say 2041–45 than in 2025), and Helion's 2028 target has been softened to 'initial operations'",
       probability: "10-20%",
-      backedBy: ["CFS", "Helion", "Tokamak Energy", "Some venture investors"]
+      backedBy: ["CFS", "Helion", "Tokamak Energy", "Proxima Fusion", "Some venture investors"]
     },
     moderate: {
       label: "Moderate (Government program targets)",
@@ -1179,24 +1242,27 @@ const FUSION_DATA = {
   // ============================================================
   funding: {
     privateSector: {
-      total: "$9.77B cumulative across 53 companies (FIA Global Fusion Industry Report, Jul 2025; $2.64B raised in the prior 12 months); 2026 momentum continued (Helion $465M Series G at $15.5B valuation, Inertia Enterprises $450M for laser ICF, Pacific Fusion $900M Series A)",
-      trend: "Exponential growth since 2020; major rounds continued through 2025-2026",
+      headline: "$13.3B+",
+      companyCount: "56",
+      total: "$14.24B total to date across 56 companies — $13.26B private + $0.98B public (FIA Global Fusion Industry Report, Jul 13 2026); a record $4.48B raised in the prior 12 months (+69% vs 2025). Post-report rounds: CFS ~$1B (Jul), Helion Series G top-up to $500M (Sep), Type One $200M (Oct), Kyoto Fusioneering ¥25.7B (~$162M, Aug), Startorus RMB 880M (Aug), NovaFusionX ~$100–180M (Sep)",
+      trend: "Exponential growth since 2020; 2026 is a record year. Five companies have each raised >$1B (all US). Capital is concentrating: CFS, Helion, Proxima and Pacific Fusion account for most of the 2025–26 total",
       topCompanies: [
-        { name: "CFS", amount: "~$3B" },
-        { name: "Helion Energy", amount: "~$1.5B raised ($465M Series G Jun 2026, $15.5B valuation)" },
-        { name: "TAE Technologies", amount: "$1.3B+ (plus $6B TMTG merger, stock deal)" },
+        { name: "CFS", amount: "~$4B (incl. ~$1B Jul 2026)" },
+        { name: "Helion Energy", amount: "~$1.55B raised ($500M Series G, $15.5B valuation); ~$3.2B incl. milestone commitments" },
+        { name: "TAE Technologies", amount: "$1.3B+ (plus TMTG stock merger, pending; acquirer market cap ~$1.8B)" },
         { name: "Pacific Fusion", amount: "$900M Series A (milestone-released)" },
+        { name: "Proxima Fusion", amount: ">€650M incl. grants (€411M round Jul 2026 at €2.4B valuation)" },
         { name: "Inertia Enterprises", amount: "$450M (Feb 2026)" },
         { name: "Marvel Fusion", amount: "~EUR 385M (~$420M)" },
+        { name: "Type One Energy", amount: "~$370M+ ($200M Series B Oct 2026)" },
         { name: "Tokamak Energy", amount: "$336M+" },
         { name: "Zap Energy", amount: "$330M" },
-        { name: "General Fusion", amount: "$300M+ (going public via SVAC reverse merger)" },
-        { name: "Proxima Fusion", amount: "~€200M (~$215M)" },
-        { name: "Type One Energy", amount: "$160M+" },
+        { name: "General Fusion", amount: "$300M+ private; Nasdaq-listed (GFUZ) Jul 2026 with ~$150M cash" },
+        { name: "Kyoto Fusioneering", amount: "~¥33B equity cumulative (Series D ¥16.7B + ¥9B debt, Aug 2026)" },
         { name: "First Light Fusion", amount: "$100M+" }
       ],
-      notableInvestors: ["Nvidia", "Google / GV", "Breakthrough Energy Ventures", "Temasek", "Bill Gates", "Soros Fund Management", "General Catalyst", "Bessemer Venture Partners", "Lightspeed", "Lowercarbon Capital", "Eric Schmidt", "Ken Griffin", "Eni", "Equinor", "Chevron", "EQT Ventures", "Siemens Energy Ventures", "SoftBank Vision Fund 2"],
-      caveat: "Funding figures are company-reported and may include milestone-tied commitments, SPAC valuations, or stock deals. Actual capital deployed may differ. The $6B TAE-TMTG merger is a stock transaction, not direct R&D capital."
+      notableInvestors: ["Nvidia", "Google / GV", "Breakthrough Energy Ventures", "Temasek", "Bill Gates", "Soros Fund Management", "General Catalyst", "Bessemer Venture Partners", "XTX Ventures", "East X Ventures", "Lightspeed", "Lowercarbon Capital", "Eric Schmidt", "Ken Griffin", "Eni", "Equinor", "Chevron", "RWE", "Hyundai Motor Group", "EQT Ventures", "Siemens Energy Ventures", "SoftBank Vision Fund 2", "US Dept of Commerce (CHIPS equity LOIs)"],
+      caveat: "Funding figures are company-reported and may include milestone-tied commitments, SPAC valuations, or stock deals. Actual capital deployed may differ. FIA's press release calls $14.24B 'private' but its own PDF splits out $0.98B public. The TAE-TMTG merger is a stock transaction whose value has fallen with TMTG's share price. New in 2026: US Commerce CHIPS awards to Helion ($175M) and CFS ($85M) come with government equity stakes and are LOIs, not final."
     },
     government: [
       {
@@ -1208,38 +1274,50 @@ const FUSION_DATA = {
       {
         country: "USA",
         program: "Bold Decadal Vision / DOE Milestone Program / FIRE Collaboratives / new Office of Fusion",
-        amount: "Fusion Energy Sciences ~$806M enacted (FY2026, ~21% to ITER); FY2027 request $755.3M (down $50M); Milestone Program authorized $415M through FY2027 but only ~$98M appropriated",
-        status: "Active; DOE established a new Office of Fusion (FY2027 request $10M to stand it up); $107M FIRE Collaboratives selectees announced; advocates warn China outspends US ~3x"
+        amount: "Fusion Energy Sciences ~$806M enacted (FY2026, ~21% to ITER); FY2027 request $755.3M (down $50M) — NOT enacted: running on a continuing resolution at FY2026 levels through Dec 11 2026; Milestone Program authorized $415M through FY2027 but only ~$98M appropriated; bipartisan 'American Leadership in Fusion Act' (Sep 2026) would authorise $10B but is not law",
+        status: "Active; DOE Office of Fusion established (no director publicly named); Fusion S&T Roadmap re-issued Jun 2026 (mid-2030s pilot target, no funding attached); Milestone Program paid out to Xcimer (up to $30.5M) and approved Zap capacitor milestones (Oct); Genesis Mission Phase II funds a CFS-led SPARC digital twin; Commerce CHIPS R&D LOIs up to $389M (Helion $175M, CFS $85M) for equity; NRC fusion rule still proposed, not final"
       },
       {
         country: "UK",
         program: "STEP Program + Fusion Strategy",
-        amount: "£2.5B committed for STEP + £45M Sunrise AI supercomputer + £650M+ fusion R&D",
-        status: "Active; new UK Fusion Energy Strategy published Apr 2026; West Burton site transferred to UKAEA; Construction/Magnets/Information Systems partners in place; operations targeted 2040"
+        amount: "£2.5B committed for STEP + £45M Sunrise AI supercomputer + £650M+ fusion R&D; £220M LIBRTI tritium-breeding programme (CFS first international partner, Jul 2026)",
+        status: "Active; new UK Fusion Energy Strategy published Apr 2026; draft fusion National Policy Statement EN-8 before Parliament (designation deadline Nov 30 2026); Dennis Whyte appointed UKAEA CEO (Aug 2026); STEP construction start ~2030, operations targeted 2040"
+      },
+      {
+        country: "Germany",
+        program: "Hightech Agenda fusion action plan / SPRIND milestone programme",
+        amount: "€500M milestone-based programme to 2029 via SPRIND (Oct 2026), up to €2.5B long-term; three new research hubs €125M (Jul 2026); Bavaria up to €400M for Proxima's Alpha; Lower Saxony €21M toward a €140M HTS tape plant",
+        status: "Active; first SPRIND milestone is a demonstration-plant blueprint / Technical Design Report; Proxima is the leading beneficiary and still seeks ~€1.2B federal grant for Alpha (not committed)"
       },
       {
         country: "China",
         program: "EAST, BEST, HL-2M, CFETR + CNNC-led China Fusion Energy Co. (CFEC)",
-        amount: "Est. $1.5-2B/year government; CFEC state company created Jul 2025 with ~15B yuan (~$2.1B) registered capital; analysts cite a ~$6.5B national fusion buildout (reportedly ~3x US spend)",
-        status: "Active; EAST 1,066s record (Jan 2025); BEST under construction (first plasma target end-2027, Q~5); CFETR in design; CNNC targets commercial fusion ~2050"
+        amount: "Est. $1.5-2B/year government; CFEC state company created Jul 2025 with ~15B yuan (~$2.1B) registered capital; analysts cite a ~$6.5B national fusion buildout (reportedly ~3x US spend); private rounds in 2026 incl. Startorus RMB 880M, NovaFusionX, ENN, Dongsheng",
+        status: "Active; EAST 1,066s record (Jan 2025); BEST campus delivered Oct 2026, construction-complete target end-2027 (Q~5 burning plasma, D-T electricity demo ~2030); CFETR in design (grid electricity target 2035); CFEC–ITER MoC (Sep 2026); CNNC targets commercial fusion ~2050"
       },
       {
         country: "EU",
-        program: "Euratom/EUROfusion DEMO",
-        amount: "~€5.6B (2021-2025 framework period incl. ITER contribution); successor programme under negotiation",
-        status: "Active; EU-DEMO in pre-conceptual design targeting 2050s"
+        program: "Euratom/EUROfusion DEMO; IFMIF-DONES",
+        amount: "~€5.6B (2021-2025 framework period incl. ITER contribution); successor programme under negotiation; IFMIF-DONES €202M construction (EU 25% / Spain 55%)",
+        status: "Active; EU Fusion Strategy promised for Q1 2026 still unpublished (Oct 2026); IFMIF-DONES building permit granted Jun 2026, first procurement arrangements signed Oct 2026, main building substantially complete by 2029; EU-DEMO in pre-conceptual design targeting 2050s"
       },
       {
         country: "Japan",
-        program: "JT-60SA, Broader Approach, national fusion strategy",
-        amount: "$2B+ (including JT-60SA)",
-        status: "Active; JT-60SA integrated commissioning restarted May 2026 after in-vessel coil upgrade; ~6-month plasma campaign begins late 2026"
+        program: "JT-60SA, Broader Approach, Public-Private Fusion Investment Roadmap, METI demonstration programme",
+        amount: "$2B+ (including JT-60SA); roadmap targets ~¥3.1 trillion public+private investment through FY2040 (Jul 2026); ~¥60B METI power-demonstration subsidy to Feb 2029 (Sep 2026)",
+        status: "Active; JT-60SA integrated commissioning restarted May 2026, ~6-month plasma campaign still expected from end-2026; METI conditionally selected EX-Fusion, Helical Fusion, LINEA Innovation and Starlight Engine (formal grants pending); QST JA DEMO prototype target 2038"
       },
       {
         country: "South Korea",
-        program: "KSTAR, K-DEMO",
-        amount: "$1B+ (estimated)",
-        status: "Active; KSTAR operational with tungsten divertor; targeting 300s at 100M°C"
+        program: "KSTAR, Korean Innovative Fusion Reactor / K-Moonshot (supersedes K-DEMO naming)",
+        amount: "$1B+ (estimated); Naju fusion facility KRW 1.2T planned 2027–36; innovative reactor conceptual design KRW 2.1B from 2026",
+        status: "Active; KSTAR full-tungsten wall, ≥102s plasma (Jun 2026), 300s target unmet; KFE reorganised Aug 2026; 5th Basic Plan (2027–31) in preparation; EnableFusion raised KRW 45B Series A (Sep 2026)"
+      },
+      {
+        country: "Singapore",
+        program: "No reactor programme; supply-chain, R&D and talent positioning (A*STAR, SGInnovate, EMA under new Ministry of Energy, Trade and Industry)",
+        amount: "No dedicated public fusion budget disclosed; Temasek is an investor in CFS",
+        status: "A*STAR signed a collaborative research agreement with CFS on ARC supply-chain technologies (May 2026); A*STAR and ST Engineering have made SPARC components; A*STAR delivered a plasma diagnostic to Realta Fusion; FusionX:APAC 2026 (Sep 30–Oct 2) saw the minister ask for 'fusion hub' proposals — stated intent only, nothing committed. Fission track separate: IAEA INIR Phase 1 mission planned 2027"
       }
     ],
     caveat: "Government funding figures are estimates from public sources. Many governments do not publish consolidated fusion budgets. China's spending is particularly opaque. EU figures include ITER contributions. Figures may not be directly comparable across countries due to accounting differences."
@@ -1452,8 +1530,8 @@ const FUSION_DATA = {
           score: 3, maxScore: 10,
           status: "Aspirational",
           detail: "Several private companies target net electricity or demonstration plants in the early 2030s: CFS (ARC ~2032\u201335), Helion (Microsoft PPA by 2028), Tokamak Energy (2030s). The Fusion Industry Association\u2019s survey shows median company expectation of first power by early 2030s.",
-          evidence: "CFS SPARC first plasma target: 2026\u20132027. Helion Polaris: 2025\u20132026. Both are on stated timelines per company reports. Significant capital raised to support these timelines.",
-          gap: "History of private fusion: General Fusion, TAE, and others have repeatedly pushed back timelines. The jump from \u2018first plasma in a demo\u2019 to \u2018electricity on the grid\u2019 requires solving all the engineering challenges simultaneously. No private company has yet operated a device that produces fusion neutrons at meaningful energy levels."
+          evidence: "CFS SPARC first plasma target: now 2027 (was 2026\u20132027; TF magnet installation 8 of 18 at end-Sep 2026 vs 'all 18 by end of summer'). Helion Polaris demonstrated D-T fusion (Feb 2026) but the 'net electricity' goal was quietly dropped (Sep 2026); Orion 2028 is now 'initial operations', full power 2029\u201330. Record capital raised in 2026 ($4.48B in 12 months per FIA) to support these timelines.",
+          gap: "History of private fusion: General Fusion, TAE, and others have repeatedly pushed back timelines, and H2 2026 added Helion, CFS, Type One, Marvel and Tokamak Energy to the list of softened or missed targets. FIA's 2026 survey shows company expectations for first commercial electricity shifting later. The jump from \u2018first plasma in a demo\u2019 to \u2018electricity on the grid\u2019 requires solving all the engineering challenges simultaneously. No private company has yet operated a device that produces fusion neutrons at meaningful energy levels."
         },
         {
           name: "Government Program Targets (2040s)",
@@ -1476,24 +1554,24 @@ const FUSION_DATA = {
           score: 5, maxScore: 10,
           status: "Developing",
           detail: "Regulatory frameworks are being developed in key jurisdictions. The UK has classified fusion as non-nuclear (more favorable). The US NRC is developing a fusion-specific framework. Speed of licensing will significantly affect deployment timelines.",
-          evidence: "UK: fusion regulated under existing environment/health frameworks, not nuclear. US: NRC Part 30 pathway proposed (byproduct material). Canada developing position.",
-          gap: "US NRC final rules not complete. First-of-a-kind licensing could take 3\u20135+ years even under favorable rules. Environmental impact assessments, public hearings, and construction permits add time. International harmonization is lacking."
+          evidence: "UK: fusion regulated under existing environment/health frameworks, not nuclear; planning NPS EN-8 in Parliamentary scrutiny (2026). US: NRC Part 30 (byproduct material) rule proposed Feb 2026; first state-level fusion licences issued in Tennessee (Type One, Aug 2026) and Washington (Helion Orion, Jun 2026). Japan: staged safety regulation adopted in Jul 2026 roadmap. Canada developing position.",
+          gap: "US NRC final rule not complete (missed its 'Fall 2026' target so far). First-of-a-kind licensing could take 3\u20135+ years even under favorable rules. Environmental impact assessments, public hearings, and construction permits add time. International harmonization is lacking; the EU strategy is overdue."
         },
         {
           name: "Supply Chain & Industrial Readiness",
           score: 4, maxScore: 10,
           status: "Immature",
           detail: "A fusion industry requires specialized supply chains: REBCO superconducting tape, enriched lithium-6, tritium-compatible materials, large vacuum vessels, remote handling robotics, and specialized construction capabilities.",
-          evidence: "REBCO tape production is scaling (driven partly by fusion demand). Vacuum vessel fabrication demonstrated for ITER. Nuclear-qualified materials and welding exist from fission industry.",
-          gap: "REBCO production must scale ~10\u2013100\u00d7 for a fleet of fusion plants. Lithium-6 enrichment capacity is very limited. Tritium supply for startup is constrained (~25 kg globally). Specialized component manufacturers are few."
+          evidence: "REBCO tape production is scaling (driven partly by fusion demand): CFS ordered ~10,000 km from Fujikura (Sep 2026), Proxima plans a \u20ac140M tape plant, Tokamak Energy/Furukawa are studying UK capacity. FIA supply-chain report: supplier spending +24% in 2025. Li-6 startups appeared in 2026 (Molten Salt Solutions, Marathon Fusion, Licube). Vacuum vessel fabrication demonstrated for ITER. Nuclear-qualified materials and welding exist from fission industry.",
+          gap: "REBCO production must scale ~10\u2013100\u00d7 for a fleet of fusion plants and remains concentrated in a few Asian producers. Lithium-6 enrichment capacity is very limited (new ventures are seed-stage). Tritium supply for startup is constrained (~25 kg globally); no new CANDU supply agreements in 2026. Specialized component manufacturers are few."
         },
         {
           name: "Workforce & Expertise",
           score: 5, maxScore: 10,
           status: "Growing but thin",
           detail: "The fusion workforce is growing rapidly (driven by private sector hiring) but remains small compared to what a commercial industry would need. Key skills: plasma physics, nuclear engineering, superconductor engineering, remote handling, tritium chemistry.",
-          evidence: "FIA reports rapid employment growth in fusion companies. University programs expanding. ITER and national labs training next generation.",
-          gap: "Scaling from ~5,000 fusion professionals globally to the tens of thousands needed for an industry. Competition with fission, defense, and other sectors for nuclear-qualified engineers. Training pipeline takes 5\u201310 years."
+          evidence: "FIA 2026 report: 10,497 employees reported by 34 responding companies (up from ~9,300), with a >16,000 industry workforce cited; Helion alone ~800 staff. University programs expanding; the proposed US fusion bill includes an NSF workforce programme. ITER and national labs training next generation.",
+          gap: "Scaling from ~10,000\u201316,000 fusion professionals globally to the tens of thousands needed for an industry. Competition with fission, defense, and other sectors for nuclear-qualified engineers. Training pipeline takes 5\u201310 years."
         }
       ]
     }
@@ -1501,9 +1579,9 @@ const FUSION_DATA = {
   criticalPath: [
     {
       item: "SPARC achieves Q>2",
-      expected: "2027-2028",
+      expected: "2027-2028 (first plasma now 2027; CFS says Q>1 in 2027)",
       impact: "Validates compact HTS tokamak path; could accelerate timeline by a decade vs ITER-only approach",
-      probability: "60-70%",
+      probability: "55-70% (magnet installation behind schedule as of Sep 2026)",
       category: "physics"
     },
     {
