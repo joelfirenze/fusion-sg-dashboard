@@ -135,8 +135,8 @@ const FUSION_DATA = {
       description: "MIT spinoff building SPARC (demonstration) and ARC (commercial power plant). Uses HTS magnets to achieve stronger fields in a smaller device.",
       founded: 2018,
       funding: "~$4B total (incl. $1.8B Series B, $863M Series B2 Aug 2025, and a ~$1B round Jul 2026 from pension/sovereign/infrastructure investors incl. Hyundai Motor Group; valuation undisclosed; earlier investors include Nvidia, Google, Temasek, Equinor)",
-      status: "SPARC ~80% assembled; 8 of 18 TF magnets installed (Sep 2026), all 18 likely ~Q1 2027; first plasma targeted 2027",
-      progress: { stage: 2, pct: 90, note: "SPARC ~80% assembled (CFS, Jul 2026); 8 of 18 TF magnets installed as of late Sep 2026 (the Jul 2026 'all 18 by end of summer' target slipped; CFS now says end-2026, demonstrated pace points to ~Q1 2027); first plasma and Q>1 both targeted for 2027; ~$1B raised Jul 2026 (total ~$4B)" },
+      status: "SPARC ~80% assembled; 8 of 18 TF magnets installed (Sep 2026), all 18 likely ~Q1 2027; first plasma expected H2 2027, Q>1 2028 (editorial)",
+      progress: { stage: 2, pct: 90, note: "SPARC ~80% assembled (CFS, Jul 2026); 8 of 18 TF magnets installed as of late Sep 2026 (the Jul 2026 'all 18 by end of summer' target slipped; CFS now says end-2026, demonstrated pace points to ~Q1 2027); CFS targets first plasma and Q>1 in 2027 — editorial view: first plasma H2 2027, Q>1 2028; ~$1B raised Jul 2026 (total ~$4B)" },
       milestones: [
         { year: 2021, event: "Demonstrated 20T HTS magnet (world record for fusion-class)", achieved: true },
         { year: 2023, event: "Broke ground on SPARC facility in Devens, MA", achieved: true },
@@ -148,8 +148,10 @@ const FUSION_DATA = {
         { year: 2026, event: "All 18 TF magnets installed by end of 2026 (CFS target, revised from 'end of summer' after reporting 8 of 18 in late Sep)", achieved: false, confidence: "low", note: "Editorial: the demonstrated pace (1 → 2 → 8 between Jan and Sep 2026, ~1.3/month since May) implies ~Q1 2027 for the last coil; the end-2026 date comes from CFS's own Sep 2026 update (X post), not independently confirmed" },
         { year: "Q1 2027", event: "All 18 TF magnets installed (editorial estimate from demonstrated installation rate)", achieved: false, confidence: "medium", note: "A slip of a few months on first-of-a-kind HTS magnet installation is unremarkable; central solenoid and PF coil installation counts are not published" },
         { year: 2026, event: "Selected to lead a 10-organisation DOE Genesis Mission Phase II team building an AI digital twin / operations co-pilot for SPARC (Oct); $85M Letter of Intent with US Dept of Commerce CHIPS R&D Office for fusion-ready semiconductors, with Commerce taking a minority non-voting equity stake (Oct)", achieved: true, note: "LOI, not a final award; equity stake size undisclosed" },
-        { year: 2027, event: "SPARC first plasma (target) — slipped from '2026-2027' to 2027", achieved: false, confidence: "medium" },
-        { year: "2027-2028", event: "SPARC D-T operations, target Q>1 then Q>2", achieved: false, confidence: "medium", note: "CFS now states Q>1 targeted in 2027" },
+        { year: "H2 2027", event: "SPARC first plasma (CFS target: 2027; slipped from 2025 → 2026 → 2027)", achieved: false, confidence: "medium", note: "Editorial: with TF magnet installation likely finishing ~Q1 2027, vessel closure, cryostat, cooldown to 20 K and magnet/integrated commissioning leave little room for first plasma before H2 2027" },
+        { year: 2027, event: "SPARC Q>1 in D-T (CFS target)", achieved: false, confidence: "low", note: "Editorial: requires D-D commissioning, tritium receipt and D-T authorisation within months of first plasma — no first-of-a-kind tokamak has done this; JET and TFTR took ~a decade from first plasma to D-T" },
+        { year: 2028, event: "SPARC Q>1 in D-T (editorial estimate)", achieved: false, confidence: "medium" },
+        { year: "2028-2029", event: "SPARC reaches design point Q>2 (editorial estimate; CFS: 2027-2028)", achieved: false, confidence: "medium", note: "Schedule risk, not physics risk: the slip does not change the SPARC physics case, but pushes D-T data closer to the point where ARC siting and 2030s offtake commitments must rest on projections" },
         { year: "Early 2030s", event: "ARC commercial pilot plant (Chesterfield County, VA; PJM interconnection application pending since Apr 2026)", achieved: false, confidence: "low" }
       ],
       keyMetrics: {
@@ -1531,7 +1533,7 @@ const FUSION_DATA = {
           score: 3, maxScore: 10,
           status: "Aspirational",
           detail: "Several private companies target net electricity or demonstration plants in the early 2030s: CFS (ARC ~2032\u201335), Helion (Microsoft PPA by 2028), Tokamak Energy (2030s). The Fusion Industry Association\u2019s survey shows median company expectation of first power by early 2030s.",
-          evidence: "CFS SPARC first plasma target: now 2027 (was 2026\u20132027; TF magnet installation 8 of 18 at end-Sep 2026, all 18 now expected end-2026). Helion Polaris demonstrated D-T fusion (Feb 2026) but the 'net electricity' goal was quietly dropped (Sep 2026); Orion 2028 is now 'initial operations', full power 2029\u201330. Record capital raised in 2026 ($4.48B in 12 months per FIA) to support these timelines.",
+          evidence: "CFS SPARC first plasma target: now 2027 (was 2026\u20132027; TF magnet installation 8 of 18 at end-Sep 2026, all 18 likely ~Q1 2027, so first plasma realistically H2 2027 and Q>1 2028). Helion Polaris demonstrated D-T fusion (Feb 2026) but the 'net electricity' goal was quietly dropped (Sep 2026); Orion 2028 is now 'initial operations', full power 2029\u201330. Record capital raised in 2026 ($4.48B in 12 months per FIA) to support these timelines.",
           gap: "History of private fusion: General Fusion, TAE, and others have repeatedly pushed back timelines, and H2 2026 added Helion, CFS, Type One, Marvel and Tokamak Energy to the list of softened or missed targets. FIA's 2026 survey shows company expectations for first commercial electricity shifting later. The jump from \u2018first plasma in a demo\u2019 to \u2018electricity on the grid\u2019 requires solving all the engineering challenges simultaneously. No private company has yet operated a device that produces fusion neutrons at meaningful energy levels."
         },
         {
@@ -1580,7 +1582,7 @@ const FUSION_DATA = {
   criticalPath: [
     {
       item: "SPARC achieves Q>2",
-      expected: "2027-2028 (first plasma now 2027; CFS says Q>1 in 2027)",
+      expected: "2028-2029 (editorial; CFS says Q>1 in 2027 — first plasma realistically H2 2027)",
       impact: "Validates compact HTS tokamak path; could accelerate timeline by a decade vs ITER-only approach",
       probability: "60-70%",
       category: "physics"
