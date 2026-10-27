@@ -27,7 +27,7 @@ const FUSION_DATA = {
       summary: "Full refresh covering mid-June to late October 2026. The period's defining pattern: record private and public funding commitments alongside quiet slippage of the flagship private milestones.",
       highlights: [
         "Funding: FIA 2026 report puts total fusion funding at $14.24B (56 companies; record $4.48B in 12 months). CFS raised another ~$1B (total ~$4B); Proxima €411M at a €2.4B valuation; Helion's Series G topped up to $500M; Type One $200M; General Fusion listed on Nasdaq (GFUZ)",
-        "Timelines softened: Helion dropped 'net electricity' as Polaris's goal and reframed Orion's 2028 target as 'initial operations' (full power 2029–30); CFS missed 'all 18 TF magnets by end of summer' (8/18 at end-Sep) and SPARC first plasma is now 2027; Type One's groundbreaking slipped to H1 2027; TAE's TMTG merger is still unclosed with a Dec 18 deadline and no Da Vinci site",
+        "Timelines softened: Helion dropped 'net electricity' as Polaris's goal and reframed Orion's 2028 target as 'initial operations' (full power 2029–30); CFS's 'all 18 TF magnets by end of summer' target moved to end-2026 (8/18 at end-Sep) and SPARC first plasma is 2027; Type One's groundbreaking slipped to H1 2027; TAE's TMTG merger is still unclosed with a Dec 18 deadline and no Da Vinci site",
         "Governments funded programmes rather than strategies: Japan's ¥3.1T public-private roadmap and ¥60B METI demonstration selections; Germany's €500M SPRIND milestone programme; a $10B US fusion bill introduced (not enacted — FY2027 is on a continuing resolution); US Commerce CHIPS equity-for-grant LOIs to Helion ($175M) and CFS ($85M). The EU Fusion Strategy and the US NRC final rule are both overdue",
         "Hardware progress: ITER placed its sixth of nine vacuum-vessel sector modules ~6 months ahead of Baseline 2024; BEST's campus delivered with >50% of main-machine assembly done (though '2027' is now worded as 'construction complete', not first plasma); Tokamak Energy's Demo4 reached 13.7 T; General Fusion claims ~1 keV in LM26 (pending peer review); Pacific Fusion broke ground in Albuquerque",
         "Added a Singapore row to the government funding table (A*STAR–CFS research agreement, FusionX:APAC 2026, new Ministry of Energy, Trade and Industry) and two new viability signals: supply-chain industrialisation (positive) and softening private timelines (negative)"
@@ -135,8 +135,8 @@ const FUSION_DATA = {
       description: "MIT spinoff building SPARC (demonstration) and ARC (commercial power plant). Uses HTS magnets to achieve stronger fields in a smaller device.",
       founded: 2018,
       funding: "~$4B total (incl. $1.8B Series B, $863M Series B2 Aug 2025, and a ~$1B round Jul 2026 from pension/sovereign/infrastructure investors incl. Hyundai Motor Group; valuation undisclosed; earlier investors include Nvidia, Google, Temasek, Equinor)",
-      status: "SPARC ~80% assembled; TF magnet installation behind schedule; first plasma targeted 2027",
-      progress: { stage: 2, pct: 90, note: "SPARC ~80% assembled (CFS, Jul 2026); 8 of 18 TF magnets installed as of late Sep 2026 — the 'all 18 by end of summer' target was missed; first plasma and Q>1 now both targeted for 2027; ~$1B raised Jul 2026 (total ~$4B)" },
+      status: "SPARC ~80% assembled; 8 of 18 TF magnets installed (Sep 2026), all 18 now expected by end-2026; first plasma targeted 2027",
+      progress: { stage: 2, pct: 90, note: "SPARC ~80% assembled (CFS, Jul 2026); 8 of 18 TF magnets installed as of late Sep 2026 (the Jul 2026 'all 18 by end of summer' target slipped; CFS now indicates all 18 by end-2026); first plasma and Q>1 both targeted for 2027; ~$1B raised Jul 2026 (total ~$4B)" },
       milestones: [
         { year: 2021, event: "Demonstrated 20T HTS magnet (world record for fusion-class)", achieved: true },
         { year: 2023, event: "Broke ground on SPARC facility in Devens, MA", achieved: true },
@@ -145,7 +145,7 @@ const FUSION_DATA = {
         { year: 2026, event: "Second vacuum vessel half arrived (May), completing tokamak structure; ENI signed ~$1B early-power offtake agreement (May)", achieved: true, note: "First of 18 TF magnets installed Jan 2026" },
         { year: 2026, event: "Published 5 peer-reviewed papers establishing the ARC physics basis (Jun): ~1.13 GW fusion power (range 0.9-1.3 GW), 400 MW net to grid, fully-immersed FLiBe liquid blanket with a modeled tritium breeding ratio (TBR) of 1.08", achieved: true, note: "TBR is from neutronics modeling, not measured; ~8% margin above self-sufficiency. Sorbom: ARC designed to work even 'on the wrong side of all the uncertainties'" },
         { year: 2026, event: "~$1B equity round (Jul) from pension, sovereign and infrastructure investors — total raised ~$4B; Hyundai Motor Group joined (Sep); named first international partner in UKAEA's £220M LIBRTI tritium-breeding programme (Jul); record ~10,000 km REBCO tape order with Fujikura for ARC magnets (Sep)", achieved: true, note: "Jul 2026 funds cover ARC site preparation but not full construction; no Chesterfield site plan or building permit filed as of Jul 2026 per county records" },
-        { year: 2026, event: "All 18 TF magnets installed by end of summer 2026 (target) — MISSED: CFS reported 8 of 18 installed as of late Sep 2026", achieved: false, confidence: "high", note: "Installation continuing; no revised completion date published" },
+        { year: 2026, event: "All 18 TF magnets installed (target) — originally 'end of summer 2026', now 'by end of 2026' per CFS after reporting 8 of 18 installed in late Sep", achieved: false, confidence: "high", note: "A slip of a few months on first-of-a-kind HTS magnet installation is unremarkable; the revised end-2026 date comes from CFS's own Sep 2026 update (X post), not independently confirmed" },
         { year: 2026, event: "Selected to lead a 10-organisation DOE Genesis Mission Phase II team building an AI digital twin / operations co-pilot for SPARC (Oct); $85M Letter of Intent with US Dept of Commerce CHIPS R&D Office for fusion-ready semiconductors, with Commerce taking a minority non-voting equity stake (Oct)", achieved: true, note: "LOI, not a final award; equity stake size undisclosed" },
         { year: 2027, event: "SPARC first plasma (target) — slipped from '2026-2027' to 2027", achieved: false, confidence: "medium" },
         { year: "2027-2028", event: "SPARC D-T operations, target Q>1 then Q>2", achieved: false, confidence: "medium", note: "CFS now states Q>1 targeted in 2027" },
@@ -164,7 +164,7 @@ const FUSION_DATA = {
         "Jump from SPARC to commercial ARC requires major engineering",
         "Tritium self-sufficiency rests on a modeled ARC TBR of 1.08 - a thin ~8% margin; SPARC itself does not breed, and no device has yet bred and recovered tritium in a closed loop or demonstrated online extraction from flowing FLiBe",
         "ARC magnet lifetime depends on neutron damage from the salt blanket - an unresolved durability question per CFS's own papers",
-        "TF magnet installation is running behind CFS's own schedule (8 of 18 at end-Sep 2026 vs 'all 18 by end of summer'); first plasma has already slipped from 2025 → 2026 → 2027",
+        "TF magnet installation slipped from 'end of summer' to 'end of 2026' (8 of 18 at end-Sep 2026) — a normal first-of-a-kind delay, but first plasma has already moved 2025 → 2026 → 2027, so further months matter",
         "~$4B raised is still short of a full ARC build; Jul 2026 round covers site prep only",
         "Net electricity generation has not been demonstrated by any fusion device"
       ],
@@ -838,7 +838,7 @@ const FUSION_DATA = {
       detail: "CFS demonstrated a 20T large-bore HTS magnet in 2021 - a landmark achievement. Tokamak Energy's Demo4 full-HTS system completed a 14-month campaign at 13.7 T peak (Sep 2026). SPARC's 18 TF coils are being installed (8 of 18 by Sep 2026). Manufacturing scale-up and cost reduction are the remaining challenges; the first industrial-scale tape orders and factories were announced in 2026.",
       confidence: 76,
       validatedBy: ["CFS 20T magnet demo (2021)", "Tokamak Energy Demo4: 13.7 T peak, ~10,000 h energised, >90 joints (2026)", "China ASIPP HTS central solenoid tested to 60 kA (Jun 2026)", "Various industrial HTS demonstrations"],
-      remainingGaps: ["Full toroidal magnet set not yet operated in a fusion device (SPARC installation running behind schedule)", "Radiation effects on HTS in fusion neutron environment", "Cost of REBCO tape at volume production — supply concentrated in a few Asian producers; CFS's 10,000 km Fujikura order and Proxima's planned €140M plant are the first scale-up moves", "Joint and quench management in full-scale systems"]
+      remainingGaps: ["Full toroidal magnet set not yet operated in a fusion device (SPARC installation due to complete end-2026)", "Radiation effects on HTS in fusion neutron environment", "Cost of REBCO tape at volume production — supply concentrated in a few Asian producers; CFS's 10,000 km Fujikura order and Proxima's planned €140M plant are the first scale-up moves", "Joint and quench management in full-scale systems"]
     },
     {
       id: "tritium_breeding",
@@ -1038,7 +1038,7 @@ const FUSION_DATA = {
         signal: "Flagship private timelines quietly soften",
         date: "H2 2026",
         significance: "high",
-        detail: "The three most-cited private milestones all moved in H2 2026 without formal announcements: Helion removed 'net electricity' as Polaris's goal and reworded Orion's 2028 promise from 'produce electricity' to 'initial operations', with full 50 MW power now 2029–30 (Axios, Sep); CFS missed its 'all 18 TF magnets by end of summer' target (8 of 18 at end-Sep) and now gives 2027 — not 2026 — for SPARC first plasma; Type One's Infinity One groundbreaking slipped from late 2026 to H1 2027; Marvel's ATLAS laser opening slipped 2026 → 2027; Tokamak Energy's ST80-HTS 2026 target went unmentioned all year; TAE's Da Vinci still has no site. FIA's own 2026 survey shows fewer companies expecting first commercial electricity in 2031–35 and more in 2041–45 than a year earlier.",
+        detail: "The three most-cited private milestones all moved in H2 2026 without formal announcements: Helion removed 'net electricity' as Polaris's goal and reworded Orion's 2028 promise from 'produce electricity' to 'initial operations', with full 50 MW power now 2029–30 (Axios, Sep); CFS's 'all 18 TF magnets by end of summer' target moved to end-2026 (8 of 18 at end-Sep) and SPARC first plasma is 2027, not 2026; Type One's Infinity One groundbreaking slipped from late 2026 to H1 2027; Marvel's ATLAS laser opening slipped 2026 → 2027; Tokamak Energy's ST80-HTS 2026 target went unmentioned all year; TAE's Da Vinci still has no site. FIA's own 2026 survey shows fewer companies expecting first commercial electricity in 2031–35 and more in 2041–45 than a year earlier.",
         caveat: "Slips of months to a year on first-of-a-kind hardware are normal and none of these firms has abandoned its programme; several raised large rounds in the same period. But the pattern — softened wording rather than announced re-baselines — is the one the dashboard's historical-accuracy score warns about."
       },
       {
@@ -1530,7 +1530,7 @@ const FUSION_DATA = {
           score: 3, maxScore: 10,
           status: "Aspirational",
           detail: "Several private companies target net electricity or demonstration plants in the early 2030s: CFS (ARC ~2032\u201335), Helion (Microsoft PPA by 2028), Tokamak Energy (2030s). The Fusion Industry Association\u2019s survey shows median company expectation of first power by early 2030s.",
-          evidence: "CFS SPARC first plasma target: now 2027 (was 2026\u20132027; TF magnet installation 8 of 18 at end-Sep 2026 vs 'all 18 by end of summer'). Helion Polaris demonstrated D-T fusion (Feb 2026) but the 'net electricity' goal was quietly dropped (Sep 2026); Orion 2028 is now 'initial operations', full power 2029\u201330. Record capital raised in 2026 ($4.48B in 12 months per FIA) to support these timelines.",
+          evidence: "CFS SPARC first plasma target: now 2027 (was 2026\u20132027; TF magnet installation 8 of 18 at end-Sep 2026, all 18 now expected end-2026). Helion Polaris demonstrated D-T fusion (Feb 2026) but the 'net electricity' goal was quietly dropped (Sep 2026); Orion 2028 is now 'initial operations', full power 2029\u201330. Record capital raised in 2026 ($4.48B in 12 months per FIA) to support these timelines.",
           gap: "History of private fusion: General Fusion, TAE, and others have repeatedly pushed back timelines, and H2 2026 added Helion, CFS, Type One, Marvel and Tokamak Energy to the list of softened or missed targets. FIA's 2026 survey shows company expectations for first commercial electricity shifting later. The jump from \u2018first plasma in a demo\u2019 to \u2018electricity on the grid\u2019 requires solving all the engineering challenges simultaneously. No private company has yet operated a device that produces fusion neutrons at meaningful energy levels."
         },
         {
@@ -1581,7 +1581,7 @@ const FUSION_DATA = {
       item: "SPARC achieves Q>2",
       expected: "2027-2028 (first plasma now 2027; CFS says Q>1 in 2027)",
       impact: "Validates compact HTS tokamak path; could accelerate timeline by a decade vs ITER-only approach",
-      probability: "55-70% (magnet installation behind schedule as of Sep 2026)",
+      probability: "60-70%",
       category: "physics"
     },
     {
